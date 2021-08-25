@@ -1,0 +1,2 @@
+tag @s add unlock_celebration_15
+tellraw @s [{"text":"- - - - - - - - - - - - - - - - - - - - - - - - - - -","color":"gray","bold":true},{"text":"\nYou have unlocked a LEGENDARY Celebration!","color":"yellow","bold":false},{"text":"\nCelebration ","color":"gray","bold":true},{"text":"- ","color":"gray","bold":true},{"text":"Dance Party","color":"white","bold":true},{"text":"\nYou can select it inside the Menu Ender Chest!","color":"aqua","bold":false}]

@@ -1,0 +1,7 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{fighter:1,selected:1,invalid_click:1,HideFlags:63,clickable:1,SkullOwner:{Id:[I;717187579,5715758,40052575,1455805],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYxMzA4NDQ4MDY3NiwKICAicHJvZmlsZUlkIiA6ICI4NDI2MTI4MmQxY2I0MGIyYWE4NTNkZGM0OGNiNDA3NiIsCiAgInByb2ZpbGVOYW1lIiA6ICJGYWxjb25SZWlnbiIsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9hMTQ5ZDE5ZGEwYjA3ZDNhNGI5ZTY4NjIwN2QyYTI3ZWQ4MjFlMTc5MDg5OTdiM2VkNTQ2ZDFhMDZiYTFiN2JhIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=\"}]}}}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Zombie","color":"aqua","italic":false,"bold":true}] },
+              {"function":"minecraft:set_lore","entity":"this","lore":[{"text":"SELECTED","color":"dark_aqua","bold":true,"italic":false},{"text":"Variant: ","color":"gray","bold":false,"italic":false,"extra":[{"text":"Drowned","color":"white","bold":true}]},{"text":""},{"text":"Shift-click to change variant.","color":"gray","italic":false}]}], 
+              "name": "minecraft:player_head" } ] } ] }

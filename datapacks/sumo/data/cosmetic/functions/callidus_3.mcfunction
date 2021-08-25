@@ -1,0 +1,2 @@
+tag @s add unlock_callidus_3
+tellraw @s [{"text":"- - - - - - - - - - - - - - - - - - - - - - - - - - -","color":"gray","bold":true},{"text":"\nYou have unlocked a variant!","color":"dark_green","bold":false},{"text":"\nCallidus ","color":"gray","bold":true},{"text":"- ","color":"gray","bold":true},{"text":"White Helmet","color":"white","bold":true},{"text":"\nYou can select it inside the Fighter Selection Chest!","color":"aqua","bold":false}]

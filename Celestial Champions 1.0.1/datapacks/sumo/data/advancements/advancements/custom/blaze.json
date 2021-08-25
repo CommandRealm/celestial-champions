@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:player_head",
+            "nbt": "{CustomModelData:0,SkullOwner:{Id:[I;643790533,-1896397495,-1697921292,1122999338],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWJiMzA5MzJlYmExNzk3ODZjYzNiZTc3YWZmMzQ4ZDJkNWRiMWM3Zjg3Y2U0ZjFjNGI0YTdkYWE3MzUxZGExNyJ9fX0=\"}]}}}"
+        },
+        "title": {
+            "text": "Fiery Fight",
+            "color": "#fff703",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": "false",
+        "description": {
+            "text": "Play a game as Blaze.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:custom/slime",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

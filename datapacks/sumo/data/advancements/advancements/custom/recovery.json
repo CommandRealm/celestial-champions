@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:ladder",
+            "nbt": "{CustomModelData:0}"
+        },
+        "title": {
+            "text": "Made it!",
+            "color": "#b80000",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": "false",
+        "description": {
+            "text": "Recover back onto the stage after being near the void.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:custom/rip",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

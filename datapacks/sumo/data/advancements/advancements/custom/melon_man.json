@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:melon",
+            "nbt": "{CustomModelData:1}"
+        },
+        "title": {
+            "text": "Very Melon-y Choice",
+            "color": "#fff703",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": "false",
+        "description": {
+            "text": "Play a game as Melon Man.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:custom/callidus",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

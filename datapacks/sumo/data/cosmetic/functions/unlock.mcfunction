@@ -1,0 +1,9 @@
+scoreboard players set $mod random 10
+function random:random
+execute unless entity @s[tag=unlock_theo_2,tag=unlock_theo_3,tag=unlock_theo_4,tag=unlock_incend_2,tag=unlock_incend_3,tag=unlock_incend_4,tag=unlock_drakier_2,tag=unlock_drakier_3,tag=unlock_drakier_4,tag=unlock_gracea_2,tag=unlock_gracea_3,tag=unlock_gracea_4,tag=unlock_callidus_2,tag=unlock_callidus_3,tag=unlock_callidus_4,tag=unlock_melon_man_2,tag=unlock_melon_man_3,tag=unlock_melon_man_4,tag=unlock_gene_2,tag=unlock_malice_2,tag=unlock_malice_3,tag=unlock_malice_4,tag=unlock_zombie_2,tag=unlock_zombie_3,tag=unlock_skeleton_2,tag=unlock_skeleton_3,tag=unlock_spider_2,tag=unlock_creeper_2,tag=unlock_enderman_2,tag=unlock_enderman_3,tag=unlock_enderman_4,tag=unlock_blaze_2,tag=unlock_blaze_3,tag=unlock_blaze_4,tag=unlock_slime_2,tag=unlock_slime_3,tag=unlock_slime_4,tag=unlock_chicken_2,tag=unlock_chicken_3,tag=unlock_chicken_4] if score $rand random matches 0 run function cosmetic:unlock_variant
+
+execute unless entity @s[tag=unlocked_variant] unless entity @s[tag=unlock_death_10,tag=unlock_death_11,tag=unlock_celebration_15,tag=unlock_celebration_16,tag=unlock_celebration_17] if score $rand random matches 1..2 run function cosmetic:unlock_legendary
+
+execute unless entity @s[tag=unlocked_legendary] unless entity @s[tag=unlocked_variant] unless entity @s[tag=unlock_death_7,tag=unlock_death_8,tag=unlock_death_9,tag=unlock_celebration_10,tag=unlock_celebration_11,tag=unlock_celebration_12,tag=unlock_celebration_13,tag=unlock_celebration_14] if score $rand random matches 3.. run function cosmetic:unlock_epic
+tag @s remove unlocked_legendary
+tag @s remove unlocked_variant

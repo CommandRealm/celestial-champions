@@ -1,0 +1,10 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{fighter:13,HideFlags:63,clickable:1,SkullOwner:{Id:[I;643790533,-1896397495,-1697921292,1122999338],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWJiMzA5MzJlYmExNzk3ODZjYzNiZTc3YWZmMzQ4ZDJkNWRiMWM3Zjg3Y2U0ZjFjNGI0YTdkYWE3MzUxZGExNyJ9fX0=\"}]}}}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Blaze","color":"#ffd528","italic":false,"bold":true}] },
+              {"function":"minecraft:set_lore","entity":"this","lore":[{"text":""},{"text":"Click to select.","color":"gray","italic":false},{"text":"Shift-click to change variant.","color":"gray","italic":false}]}], 
+              "name": "minecraft:player_head" } ] } ] }
+
+
+              

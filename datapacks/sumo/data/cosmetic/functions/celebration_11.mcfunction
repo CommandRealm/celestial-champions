@@ -1,0 +1,2 @@
+tag @s add unlock_celebration_11
+tellraw @s [{"text":"- - - - - - - - - - - - - - - - - - - - - - - - - - -","color":"gray","bold":true},{"text":"\nYou have unlocked an EPIC Celebration!","color":"light_purple","bold":false},{"text":"\nCelebration ","color":"gray","bold":true},{"text":"- ","color":"gray","bold":true},{"text":"Food","color":"white","bold":true},{"text":"\nYou can select it inside the Menu Ender Chest!","color":"aqua","bold":false}]

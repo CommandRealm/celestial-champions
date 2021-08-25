@@ -1,0 +1,12 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "nbt": "{SelectedItem:{id:\"minecraft:trident\",tag:{Weapon:\"knockback\"}}}"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:name_tag",
+            "nbt": "{CustomModelData:1}"
+        },
+        "title": {
+            "text": "Exclusive Prefix",
+            "color": "#ffffff",
+            "bold": true
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": "false",
+        "description": {
+            "text": "Complete this row of advancements to unlock.",
+            "color": "dark_green",
+            "bold": false
+        }
+    },
+    "parent": "advancements:custom/secret",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:compass",
+            "nbt": "{CustomModelData:0}"
+        },
+        "title": {
+            "text": "Explorer!",
+            "color": "#fafafa",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": "false",
+        "description": {
+            "text": "Walk across the bridge to the pantheon.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:custom/tutorial",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

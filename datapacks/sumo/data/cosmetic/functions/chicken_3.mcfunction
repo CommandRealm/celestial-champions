@@ -1,0 +1,2 @@
+tag @s add unlock_chicken_3
+tellraw @s [{"text":"- - - - - - - - - - - - - - - - - - - - - - - - - - -","color":"gray","bold":true},{"text":"\nYou have unlocked a variant!","color":"dark_green","bold":false},{"text":"\nChicken ","color":"gray","bold":true},{"text":"- ","color":"gray","bold":true},{"text":"Chicken?","color":"white","bold":true},{"text":"\nYou can select it inside the Fighter Selection Chest!","color":"aqua","bold":false}]

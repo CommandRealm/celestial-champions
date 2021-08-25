@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:ender_chest",
+            "nbt": "{CustomModelData:0}"
+        },
+        "title": {
+            "text": "Fancy Exterior",
+            "color": "#f2f2f2",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": "false",
+        "description": {
+            "text": "Equip a variant, death animation, and victory celebration at the same time.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:custom/bridge",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

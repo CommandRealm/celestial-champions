@@ -1,0 +1,5 @@
+scoreboard objectives add bagee_arm dummy
+scoreboard players set -1 bagee_arm -1
+scoreboard players set -60 bagee_arm -60
+kill @e[type=armor_stand,tag=bagee]
+summon minecraft:armor_stand -91 76.5 -7 {Silent:1b,NoGravity:1b,ShowArms:1b,Invulnerable:1b,NoBasePlate:1b,Pose:{Head:[0f,0f,0f],LeftLeg:[0f,0f,354f],RightLeg:[0f,0f,3f],RightArm:[180f,0f,330f],LeftArm:[0f,0f,-9f]},ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:0}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:788741}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:6820113}}},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;1568309922,11026778,-1543955128,744672685],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzRhNTE4ODFlMjRlYzliMDIzN2FmZTRiZmI4NGJmNjMxNmJmZTNkOGM0Y2NkZGU0ZGNjN2I3NTZkOGY3NjA0ZSJ9fX0="}]}}}}],DisabledSlots:4144959,Rotation:[-45f,0f],Tags:["bagee","show_details"],Marker:1}

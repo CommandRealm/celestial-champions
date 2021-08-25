@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:leather_chestplate",
+            "nbt": "{CustomModelData:1}"
+        },
+        "title": {
+            "text": "Unlock All Variants",
+            "color": "#fff703",
+            "bold": true
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": "false",
+        "description": {
+            "text": "Complete this row of advancements to unlock.",
+            "color": "dark_green",
+            "bold": false
+        }
+    },
+    "parent": "advancements:custom/chicken",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

@@ -1,0 +1,2 @@
+# Default Firework Celebration by Calverin
+execute as @a[tag=winner,scores={celebration=0}] at @s if score $end cooldown matches 99 run summon firework_rocket ~ ~1 ~ {LifeTime:20,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:1,Flicker:1,Trail:0,Colors:[I;2651799,4408131],FadeColors:[I;1973019]}]}}},Tags:["die"]}
