@@ -1,0 +1,2 @@
+execute if entity @e[distance=..0.05,type=area_effect_cloud,tag=check_sign,tag=remove,tag=check_time_of_day] run scoreboard players remove $time_of_day settings 2
+execute if entity @e[distance=..0.05,type=area_effect_cloud,tag=check_sign,tag=check_time_of_day] run function options:time_of_day/add_time_of_day

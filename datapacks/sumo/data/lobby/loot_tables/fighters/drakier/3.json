@@ -1,0 +1,10 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{fighter:8,HideFlags:63,clickable:1,CustomModelData:7}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Drakier","color":"#634d6a","italic":false,"bold":true}] },
+              {"function":"minecraft:set_lore","entity":"this","lore":[{"text":"Variant: ","color":"gray","bold":false,"italic":false,"extra":[{"text":"Green","color":"white","bold":true}]},{"text":""},{"text":"Click to select.","color":"gray","italic":false},{"text":"Shift-click to change variant.","color":"gray","italic":false}]}], 
+              "name": "minecraft:dragon_egg" } ] } ] }
+
+
+              

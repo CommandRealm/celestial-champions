@@ -1,0 +1,1 @@
+execute at @a[tag=playing] run forceload add ~40 ~40 ~-40 ~-40

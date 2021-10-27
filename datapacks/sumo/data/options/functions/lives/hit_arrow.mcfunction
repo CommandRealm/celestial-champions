@@ -1,0 +1,2 @@
+execute if entity @e[distance=..0.05,type=area_effect_cloud,tag=check_sign,tag=remove,tag=check_lives] run scoreboard players remove $lives settings 2
+execute if entity @e[distance=..0.05,type=area_effect_cloud,tag=check_sign,tag=check_lives] run function options:lives/add_life

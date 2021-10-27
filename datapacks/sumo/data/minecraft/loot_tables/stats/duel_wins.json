@@ -1,0 +1,6 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"You have played in ","color":"blue","italic":false,"bold":false},{"score":{"objective":"stats_duels","name":"@s"},"color":"dark_aqua","italic":false,"bold":true},{"text":" duels.","color":"blue","italic":false,"bold":false}] }], 
+              "name": "minecraft:lapis_block" } ] } ] }

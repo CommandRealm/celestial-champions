@@ -1,0 +1,10 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{fighter:2,HideFlags:63,clickable:1}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Skeleton","color":"#d3d3d3","italic":false,"bold":true}] },
+              {"function":"minecraft:set_lore","entity":"this","lore":[{"text":"Click to select.","color":"gray","italic":false},{"text":"Shift-click to change variant.","color":"gray","italic":false}]}], 
+              "name": "minecraft:skeleton_skull" } ] } ] }
+
+
+              

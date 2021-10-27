@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+      "minecraft:fishing_rod",
+      "minecraft:magma_block",
+      "minecraft:ice",
+      "minecraft:granite",
+      "minecraft:white_stained_glass",
+      "minecraft:blackstone"
+
+    ]
+  }
