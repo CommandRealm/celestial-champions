@@ -1,6 +1,6 @@
 ##Called to give the player who ran this function a random fighter
 ##Random number. Change mod's score to the amt of fighters.
-scoreboard players set $mod random 16
+scoreboard players set $mod random 18
 function random:random
 
 ##Copying random score to us
@@ -22,3 +22,5 @@ execute if entity @s[scores={fighter=12}] run scoreboard players operation @s co
 execute if entity @s[scores={fighter=13}] run scoreboard players operation @s costume = @s f_13_costume
 execute if entity @s[scores={fighter=14}] run scoreboard players operation @s costume = @s f_14_costume
 execute if entity @s[scores={fighter=15}] run scoreboard players operation @s costume = @s f_15_costume
+execute if entity @s[scores={fighter=16}] run scoreboard players operation @s costume = @s f_16_costume
+execute if entity @s[scores={fighter=17}] run scoreboard players operation @s costume = @s f_17_costume

@@ -1,5 +1,5 @@
 # Parrot Dance Party Celebration by Calverin
-execute as @a[tag=winner,scores={celebration=15}] at @s if score $end cooldown matches 99 run replaceitem entity @s armor.head jukebox
+execute as @a[tag=winner,scores={celebration=15}] at @s if score $end cooldown matches 99 run item replace entity @s armor.head with jukebox
 execute as @a[tag=winner,scores={celebration=15}] at @s if score $end cooldown matches 99 run setblock 0 76 80 minecraft:jukebox[has_record=false]{}
 execute as @a[tag=winner,scores={celebration=15}] at @s if score $end cooldown matches 99 run give @s music_disc_blocks{CanPlaceOn:["minecraft:jukebox"]}
 execute as @a[tag=winner,scores={celebration=15}] at @s if score $end cooldown matches 99 run give @s music_disc_cat{CanPlaceOn:["minecraft:jukebox"]}

@@ -6,8 +6,18 @@ scoreboard players operation @s calculate = @s damaged_id
 ##Scoreboard resets
 scoreboard players reset @s damage_taken
 
+##If we're damaged by fire arrow, add damage
+execute unless score @s times_hit = @s max_damage unless entity @s[advancements={advancements:damage/take_red_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_blue_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_yellow_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_green_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_cyan_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_orange_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_pink_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_purple_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_white_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_gray_team_friendly_fire=true}] if entity @s[advancements={fighter:arthor/fire_arrow_damage=true}] run scoreboard players remove @s times_hit 1
+
+
 ##Scoreboard additions (unless statement make sure that it doesn't go above the max damage)
 execute unless score @s times_hit = @s max_damage unless entity @s[advancements={advancements:damage/take_red_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_blue_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_yellow_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_green_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_cyan_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_orange_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_pink_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_purple_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_white_team_friendly_fire=true}] unless entity @s[advancements={advancements:damage/take_gray_team_friendly_fire=true}] run scoreboard players add @s times_hit 1
+
+
+
+##If we're damaged by darkness arrow, add damage
+execute if entity @s[advancements={fighter:arthor/darkness_arrow_damage=true}] run scoreboard players add @s times_hit 4
+
 
 ##Adding extra times hit values
 execute if entity @s[advancements={advancements:damage/additional_damage_1=true}] run scoreboard players add @s times_hit 1
@@ -22,15 +32,21 @@ execute if entity @s[advancements={advancements:damage/additional_damage_9=true}
 execute if entity @s[advancements={advancements:damage/additional_damage_10=true}] run scoreboard players add @s times_hit 10
 execute if entity @s[advancements={advancements:damage/additional_damage_20=true}] run scoreboard players add @s times_hit 20
 
+##Adding damage if we were hit by sharp rock
+execute if entity @s[advancements={fighter:gene/sharp_rock_damage=true}] run scoreboard players add @s times_hit 3
+advancement revoke @s only fighter:gene/sharp_rock_damage
+
 ##If times hit is greater than max damage set times_hit to be equal to max_damage
 execute if score @s times_hit > @s max_damage run scoreboard players operation @s times_hit = @s max_damage
+
+
 
 
 ##Converting times_hit over max_damage into a percentage
 function fighter:damage/calculate_percentage
 
 
-##If we were hit by a crossbow
+##If we were hit by a stun crossbow
 execute if entity @s[advancements={advancements:item/damaged_by_crossbow=true}] run function item:crossbow/damaged_by_crossbow
 
 
@@ -180,4 +196,14 @@ execute if score $teams settings matches 2.. run function fighter:damage/check_t
 
 ##Specific fighter functions
 execute if entity @s[scores={fighter=8}] run function fighter:drakier/damaged
+
+advancement revoke @s only fighter:arthor/fire_arrow_damage
+advancement revoke @s only fighter:arthor/darkness_arrow_damage
+
+
+
+
+execute if entity @s[advancements={fighter:fear_level_1=true}] run scoreboard players set @s fear 60
+execute if entity @s[advancements={fighter:fear_level_1=true}] run function fighter:fear/start_fear
+advancement revoke @s only fighter:fear_level_1
 

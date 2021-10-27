@@ -11,7 +11,7 @@
         },
         "frame": "task",
         "show_toast": true,
-        "announce_to_chat": "false",
+        "announce_to_chat": false,
         "description": {
             "text": "Get a kill-streak of three in a game of Celestial Champions.",
             "color": "#fac84b",

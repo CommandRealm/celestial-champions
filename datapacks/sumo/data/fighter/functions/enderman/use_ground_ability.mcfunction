@@ -6,7 +6,7 @@
 scoreboard players set @s ability_state 2
 
 ##Showing how long the ability lasts for
-scoreboard players set @s ability_timer 100
+scoreboard players set @s ability_timer 350
 
 ##Clarifying it as a ground ability (0 is ground, 1 is air)
 scoreboard players set @s ability_type 0
@@ -22,15 +22,15 @@ tag @s add copy_id
 ##Teleportation
 
 ##Copying AEC ids to calculate
-execute as @e[type=area_effect_cloud,tag=enderman_warp_spot,nbt={Age:59}] run scoreboard players operation @s calculate = @s id
+execute as @e[type=marker,tag=enderman_warp_spot,scores={death_timer=1}] run scoreboard players operation @s calculate = @s id
 ##Subtraction
-execute as @e[type=area_effect_cloud,tag=enderman_warp_spot,nbt={Age:59}] run scoreboard players operation @s calculate -= @p[tag=copy_id] id
+execute as @e[type=marker,tag=enderman_warp_spot,scores={death_timer=1}] run scoreboard players operation @s calculate -= @p[tag=copy_id] id
 
 ##Teleporting to warp spot with calculate score of 0
-tp @s @e[type=area_effect_cloud,tag=enderman_warp_spot,nbt={Age:59},sort=nearest,limit=1]
+tp @s @e[type=marker,tag=enderman_warp_spot,scores={death_timer=1},sort=nearest,limit=1]
 
 ##Killing warp spot
-kill @e[type=area_effect_cloud,tag=enderman_warp_spot,nbt={Age:59},sort=nearest,limit=1]
+kill @e[type=marker,tag=enderman_warp_spot,scores={death_timer=1},sort=nearest,limit=1]
 
 ##Tag removals
 tag @s remove copy_id

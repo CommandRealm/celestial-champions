@@ -1,2 +1,0 @@
-execute if entity @e[distance=..0.05,type=area_effect_cloud,tag=check_sign,tag=remove,tag=check_map] run scoreboard players remove $map settings 2
-execute if entity @e[distance=..0.05,type=area_effect_cloud,tag=check_sign,tag=check_map] run function options:map/add_map

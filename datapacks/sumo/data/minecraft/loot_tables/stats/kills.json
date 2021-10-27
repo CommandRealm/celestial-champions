@@ -1,6 +1,0 @@
-{ "type":"minecraft:generic", "pools" : 
-    [ { "rolls":1, "entries":
-        [ { "type": "minecraft:item", "functions":
-            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1}"},
-              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"You have ","color":"dark_aqua","italic":false,"bold":false},{"score":{"objective":"stats_kills","name":"@s"},"color":"aqua","italic":false,"bold":true},{"text":" kills.","color":"dark_aqua","italic":false,"bold":false}] }], 
-              "name": "minecraft:diamond_block" } ] } ] }

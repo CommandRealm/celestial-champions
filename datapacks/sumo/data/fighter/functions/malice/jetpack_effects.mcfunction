@@ -1,4 +1,0 @@
-execute as @a[tag=is_fighter,gamemode=adventure,scores={ability_state=1,ability_timer=1..,fighter=15},nbt={ActiveEffects:[{Id:25b,Amplifier:1b}]}] at @s run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.25 0 
-execute as @a[tag=is_fighter,gamemode=adventure,scores={ability_state=1,ability_timer=1..,fighter=15},nbt={ActiveEffects:[{Id:25b,Amplifier:1b}]}] at @s run particle cloud ~ ~1 ~ 0.25 0.5 0.25 0.15 1
-execute as @a[tag=is_fighter,gamemode=adventure,scores={ability_state=1,ability_timer=1..,fighter=15},nbt={ActiveEffects:[{Id:25b,Amplifier:1b}]}] at @s run particle lava ~ ~1 ~ 0.25 0.5 0.25 0.15 1
-execute as @a[tag=is_fighter,gamemode=adventure,scores={ability_state=1,ability_timer=2..,fighter=15}] at @s unless entity @s[nbt={ActiveEffects:[{Id:25b,Amplifier:1b}]}] run scoreboard players set @s ability_timer 1

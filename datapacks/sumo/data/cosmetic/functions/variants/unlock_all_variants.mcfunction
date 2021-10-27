@@ -59,3 +59,8 @@ tag @s add unlock_slime_4
 tag @s add unlock_chicken_2
 tag @s add unlock_chicken_3
 tag @s add unlock_chicken_4
+
+tag @s add unlock_guardian_2
+tag @s add unlock_guardian_3
+
+tag @s add unlock_arthor_2

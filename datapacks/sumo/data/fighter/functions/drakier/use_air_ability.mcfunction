@@ -14,19 +14,17 @@ scoreboard players set @s ability_type 1
 
 ##Repairing elytra
 
-tag @s remove pause_random_cooldown
-scoreboard players reset @s random_cooldown
 
-function fighter:drakier/get_elytra
+function fighter:drakier/get_firework
 
 
 
 ##Particles
-particle item elytra ~ ~ ~ 0.25 0.25 0.25 0.25 100
+particle item firework_rocket ~ ~ ~ 0.25 0.25 0.25 0.25 100
 
 
 ##Tellraw
-tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"white"},{"text":"\nAir Ability: ","color":"dark_aqua","bold":true},{"text":"Elytra Repair\n","color":"aqua"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Repairs elytra if lost."}},{"text":"--------------------------","color":"white"}]
+tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"white"},{"text":"\nAir Ability: ","color":"dark_aqua","bold":true},{"text":"Firework\n","color":"aqua"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Repairs elytra if lost."}},{"text":"--------------------------","color":"white"}]
 
 
 ##Sounds

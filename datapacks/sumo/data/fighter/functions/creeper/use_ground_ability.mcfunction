@@ -27,9 +27,9 @@ tag @s add used_ability
 
 
 ##Called to shoot an arrow with motion
-execute anchored eyes positioned ^ ^ ^1 if entity @s[scores={costume=0}] run summon zombie ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["needs_motion","needs_copied_id","on_death_timer","needs_death_timer","creeper_grenade"],ArmorItems:[{},{},{},{id:"minecraft:tnt",Count:1b,tag:{CustomModelData:1}}],ActiveEffects:[{Id:14b,Amplifier:254,Duration:1000,ShowParticles:false},{Id:11b,Amplifier:254,Duration:1000,ShowParticles:false}],Attributes:[{Name:"generic.follow_range",Base:0}]}
-execute anchored eyes positioned ^ ^ ^1 if entity @s[scores={costume=1}] run summon zombie ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["needs_motion","needs_copied_id","on_death_timer","needs_death_timer","creeper_grenade"],ArmorItems:[{},{},{},{id:"minecraft:tnt",Count:1b,tag:{CustomModelData:2}}],ActiveEffects:[{Id:14b,Amplifier:254,Duration:1000,ShowParticles:false},{Id:11b,Amplifier:254,Duration:1000,ShowParticles:false}],Attributes:[{Name:"generic.follow_range",Base:0}]}
-execute anchored eyes positioned ^ ^ ^1 if entity @s[scores={costume=2}] run summon zombie ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["needs_motion","needs_copied_id","on_death_timer","needs_death_timer","creeper_grenade"],ArmorItems:[{},{},{},{id:"minecraft:tnt",Count:1b,tag:{CustomModelData:3}}],ActiveEffects:[{Id:14b,Amplifier:254,Duration:1000,ShowParticles:false},{Id:11b,Amplifier:254,Duration:1000,ShowParticles:false}],Attributes:[{Name:"generic.follow_range",Base:0}]}
+execute positioned ^ ^ ^1 if entity @s[scores={costume=0}] run summon zombie ~ ~2 ~ {Silent:1b,Invulnerable:1b,Tags:["needs_motion","needs_copied_id","on_death_timer","needs_death_timer","creeper_grenade"],ArmorItems:[{},{},{},{id:"minecraft:tnt",Count:1b,tag:{CustomModelData:1}}],ActiveEffects:[{Id:14b,Amplifier:254,Duration:1000,ShowParticles:false},{Id:11b,Amplifier:254,Duration:1000,ShowParticles:false}],Attributes:[{Name:"generic.follow_range",Base:0}]}
+execute positioned ^ ^ ^1 if entity @s[scores={costume=1}] run summon zombie ~ ~2 ~ {Silent:1b,Invulnerable:1b,Tags:["needs_motion","needs_copied_id","on_death_timer","needs_death_timer","creeper_grenade"],ArmorItems:[{},{},{},{id:"minecraft:tnt",Count:1b,tag:{CustomModelData:2}}],ActiveEffects:[{Id:14b,Amplifier:254,Duration:1000,ShowParticles:false},{Id:11b,Amplifier:254,Duration:1000,ShowParticles:false}],Attributes:[{Name:"generic.follow_range",Base:0}]}
+execute positioned ^ ^ ^1 if entity @s[scores={costume=2}] run summon zombie ~ ~2 ~ {Silent:1b,Invulnerable:1b,Tags:["needs_motion","needs_copied_id","on_death_timer","needs_death_timer","creeper_grenade"],ArmorItems:[{},{},{},{id:"minecraft:tnt",Count:1b,tag:{CustomModelData:3}}],ActiveEffects:[{Id:14b,Amplifier:254,Duration:1000,ShowParticles:false},{Id:11b,Amplifier:254,Duration:1000,ShowParticles:false}],Attributes:[{Name:"generic.follow_range",Base:0}]}
 
 
 
@@ -56,7 +56,7 @@ execute as @e[type=zombie,tag=needs_motion] at @s store result score @s pos_z ru
 
 
 ##Removing the 1.75 blocks from anchored eyes
-scoreboard players remove @e[type=zombie,tag=needs_motion] pos_y 175
+scoreboard players remove @e[type=zombie,tag=needs_motion] pos_y 200
 
 ##Subtracting
 execute as @e[type=zombie,tag=needs_motion] at @s run scoreboard players operation @s pos_x -= @p[tag=used_ability] pos_x
@@ -64,9 +64,9 @@ execute as @e[type=zombie,tag=needs_motion] at @s run scoreboard players operati
 execute as @e[type=zombie,tag=needs_motion] at @s run scoreboard players operation @s pos_z -= @p[tag=used_ability] pos_z
 
 ##Applying motion
-execute as @e[type=zombie,tag=needs_motion] at @s store result entity @s Motion[0] double 0.045 run scoreboard players get @s pos_x
-execute as @e[type=zombie,tag=needs_motion] at @s store result entity @s Motion[1] double 0.045 run scoreboard players get @s pos_y
-execute as @e[type=zombie,tag=needs_motion] at @s store result entity @s Motion[2] double 0.045 run scoreboard players get @s pos_z
+execute as @e[type=zombie,tag=needs_motion] at @s store result entity @s Motion[0] double 0.025 run scoreboard players get @s pos_x
+execute as @e[type=zombie,tag=needs_motion] at @s store result entity @s Motion[1] double 0.025 run scoreboard players get @s pos_y
+execute as @e[type=zombie,tag=needs_motion] at @s store result entity @s Motion[2] double 0.025 run scoreboard players get @s pos_z
 
 ##Removing tags
 tag @e[type=zombie,tag=needs_motion] remove needs_motion

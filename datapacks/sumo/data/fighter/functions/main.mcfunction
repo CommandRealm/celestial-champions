@@ -5,7 +5,7 @@
 execute if entity @a[tag=is_fighter,gamemode=adventure] run function fighter:call_abilities
 
 ##Extra jumps
-execute as @a[tag=is_fighter,nbt={OnGround:1b},gamemode=adventure] at @s unless entity @s[scores={extra_jump_time=1..}] unless score @s extra_jumps = @s set_extra_jumps run scoreboard players operation @s extra_jumps = @s set_extra_jumps
+execute as @a[tag=is_fighter,nbt={OnGround:1b},gamemode=adventure] at @s unless entity @s[scores={extra_jump_time=1..}] unless score @s extra_jumps = @s set_extra_jumps run function fighter:extra_jump/touch_ground
 
 
 ##Will activate double jump if they have one to use, are sneaking, and haven't used one recently.
@@ -35,7 +35,7 @@ execute as @a[tag=is_fighter,gamemode=adventure,nbt={OnGround:1b}] at @s run sco
 
 
 ##Setting delay score if player isn't on ground
-scoreboard players set @a[tag=is_fighter,nbt={OnGround:0b},gamemode=adventure,scores={ability_type_d=0,use_ability_type=0}] ability_type_d 7
+scoreboard players set @a[tag=is_fighter,nbt={OnGround:0b},gamemode=adventure,scores={ability_type_d=0,use_ability_type=0}] ability_type_d 9
 ##Counting down ability type delay score
 scoreboard players remove @a[scores={ability_type_d=1..}] ability_type_d 1
 ##Setting it to be an air ability if countdown hits 0
@@ -57,16 +57,10 @@ execute if entity @a[scores={ability_timer=1..},tag=is_fighter] run function fig
 execute if entity @a[scores={ability_timer=1..},tag=is_fighter] run function fighter:ability/convert_timer_to_seconds
 
 
+##When an inventory is changed
+execute if entity @a[tag=is_fighter,advancements={fighter:inventory_changed=true}] run function fighter:check_inventory
+
 ##Gives players their weapons and an item that signifies their number of air jumps
-
-##Sets it to -100000 and because getting the if the check fails it will be set to 0
-scoreboard players set @a[tag=is_fighter,gamemode=adventure] slot_success -100000
-
-##If they have the item in their inventory still, it will store the slot id of the item in 
-execute as @a[tag=is_fighter,nbt={Inventory:[{tag:{Weapon:"combo"}}]},gamemode=adventure] store result score @s slot_success run data get entity @s Inventory[{tag:{Weapon:"combo"}}].Slot 1
-
-##Gets combo weapon.
-execute as @a[tag=is_fighter,gamemode=adventure] at @s unless score @s slot_success = @s combo_slot run function fighter:hotbar/get_combo_weapon
 
 
 ##Items
@@ -74,129 +68,22 @@ execute if score $item_rate settings matches 1.. run function item:main
 
 
 
-##Sets it to -100000 and because getting the if the check fails it will be set to 0
-scoreboard players set @a[tag=is_fighter,gamemode=adventure] slot_success -100000
-
-##If they have the item in their inventory still, it will store the slot id of the item in 
-execute as @a[tag=is_fighter,nbt={Inventory:[{tag:{Weapon:"knockback"}}]},gamemode=adventure] store result score @s slot_success run data get entity @s Inventory[{tag:{Weapon:"knockback"}}].Slot 1
-
-##Gets knockback weapon.
-execute as @a[tag=is_fighter,gamemode=adventure] at @s unless score @s slot_success = @s knockback_slot run function fighter:hotbar/check_get_knockback_weapon
-
-##Getting offhand item (if we need it)
-execute as @a[tag=is_fighter,gamemode=adventure,tag=has_offhand_item] at @s unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{Weapon:"offhand_item"}}]}] run function fighter:hotbar/get_offhand_item
-
-##Resetting score
-scoreboard players set @a[tag=is_fighter,gamemode=adventure] slot_success -100
-
-##Counting how many feathers the player has in their air jump slot
-execute as @a[tag=is_fighter,gamemode=adventure,scores={air_jump_slot=0},nbt={Inventory:[{Slot:0b,tag:{Air_Jump_Indicator:1b}}]}] at @s store result score @s slot_success run data get entity @s Inventory[{Slot:0b}].Count 1
-execute as @a[tag=is_fighter,gamemode=adventure,scores={air_jump_slot=1},nbt={Inventory:[{Slot:1b,tag:{Air_Jump_Indicator:1b}}]}] at @s store result score @s slot_success run data get entity @s Inventory[{Slot:1b}].Count 1
-execute as @a[tag=is_fighter,gamemode=adventure,scores={air_jump_slot=2},nbt={Inventory:[{Slot:2b,tag:{Air_Jump_Indicator:1b}}]}] at @s store result score @s slot_success run data get entity @s Inventory[{Slot:2b}].Count 1
-execute as @a[tag=is_fighter,gamemode=adventure,scores={air_jump_slot=3},nbt={Inventory:[{Slot:3b,tag:{Air_Jump_Indicator:1b}}]}] at @s store result score @s slot_success run data get entity @s Inventory[{Slot:3b}].Count 1
-execute as @a[tag=is_fighter,gamemode=adventure,scores={air_jump_slot=4},nbt={Inventory:[{Slot:4b,tag:{Air_Jump_Indicator:1b}}]}] at @s store result score @s slot_success run data get entity @s Inventory[{Slot:4b}].Count 1
-execute as @a[tag=is_fighter,gamemode=adventure,scores={air_jump_slot=5},nbt={Inventory:[{Slot:5b,tag:{Air_Jump_Indicator:1b}}]}] at @s store result score @s slot_success run data get entity @s Inventory[{Slot:5b}].Count 1
-execute as @a[tag=is_fighter,gamemode=adventure,scores={air_jump_slot=6},nbt={Inventory:[{Slot:6b,tag:{Air_Jump_Indicator:1b}}]}] at @s store result score @s slot_success run data get entity @s Inventory[{Slot:6b}].Count 1
-execute as @a[tag=is_fighter,gamemode=adventure,scores={air_jump_slot=7},nbt={Inventory:[{Slot:7b,tag:{Air_Jump_Indicator:1b}}]}] at @s store result score @s slot_success run data get entity @s Inventory[{Slot:7b}].Count 1
-execute as @a[tag=is_fighter,gamemode=adventure,scores={air_jump_slot=8},nbt={Inventory:[{Slot:8b,tag:{Air_Jump_Indicator:1b}}]}] at @s store result score @s slot_success run data get entity @s Inventory[{Slot:8b}].Count 1
-execute as @a[tag=is_fighter,gamemode=adventure,nbt={Inventory:[{tag:{No_Jump_Indicator:1b,Air_Jump_Indicator:1b}}]}] at @s run scoreboard players remove @s slot_success 1
-
-
-##Gets air jump indicator.
-execute as @a[tag=is_fighter,gamemode=adventure] at @s unless score @s slot_success = @s extra_jumps run function fighter:hotbar/check_get_air_jump_indicator
-
-
-
 ##Action bar titles
 
-
-
-##If player is on ground and ability is ready and damage is under 50% + has default kb and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=0,ability_state=0,damage_percent=..49},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s if score @s knockback = @s base_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#7a0006","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#7a0006","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"white"},{"text":"%","color":"white"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"green"},{"text":"(","bold":true,"color":"dark_green"},{"text":"Ready","color":"aqua"},{"text":")","bold":true,"color":"dark_green"}]
-
-##If player is on ground and ability is ready and damage is above 50% + has default kb and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=0,ability_state=0,damage_percent=50..},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s if score @s knockback = @s base_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#7a0006","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#7a0006","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"red"},{"text":"%","color":"red"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"green"},{"text":"(","bold":true,"color":"dark_green"},{"text":"Ready","color":"aqua"},{"text":")","bold":true,"color":"dark_green"}]
-
-##If player is on ground and ability is in progress and damage is under 50% + has default kb and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=1..,ability_state=1,damage_percent=..49},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s if score @s knockback = @s base_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#7a0006","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#7a0006","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"white"},{"text":"%","color":"white"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"green"},{"text":"(","bold":true,"color":"dark_green"},{"score":{"objective":"ability_display","name":"@s"},"color":"aqua"},{"text":")","bold":true,"color":"dark_green"}]
-
-##If player is on ground and ability is in progress and damage is above 50% + has default kb and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=1..,ability_state=1,damage_percent=50..},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s if score @s knockback = @s base_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#7a0006","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#7a0006","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"red"},{"text":"%","color":"red"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"green"},{"text":"(","bold":true,"color":"dark_green"},{"score":{"objective":"ability_display","name":"@s"},"color":"aqua"},{"text":")","bold":true,"color":"dark_green"}]
-
-
-##If player is on ground and ability is not ready  and damage is under 50% + has default kb and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=1..,ability_state=2,damage_percent=..49},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s if score @s knockback = @s base_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#7a0006","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#7a0006","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"white"},{"text":"%","color":"white"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"red"},{"text":"(","bold":true,"color":"dark_red"},{"score":{"objective":"ability_display","name":"@s"},"color":"aqua"},{"text":")","bold":true,"color":"dark_red"}]
-
-##If player is on ground and ability is not ready  and damage is above 50% + has default kb and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=1..,ability_state=2,damage_percent=50..},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s if score @s knockback = @s base_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#7a0006","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#7a0006","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"red"},{"text":"%","color":"red"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"red"},{"text":"(","bold":true,"color":"dark_red"},{"score":{"objective":"ability_display","name":"@s"},"color":"aqua"},{"text":")","bold":true,"color":"dark_red"}]
-
-
-
-
-##If player is on ground and ability is ready and damage is under 50% + has kb that isn't base or max and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=0,ability_state=0,damage_percent=..49},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s unless score @s knockback = @s base_knockback unless score @s knockback = @s max_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#0024ff","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#0024ff","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"white"},{"text":"%","color":"white"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"green"},{"text":"(","bold":true,"color":"dark_green"},{"text":"Ready","color":"aqua"},{"text":")","bold":true,"color":"dark_green"}]
-
-##If player is on ground and ability is ready and damage is above 50% + has kb that isn't base or max and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=0,ability_state=0,damage_percent=50..},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s unless score @s knockback = @s base_knockback unless score @s knockback = @s max_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#0024ff","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#0024ff","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"red"},{"text":"%","color":"red"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"green"},{"text":"(","bold":true,"color":"dark_green"},{"text":"Ready","color":"aqua"},{"text":")","bold":true,"color":"dark_green"}]
-
-##If player is on ground and ability is in progress and damage is under 50% + has kb that isn't base or max and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=1..,ability_state=1,damage_percent=..49},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s unless score @s knockback = @s base_knockback unless score @s knockback = @s max_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#0024ff","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#0024ff","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"white"},{"text":"%","color":"white"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"green"},{"text":"(","bold":true,"color":"dark_green"},{"score":{"objective":"ability_display","name":"@s"},"color":"aqua"},{"text":")","bold":true,"color":"dark_green"}]
-
-##If player is on ground and ability is in progress and damage is above 50% + has kb that isn't base or max and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=1..,ability_state=1,damage_percent=50..},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s unless score @s knockback = @s base_knockback unless score @s knockback = @s max_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#0024ff","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#0024ff","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"red"},{"text":"%","color":"red"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"green"},{"text":"(","bold":true,"color":"dark_green"},{"score":{"objective":"ability_display","name":"@s"},"color":"aqua"},{"text":")","bold":true,"color":"dark_green"}]
-
-
-##If player is on ground and ability is not ready and damage is under 50% + has kb that isn't base or max and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=1..,ability_state=2,damage_percent=..49},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s unless score @s knockback = @s base_knockback unless score @s knockback = @s max_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#0024ff","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#0024ff","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"white"},{"text":"%","color":"white"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"red"},{"text":"(","bold":true,"color":"dark_red"},{"score":{"objective":"ability_display","name":"@s"},"color":"aqua"},{"text":")","bold":true,"color":"dark_red"}]
-
-##If player is on ground and ability is not ready  and damage is above 50% + has kb that isn't base or max and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=1..,ability_state=2,damage_percent=50..},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s unless score @s knockback = @s base_knockback unless score @s knockback = @s max_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#0024ff","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#0024ff","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"red"},{"text":"%","color":"red"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"red"},{"text":"(","bold":true,"color":"dark_red"},{"score":{"objective":"ability_display","name":"@s"},"color":"aqua"},{"text":")","bold":true,"color":"dark_red"}]
-
-
-
-
-##If player is on ground and ability is ready and damage is under 50% + has max kb and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=0,ability_state=0,damage_percent=..49},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s if score @s knockback = @s max_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#1eff00","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#1eff00","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"white"},{"text":"%","color":"white"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"green"},{"text":"(","bold":true,"color":"dark_green"},{"text":"Ready","color":"aqua"},{"text":")","bold":true,"color":"dark_green"}]
-
-##If player is on ground and ability is ready and damage is above 50% + has max kb and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=0,ability_state=0,damage_percent=50..},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s if score @s knockback = @s max_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#1eff00","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#1eff00","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"red"},{"text":"%","color":"red"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"green"},{"text":"(","bold":true,"color":"dark_green"},{"text":"Ready","color":"aqua"},{"text":")","bold":true,"color":"dark_green"}]
-
-##If player is on ground and ability is in progress and damage is under 50% + has max kb and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=1..,ability_state=1,damage_percent=..49},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s if score @s knockback = @s max_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#1eff00","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#1eff00","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"white"},{"text":"%","color":"white"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"green"},{"text":"(","bold":true,"color":"dark_green"},{"score":{"objective":"ability_display","name":"@s"},"color":"aqua"},{"text":")","bold":true,"color":"dark_green"}]
-
-##If player is on ground and ability is in progress and damage is above 50% + has max kb and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=1..,ability_state=1,damage_percent=50..},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s if score @s knockback = @s max_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#1eff00","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#1eff00","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"red"},{"text":"%","color":"red"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"green"},{"text":"(","bold":true,"color":"dark_green"},{"score":{"objective":"ability_display","name":"@s"},"color":"aqua"},{"text":")","bold":true,"color":"dark_green"}]
-
-
-##If player is on ground and ability is not ready and damage is under 50% + has max kb and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=1..,ability_state=2,damage_percent=..49},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s if score @s knockback = @s max_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#1eff00","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#1eff00","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"white"},{"text":"%","color":"white"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"red"},{"text":"(","bold":true,"color":"dark_red"},{"score":{"objective":"ability_display","name":"@s"},"color":"aqua"},{"text":")","bold":true,"color":"dark_red"}]
-
-##If player is on ground and ability is not ready  and damage is above 50% + has max kb and has no set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=1..,ability_state=2,damage_percent=50..},gamemode=adventure,tag=!action_bar_symbols,tag=!use_set_knockback] at @s if score @s knockback = @s max_knockback run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"knockback","name":"@s"},"color":"#1eff00","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#1eff00","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"red"},{"text":"%","color":"red"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"red"},{"text":"(","bold":true,"color":"dark_red"},{"score":{"objective":"ability_display","name":"@s"},"color":"aqua"},{"text":")","bold":true,"color":"dark_red"}]
-
-
-
-##If player is on ground and ability is ready and damage is under 50% and has a set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=0,ability_state=0,damage_percent=..49},gamemode=adventure,tag=!action_bar_symbols,tag=use_set_knockback] at @s run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"set_knockback","name":"@s"},"color":"#ffff00","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#ffff00","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"white"},{"text":"%","color":"white"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"green"},{"text":"(","bold":true,"color":"dark_green"},{"text":"Ready","color":"aqua"},{"text":")","bold":true,"color":"dark_green"}]
-
-##If player is on ground and ability is ready and damage is above 50% and has a set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=0,ability_state=0,damage_percent=50..},gamemode=adventure,tag=!action_bar_symbols,tag=use_set_knockback] at @s run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"set_knockback","name":"@s"},"color":"#ffff00","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#ffff00","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"red"},{"text":"%","color":"red"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"green"},{"text":"(","bold":true,"color":"dark_green"},{"text":"Ready","color":"aqua"},{"text":")","bold":true,"color":"dark_green"}]
-
-##If player is on ground and ability is in progress and damage is under 50% and has a set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=1..,ability_state=1,damage_percent=..49},gamemode=adventure,tag=!action_bar_symbols,tag=use_set_knockback] at @s run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"set_knockback","name":"@s"},"color":"#ffff00","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#ffff00","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"white"},{"text":"%","color":"white"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"green"},{"text":"(","bold":true,"color":"dark_green"},{"score":{"objective":"ability_display","name":"@s"},"color":"aqua"},{"text":")","bold":true,"color":"dark_green"}]
-
-##If player is on ground and ability is in progress and damage is above 50% and has a set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=1..,ability_state=1,damage_percent=50..},gamemode=adventure,tag=!action_bar_symbols,tag=use_set_knockback] at @s run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"set_knockback","name":"@s"},"color":"#ffff00","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#ffff00","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"red"},{"text":"%","color":"red"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"green"},{"text":"(","bold":true,"color":"dark_green"},{"score":{"objective":"ability_display","name":"@s"},"color":"aqua"},{"text":")","bold":true,"color":"dark_green"}]
-
-
-##If player is on ground and ability is not ready  and damage is under 50% and has a set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=1..,ability_state=2,damage_percent=..49},gamemode=adventure,tag=!action_bar_symbols,tag=use_set_knockback] at @s run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"set_knockback","name":"@s"},"color":"#ffff00","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#ffff00","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"white"},{"text":"%","color":"white"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"red"},{"text":"(","bold":true,"color":"dark_red"},{"score":{"objective":"ability_display","name":"@s"},"color":"aqua"},{"text":")","bold":true,"color":"dark_red"}]
-
-##If player is on ground and ability is not ready  and damage is above 50% and has a set kb
-execute as @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={ability_timer=1..,ability_state=2,damage_percent=50..},gamemode=adventure,tag=!action_bar_symbols,tag=use_set_knockback] at @s run title @s actionbar [{"text":"Knockback: ","color":"#d9000a","bold":false},{"text":"(","bold":true,"color":"gray"},{"score":{"objective":"set_knockback","name":"@s"},"color":"#ffff00","bold":true},{"text":"/","color":"gray"},{"score":{"objective":"max_knockback","name":"@s"},"color":"#ffff00","bold":true},{"text":")","bold":true,"color":"gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Damage Taken: ","color":"gray"},{"text":"(","bold":true,"color":"dark_gray"},{"score":{"objective":"damage_percent","name":"@s"},"color":"red"},{"text":"%","color":"red"},{"text":")","bold":true,"color":"dark_gray"},{"text":" | ","color":"aqua","bold":true},{"text":"Ability: ","color":"red"},{"text":"(","bold":true,"color":"dark_red"},{"score":{"objective":"ability_display","name":"@s"},"color":"aqua"},{"text":")","bold":true,"color":"dark_red"}]
+execute if entity @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={damage_percent=..9},gamemode=adventure,tag=!action_bar_symbols] run function fighter:action_bar/0
+execute if entity @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={damage_percent=10..19},gamemode=adventure,tag=!action_bar_symbols] run function fighter:action_bar/1
+execute if entity @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={damage_percent=20..29},gamemode=adventure,tag=!action_bar_symbols] run function fighter:action_bar/2
+execute if entity @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={damage_percent=30..39},gamemode=adventure,tag=!action_bar_symbols] run function fighter:action_bar/3
+execute if entity @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={damage_percent=40..49},gamemode=adventure,tag=!action_bar_symbols] run function fighter:action_bar/4
+execute if entity @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={damage_percent=50..59},gamemode=adventure,tag=!action_bar_symbols] run function fighter:action_bar/5
+execute if entity @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={damage_percent=60..69},gamemode=adventure,tag=!action_bar_symbols] run function fighter:action_bar/6
+execute if entity @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={damage_percent=70..79},gamemode=adventure,tag=!action_bar_symbols] run function fighter:action_bar/7
+execute if entity @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={damage_percent=80..89},gamemode=adventure,tag=!action_bar_symbols] run function fighter:action_bar/8
+execute if entity @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={damage_percent=90..99},gamemode=adventure,tag=!action_bar_symbols] run function fighter:action_bar/9
+execute if entity @a[tag=is_fighter,tag=!slow_falling_until_landing,scores={damage_percent=100..},gamemode=adventure,tag=!action_bar_symbols] run function fighter:action_bar/10
 
 ##Actionbar symbol call
-execute if entity @a[tag=is_fighter,tag=action_bar_symbols] run function fighter:action_bar_symbols
+execute if entity @a[tag=is_fighter,tag=action_bar_symbols] run function fighter:action_bar/symbols/main
 
 ##Running a function if someone has a damage timer
 execute if entity @a[scores={damage_timer=1..},gamemode=adventure] run function fighter:damage/active_damage_timer
@@ -213,6 +100,10 @@ execute if entity @a[tag=is_fighter,scores={set_arrow_timer=1..},gamemode=advent
 execute if entity @a[tag=is_fighter,gamemode=adventure,scores={stun=1..}] run function fighter:stun/main
 
 
+##If player is fearful
+execute if entity @a[tag=is_fighter,gamemode=adventure,scores={fear=1..}] run function fighter:fear/main
+
+
 
 
 ##Random cooldown objectives function call (The pause random cooldown tag is for things like drakier's elytra and the tag should be removed within the fighter's main functions.)
@@ -224,6 +115,7 @@ execute if entity @a[tag=is_fighter,gamemode=adventure,scores={random_cooldown3=
 
 ##Shoot bow function
 execute as @a[scores={shoot_bow=1..},tag=is_fighter] at @s run function fighter:shoot_bow
+execute as @a[scores={shoot_crossbow=1..},tag=is_fighter] at @s run function fighter:shoot_crossbow
 
 ##Fighter specific function calls
 
@@ -231,6 +123,8 @@ execute as @a[scores={shoot_bow=1..},tag=is_fighter] at @s run function fighter:
 execute if entity @a[tag=is_fighter,scores={fighter=2}] run function fighter:skeleton/main
 ##Creeper grenade
 execute if entity @e[type=zombie,tag=creeper_grenade,scores={death_timer=..110}] run function fighter:creeper/active_grenade
+##If player is zombie
+execute if entity @a[tag=is_fighter,scores={fighter=1}] run function fighter:zombie/main
 ##If player is spider
 execute if entity @a[tag=is_fighter,scores={fighter=4}] run function fighter:spider/main
 ##If player is chicken
@@ -251,10 +145,16 @@ execute if entity @a[tag=is_fighter,scores={fighter=12}] run function fighter:me
 execute if entity @a[tag=is_fighter,scores={fighter=13}] run function fighter:blaze/main
 
 ##If player is slime
-execute if entity @a[tag=is_fighter,scores={fighter=14}] if entity @e[type=armor_stand,tag=slime_platform] run function fighter:slime/active_platform
+execute if entity @a[tag=is_fighter,scores={fighter=14}] run function fighter:slime/main
 
 ##If player is malice
 execute if entity @a[tag=is_fighter,scores={fighter=15}] run function fighter:malice/main
+
+##If player is arthor
+execute if entity @a[tag=is_fighter,scores={fighter=16}] run function fighter:arthor/main
+
+##If player is guardian
+execute if entity @a[tag=is_fighter,scores={fighter=17}] run function fighter:guardian/main
 
 ##Entity kills
 ##Killing arrows
@@ -263,6 +163,9 @@ kill @e[type=arrow,nbt={inGround:1b}]
 ##Killing tridents
 kill @e[type=trident,nbt={inGround:1b}]
 
+
+##If a player has max combo, display particle
+execute as @a[tag=is_fighter] at @s if score @s knockback = @s max_knockback run particle angry_villager ~ ~1.5 ~ 0.25 0.15 0.25 0.15 1 force @a[distance=0.001..]
 
 ##Resetting is_flying objectives
 scoreboard players set @a[scores={is_flying=1..}] is_flying 0
@@ -273,6 +176,7 @@ execute as @e[type=fishing_bobber,tag=!on_death_timer] at @s run function fighte
 
 ##If there is an active death animation
 execute if entity @e[type=armor_stand,tag=death_animation] run function cosmetic:death_animation/main
+
 
 ##Keeping track of death position.
 execute as @a[tag=is_fighter,gamemode=adventure] at @s store result score @s death_pos_0 run data get entity @s Pos[0] 100

@@ -1,6 +1,0 @@
-{ "type":"minecraft:generic", "pools" : 
-    [ { "rolls":1, "entries":
-        [ { "type": "minecraft:item", "functions":
-            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1}"},
-              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"You have ","color":"dark_gray","italic":false,"bold":false},{"score":{"objective":"stats_deaths","name":"@s"},"color":"gray","italic":false,"bold":true},{"text":" deaths.","color":"dark_gray","italic":false,"bold":false}] }], 
-              "name": "minecraft:netherite_block" } ] } ] }

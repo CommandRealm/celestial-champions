@@ -93,3 +93,12 @@ execute if entity @s[scores={fighter=14,costume=3}] run function fighter:slime/g
 
 ##Malice
 execute if entity @s[scores={fighter=15}] run function fighter:malice/get_combo_weapon_0
+
+##Arthor
+execute if entity @s[scores={fighter=16}] run function fighter:arthor/get_combo_weapon_0
+
+##Guardian
+execute if entity @s[scores={fighter=17,costume=0}] run function fighter:guardian/get_combo_weapon_0
+execute if entity @s[scores={fighter=17,costume=1}] run function fighter:guardian/get_combo_weapon_1
+execute if entity @s[scores={fighter=17,costume=2}] run function fighter:guardian/get_combo_weapon_2
+execute if entity @s[scores={fighter=17,costume=3}] run function fighter:guardian/get_combo_weapon_3

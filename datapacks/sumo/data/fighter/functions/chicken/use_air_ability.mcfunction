@@ -15,6 +15,10 @@ scoreboard players set @s ability_type 1
 ##Adding tags (used_ability is just so that it doesn't use yourself) (copy_id is to give the entity the damaged tag)
 tag @s add copy_id
 
+##Spiking players early.
+execute as @a[distance=..5,tag=is_fighter,gamemode=adventure,tag=!copy_id] at @s run function fighter:chicken/immediate_spike
+particle item egg ~ ~ ~ 2.5 2.5 2.5 0.1 100
+
 ##Summoning egg
 summon egg ~ ~-0.5 ~ {Motion:[0.0d,-1.0d,0.0d],Tags:["thrown_chicken_egg","needs_death_timer","on_death_timer","chicken_spike_egg","needs_copied_id"],Item:{id:"minecraft:egg",Count:1b,tag:{egg_type:"chicken"}}}
 
@@ -28,6 +32,8 @@ tag @e[type=egg,tag=needs_copied_id] remove needs_copied_id
 ##Death timer
 scoreboard players set @e[type=egg,tag=needs_death_timer] death_timer 80
 tag @e[type=egg,tag=needs_death_timer] remove needs_death_timer
+
+
 
 
 ##Removing tags

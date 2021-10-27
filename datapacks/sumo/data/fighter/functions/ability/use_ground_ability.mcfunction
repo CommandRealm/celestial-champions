@@ -17,3 +17,5 @@ execute if entity @s[scores={fighter=12}] run function fighter:melon_man/use_gro
 execute if entity @s[scores={fighter=13}] run function fighter:blaze/use_ground_ability
 execute if entity @s[scores={fighter=14}] run function fighter:slime/use_ground_ability
 execute if entity @s[scores={fighter=15}] run function fighter:malice/use_ground_ability
+execute if entity @s[scores={fighter=16}] run function fighter:arthor/use_ground_ability
+execute if entity @s[scores={fighter=17}] run function fighter:guardian/use_ground_ability

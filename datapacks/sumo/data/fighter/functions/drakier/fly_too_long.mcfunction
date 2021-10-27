@@ -6,6 +6,8 @@ playsound minecraft:item.shield.break master @a ~ ~ ~ 2 1
 ##Damaged
 function fighter:drakier/damaged
 
+scoreboard players set @s random_cooldown 300
+
 ##Xp set
 xp set @s 0 levels
 

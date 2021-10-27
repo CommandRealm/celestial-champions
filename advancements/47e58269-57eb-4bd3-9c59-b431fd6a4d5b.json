@@ -1,33 +1,21 @@
 {
+  "fighter:inventory_changed": {
+    "criteria": {
+      "requirement": "2021-10-14 22:09:17 -0700"
+    },
+    "done": true
+  },
   "advancements:custom/root": {
     "criteria": {
-      "requirement": "2021-02-15 13:27:03 -0800"
+      "requirement": "2021-10-14 21:57:53 -0700"
     },
     "done": true
   },
   "advancements:custom/tutorial": {
     "criteria": {
-      "impossible": "2021-02-15 13:27:09 -0800"
+      "impossible": "2021-10-14 22:09:03 -0700"
     },
     "done": true
   },
-  "advancements:custom/theo": {
-    "criteria": {
-      "impossible": "2021-02-15 13:29:08 -0800"
-    },
-    "done": true
-  },
-  "advancements:custom/play_game": {
-    "criteria": {
-      "impossible": "2021-02-15 13:29:08 -0800"
-    },
-    "done": true
-  },
-  "advancements:custom/competitive": {
-    "criteria": {
-      "impossible": "2021-02-15 13:29:08 -0800"
-    },
-    "done": true
-  },
-  "DataVersion": 2586
+  "DataVersion": 2730
 }

@@ -91,3 +91,12 @@ execute if entity @s[scores={fighter=15,costume=0..1}] run function fighter:mali
 execute if entity @s[scores={fighter=15,costume=2}] run function fighter:malice/get_knockback_weapon_2
 execute if entity @s[scores={fighter=15,costume=3}] run function fighter:malice/get_knockback_weapon_3
 execute if entity @s[scores={fighter=15,costume=4}] run function fighter:malice/get_knockback_weapon_4
+
+##Arthor
+execute if entity @s[scores={fighter=16}] run function fighter:arthor/get_knockback_weapon_0
+
+##Guardian
+execute if entity @s[scores={fighter=17,costume=0}] run function fighter:guardian/get_knockback_weapon_0
+execute if entity @s[scores={fighter=17,costume=1}] run function fighter:guardian/get_knockback_weapon_1
+execute if entity @s[scores={fighter=17,costume=2}] run function fighter:guardian/get_knockback_weapon_2
+execute if entity @s[scores={fighter=17,costume=3}] run function fighter:guardian/get_knockback_weapon_3

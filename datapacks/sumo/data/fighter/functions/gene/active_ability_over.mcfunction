@@ -3,10 +3,10 @@
 ##An ability type score of 0 means it was a ground ability. 1 means air ability.
 
 ##Set up cooldown
-scoreboard players set @s[scores={ability_type=0}] ability_timer 400
+scoreboard players set @s[scores={ability_type=0}] ability_timer 300
 
 ##calling summon block function
-execute if entity @s[scores={ability_type=1}] run function fighter:gene/summon_block
+execute if entity @s[scores={ability_type=1}] positioned ~ ~-1.5 ~ run function fighter:gene/summon_block
 
 ##Set up cooldown
 scoreboard players set @s[scores={ability_type=1}] ability_timer 300

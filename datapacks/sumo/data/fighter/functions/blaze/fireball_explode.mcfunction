@@ -1,7 +1,7 @@
 ##Called when a fireball is supposed to explode.
 
 ##Creeper
-summon creeper ~ ~ ~ {Fuse:0s,Invulnerable:1b,Tags:["needs_copied_id"],ExplosionRadius:5}
+summon creeper ~ ~0.5 ~ {Fuse:0s,Invulnerable:1b,Tags:["needs_copied_id"],ExplosionRadius:5}
 
 
 ##Id

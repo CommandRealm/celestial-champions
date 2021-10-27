@@ -34,6 +34,9 @@ scoreboard players set @s arrow_timer -1000000
 ##Resetting stun timer
 scoreboard players reset @s stun
 
+##Resetting fear timer
+scoreboard players reset @s fear
+
 
 ##Clearing Stun effect
 effect clear @s slowness
@@ -56,6 +59,7 @@ scoreboard players reset @s kill_streak
 
 ##Shoot bow obj
 scoreboard players reset @s shoot_bow
+scoreboard players reset @s shoot_crossbow
 
 ##Remove Tags
 tag @s remove use_set_knockback
@@ -67,6 +71,11 @@ tag @s remove pause_needs_costume
 ##Reset random stats
 scoreboard players reset @s random_stat
 scoreboard players reset @s random_stat2
+scoreboard players reset @s random_stat3
+
+scoreboard players set @s[scores={fighter=16}] random_stat 0
+scoreboard players set @s[scores={fighter=8}] random_stat2 130
+
 
 ##Reset trident obj
 scoreboard players reset @s throw_trident
@@ -153,6 +162,14 @@ advancement revoke @a only advancements:damage/take_gray_team_friendly_fire
 advancement grant @a only advancements:damage/give_gray_team_friendly_fire
 advancement revoke @a only advancements:damage/give_gray_team_friendly_fire
 
+advancement revoke @s only fighter:arthor/fire_arrow_damage
+advancement revoke @s only fighter:arthor/earth_arrow_damage
+advancement revoke @s only fighter:arthor/darkness_arrow_damage
+
+advancement revoke @s only advancements:damage/hurt_entity_check
+advancement revoke @s only advancements:damage/hurt_player_check
+
+
 ##poisonous potato resets
 tag @s remove has_potato
 tag @s remove has_had_potato
@@ -167,5 +184,11 @@ scoreboard players reset @s eat_cookie
 ##healing obj reset
 scoreboard players reset @s times_heal
 
+##Removing fear level
+tag @s remove fear_level_1
+
 ##adv tags
 tag @s remove near_void
+
+##drop red dye
+scoreboard players reset @s drop_red_dye

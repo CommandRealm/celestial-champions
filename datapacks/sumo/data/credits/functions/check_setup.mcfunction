@@ -4,6 +4,6 @@ summon minecraft:armor_stand -92 76.5 5 {Tags:["credits","check","show_details"]
 
 ##data merge entity @e[tag=check,limit=1] {Pose:{RightArm:[-120.0f,40.0f,55.0f],LeftArm:[-70.0f,-50.0f,0.0f]}}
 
-replaceitem entity @e[tag=check] armor.feet leather_boots{display:{color:16777215}}
-replaceitem entity @e[tag=check] armor.chest leather_chestplate{display:{color:7241373}}
-replaceitem entity @e[tag=check] armor.legs leather_leggings{display:{color:12563846}}
+item replace entity @e[tag=check] armor.feet with leather_boots{display:{color:16777215}}
+item replace entity @e[tag=check] armor.chest with leather_chestplate{display:{color:7241373}}
+item replace entity @e[tag=check] armor.legs with leather_leggings{display:{color:12563846}}

@@ -8,13 +8,15 @@ execute if block ~ ~-0.1 ~ air if block ~ ~-1.1 ~ air run scoreboard players set
 kill @e[type=item,nbt={Item:{tag:{Ability:1b}}}]
 
 ##Clearing offhand if necessary
-replaceitem entity @s[nbt={Inventory:[{Slot:-106b,tag:{Ability:1b}}]}] weapon.offhand air
+item replace entity @s[nbt={Inventory:[{Slot:-106b,tag:{Ability:1b}}]}] weapon.offhand with air
 
 ##Score reset
 scoreboard players reset @s drop_ability
 
 ##Use ground ability
-execute if entity @s[scores={use_ability_type=0}] run function fighter:ability/use_ground_ability
+execute unless score @s fear matches 1.. if entity @s[scores={use_ability_type=0}] run function fighter:ability/use_ground_ability
 
 ##Use air ability
-execute if entity @s[scores={use_ability_type=1}] run function fighter:ability/use_air_ability
+execute unless score @s fear matches 1.. if entity @s[scores={use_ability_type=1}] run function fighter:ability/use_air_ability
+
+execute if score @s fear matches 1.. run playsound minecraft:entity.wither.shoot master @a ~ ~ ~ 0.5 0.75

@@ -23,12 +23,19 @@ clear @s leather_leggings{costume:1b}
 clear @s leather_boots{costume:1b}
 clear @s player_head{costume:1b}
 
+##Setting kb
+scoreboard players set @s set_knockback 3
+scoreboard players set @s knockback 3
+clear @s #minecraft:knockback_weapon{Weapon:"knockback"}
+tag @s add use_set_knockback
+
+
 ##New boots
-replaceitem entity @s armor.feet iron_boots{AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:0,UUID:[I; 999, 999, 999, 999]}],Unbreakable:1b,HideFlags:63,display:{Name:'[{"text":"Callidus\' Feet","italic":false,"color":"#d1ae5c","bold":true}]'},costume:1b}
+item replace entity @s armor.feet with iron_boots{AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:0,UUID:[I; 999, 999, 999, 999]}],Unbreakable:1b,HideFlags:63,display:{Name:'[{"text":"Callidus\' Feet","italic":false,"color":"#d1ae5c","bold":true}]'},costume:1b}
 
 
 ##Tellraw
-tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"aqua"},{"text":"\nGround Ability: ","color":"gray","bold":true},{"text":"Stealthy Dash\n","color":"white"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Gives some invisibility and Speed 3 for 4 seconds."}},{"text":"--------------------------","color":"aqua"}]
+tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"aqua"},{"text":"\nGround Ability: ","color":"gray","bold":true},{"text":"Stealthy Dash\n","color":"white"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Gives some invisibility, Speed 3, sets knockback to 3 for 4 seconds."}},{"text":"--------------------------","color":"aqua"}]
 
 
 ##Sounds

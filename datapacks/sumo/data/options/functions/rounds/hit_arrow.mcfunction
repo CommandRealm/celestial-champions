@@ -1,2 +1,0 @@
-execute if entity @e[distance=..0.05,type=area_effect_cloud,tag=check_sign,tag=remove,tag=check_rounds] run scoreboard players remove $rounds_to_win settings 2
-execute if entity @e[distance=..0.05,type=area_effect_cloud,tag=check_sign,tag=check_rounds] run function options:rounds/add_rounds

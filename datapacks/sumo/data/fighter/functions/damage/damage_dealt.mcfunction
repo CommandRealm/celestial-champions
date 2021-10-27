@@ -25,8 +25,6 @@ advancement revoke @s only advancements:damage/damage_slow_falling_player
 advancement revoke @s only advancements:damage/direct_damage
 advancement revoke @s only advancements:damage/invalid_kb_hit
 
-##Specific fighter functions
-execute if entity @s[scores={fighter=11}] run function fighter:gene/deal_damage
 
 
 ##Removing advancements

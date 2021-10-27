@@ -1,6 +1,0 @@
-{ "type":"minecraft:generic", "pools" : 
-    [ { "rolls":1, "entries":
-        [ { "type": "minecraft:item", "functions":
-            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1}"},
-              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"You have won ","color":"dark_green","italic":false,"bold":false},{"score":{"objective":"stats_d_wins","name":"@s"},"color":"green","italic":false,"bold":true},{"text":" duels.","color":"dark_green","italic":false,"bold":false}] }], 
-              "name": "minecraft:emerald_block" } ] } ] }

@@ -11,7 +11,7 @@
         },
         "frame": "challenge",
         "show_toast": true,
-        "announce_to_chat": "false",
+        "announce_to_chat": false,
         "description": {
             "text": "Complete this row of advancements to unlock.",
             "color": "dark_green",

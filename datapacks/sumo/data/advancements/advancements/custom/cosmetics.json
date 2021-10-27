@@ -11,9 +11,9 @@
         },
         "frame": "task",
         "show_toast": true,
-        "announce_to_chat": "false",
+        "announce_to_chat": false,
         "description": {
-            "text": "Equip a variant, death animation, and victory celebration at the same time.",
+            "text": "Equip a variant, death pose, and victory celebration at the same time.",
             "color": "#fac84b",
             "bold": false
         }

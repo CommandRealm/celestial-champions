@@ -26,10 +26,10 @@ scoreboard players set @s times_hit 0
 scoreboard players set @s set_extra_jumps 3
 
 ##Ticks they will by default have their air jumps for
-scoreboard players set @s set_e_jump_time 10
+scoreboard players set @s set_e_jump_time 20
 
 ##Levitation amplifier for extra jumps
-scoreboard players set @s extra_jump_force 18
+scoreboard players set @s extra_jump_force 9
 
 ##Jump boost amplifier
 scoreboard players set @s jump_force 1

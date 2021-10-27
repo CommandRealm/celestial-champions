@@ -45,6 +45,7 @@ execute as @e[type=arrow] at @s if score @s calculate = @p[tag=shot_bow] calcula
 execute if entity @s[scores={fighter=2}] run tag @e[type=arrow,tag=temporary_match_0,tag=temporary_match_1,tag=temporary_match_2,tag=temporary_match_3] add skeleton_arrow
 execute if entity @s[scores={fighter=8}] run function fighter:drakier/shoot_bow
 execute if entity @s[scores={fighter=15}] run function fighter:malice/shoot_bow
+execute if entity @s[scores={fighter=13}] run tag @e[type=arrow,tag=temporary_match_0,tag=temporary_match_1,tag=temporary_match_2,tag=temporary_match_3] add blaze_arrow
 
 ##Removing tags
 tag @s remove shot_bow

@@ -17,5 +17,7 @@ execute if entity @s[scores={fighter=12}] run function fighter:melon_man/use_air
 execute if entity @s[scores={fighter=13}] run function fighter:blaze/use_air_ability
 execute if entity @s[scores={fighter=14}] run function fighter:slime/use_air_ability
 execute if entity @s[scores={fighter=15}] run function fighter:malice/use_air_ability
+execute if entity @s[scores={fighter=16}] run function fighter:arthor/use_air_ability
+execute if entity @s[scores={fighter=17}] run function fighter:guardian/use_air_ability
 
 execute if entity @s[scores={fighter=8},nbt={SelectedItem:{id:"minecraft:firework_rocket"}}] run function fighter:drakier/get_firework

@@ -1,3 +1,3 @@
 ##Called to give drakier his elytra
-replaceitem entity @s[scores={fighter=8}] armor.chest elytra{AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:0,UUID:[I; 999, 999, 999, 999]}],Unbreakable:1b,HideFlags:63,display:{Name:'[{"text":"Drakier\'s Elytra","italic":false,"color":"#cc00fa","bold":true}]',color:3355443},costume:1b}
+item replace entity @s[scores={fighter=8}] armor.chest with elytra{AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:0,UUID:[I; 999, 999, 999, 999]}],Unbreakable:1b,HideFlags:63,display:{Name:'[{"text":"Drakier\'s Elytra","italic":false,"color":"#cc00fa","bold":true}]',color:3355443},costume:1b}
 function fighter:hotbar/drakier_get_air_jump_indicator

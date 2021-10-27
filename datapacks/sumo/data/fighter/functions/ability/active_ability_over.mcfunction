@@ -18,6 +18,8 @@ execute if entity @s[scores={fighter=12}] run function fighter:melon_man/active_
 execute if entity @s[scores={fighter=13}] run function fighter:blaze/active_ability_over
 execute if entity @s[scores={fighter=14}] run function fighter:slime/active_ability_over
 execute if entity @s[scores={fighter=15}] run function fighter:malice/active_ability_over
+execute if entity @s[scores={fighter=16}] run function fighter:arthor/active_ability_over
+execute if entity @s[scores={fighter=17}] run function fighter:guardian/active_ability_over
 
 execute if entity @s[tag=reset_timer_when_ability_over] run scoreboard players set @s ability_timer 1
 tag @s remove reset_timer_when_ability_over

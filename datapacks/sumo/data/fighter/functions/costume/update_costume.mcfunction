@@ -104,3 +104,14 @@ execute if entity @s[scores={fighter=15,costume=1}] run function fighter:malice/
 execute if entity @s[scores={fighter=15,costume=2}] run function fighter:malice/costume_2
 execute if entity @s[scores={fighter=15,costume=3}] run function fighter:malice/costume_3
 execute if entity @s[scores={fighter=15,costume=4}] run function fighter:malice/costume_4
+
+##Arthor
+execute if entity @s[scores={fighter=16,costume=0}] run function fighter:arthor/costume
+execute if entity @s[scores={fighter=16,costume=1}] run function fighter:arthor/costume_1
+execute if entity @s[scores={fighter=16,costume=2}] run function fighter:arthor/costume_2
+
+##Guardian
+execute if entity @s[scores={fighter=17,costume=0}] run function fighter:guardian/costume
+execute if entity @s[scores={fighter=17,costume=1}] run function fighter:guardian/costume_1
+execute if entity @s[scores={fighter=17,costume=2}] run function fighter:guardian/costume_2
+execute if entity @s[scores={fighter=17,costume=3}] run function fighter:guardian/costume_3

@@ -17,7 +17,7 @@ scoreboard players set @s base_kb_decimal 0
 scoreboard players set @s max_knockback 5
 
 ##Times hit before air jumps are as weak as they can be
-scoreboard players set @s max_damage 20
+scoreboard players set @s max_damage 18
 
 ##Should always start at 0
 scoreboard players set @s times_hit 0

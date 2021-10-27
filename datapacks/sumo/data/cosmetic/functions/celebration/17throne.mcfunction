@@ -2,7 +2,7 @@
 
 # Rotate and Helmet
 execute if score $end cooldown matches 99 as @a[tag=winner,scores={celebration=17}] at @s run tp @s ~ ~ ~ facing 0 77 86
-execute if score $end cooldown matches 99 as @a[tag=winner,scores={celebration=17}] at @s run replaceitem entity @s armor.head minecraft:golden_helmet
+execute if score $end cooldown matches 99 as @a[tag=winner,scores={celebration=17}] at @s run item replace entity @s armor.head with minecraft:golden_helmet
 
 # Layer 0 and 1
 execute if score $end cooldown matches 97 run fill 1 75 86 1 76 86 gold_block
@@ -29,4 +29,4 @@ execute if score $end cooldown matches 73 run setblock -1 78 86 minecraft:polish
 execute if score $end cooldown matches 71 run playsound minecraft:ui.toast.challenge_complete master @a 0 77 86 20 0
 # Clear
 execute if score $end cooldown matches 1 run fill 1 75 86 -1 79 87 air
-execute if score $end cooldown matches 1 as @a[tag=winner,scores={celebration=17}] at @s run replaceitem entity @s armor.head air
+execute if score $end cooldown matches 1 as @a[tag=winner,scores={celebration=17}] at @s run item replace entity @s armor.head with air

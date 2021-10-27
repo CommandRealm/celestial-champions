@@ -16,8 +16,6 @@ tag @s add copy_id
 
 ##summon zombies
 execute anchored eyes positioned ~ ~4.5 ~ run summon zombie ^ ^ ^2 {Tags:["blaze_fireball","needs_death_timer","on_death_timer","needs_copied_id"],Invulnerable:1b,IsBaby:1b,ActiveEffects:[{Id:14b,Amplifier:1,Duration:100000,ShowParticles:0b}],Silent:1b,ArmorItems:[{},{},{},{id:"minecraft:fire_charge",Count:1b}],NoAI:0b,Attributes:[{Name:"generic.attack_damage",Base:0}]}
-execute anchored eyes positioned ~ ~4.5 ~ run summon zombie ^3.25 ^ ^1 {Tags:["blaze_fireball","needs_death_timer","on_death_timer","needs_copied_id"],Invulnerable:1b,IsBaby:1b,ActiveEffects:[{Id:14b,Amplifier:1,Duration:100000,ShowParticles:0b}],Silent:1b,ArmorItems:[{},{},{},{id:"minecraft:fire_charge",Count:1b}],NoAI:0b,Attributes:[{Name:"generic.attack_damage",Base:0}]}
-execute anchored eyes positioned ~ ~4.5 ~ run summon zombie ^-3.25 ^ ^0 {Tags:["blaze_fireball","needs_death_timer","on_death_timer","needs_copied_id"],Invulnerable:1b,IsBaby:1b,ActiveEffects:[{Id:14b,Amplifier:1,Duration:100000,ShowParticles:0b}],Silent:1,ArmorItems:[{},{},{},{id:"minecraft:fire_charge",Count:1b}],NoAI:0b,Attributes:[{Name:"generic.attack_damage",Base:0}]}
 
 ##Tp so they're facing us
 execute as @e[type=zombie,tag=needs_copied_id] at @s run tp @s ~ ~ ~ facing entity @p[tag=copy_id]
@@ -37,7 +35,7 @@ tag @e[type=zombie,tag=needs_copied_id] remove needs_copied_id
 tag @s remove copy_id
 
 ##Tellraw
-tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"aqua"},{"text":"\nGround Ability: ","color":"gray","bold":true},{"text":"Homing Heat\n","color":"white"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Fire 3 explosives that track the nearest player."}},{"text":"--------------------------","color":"aqua"}]
+tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"aqua"},{"text":"\nGround Ability: ","color":"gray","bold":true},{"text":"Homing Heat\n","color":"white"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Fire an explosive that track the nearest player."}},{"text":"--------------------------","color":"aqua"}]
 
 
 ##Sounds

@@ -65,6 +65,16 @@ execute if entity @s[scores={damage_percent=50..}] run function fighter:extra_ju
 ##Setting cooldown so you can't immediately jump again
 scoreboard players operation @s extra_jump_cool = @s extra_jump_time
 
+item replace entity @s[scores={air_jump_slot=0}] hotbar.0 with air
+item replace entity @s[scores={air_jump_slot=1}] hotbar.1 with air
+item replace entity @s[scores={air_jump_slot=2}] hotbar.2 with air
+item replace entity @s[scores={air_jump_slot=3}] hotbar.3 with air
+item replace entity @s[scores={air_jump_slot=4}] hotbar.4 with air
+item replace entity @s[scores={air_jump_slot=5}] hotbar.5 with air
+item replace entity @s[scores={air_jump_slot=6}] hotbar.6 with air
+item replace entity @s[scores={air_jump_slot=7}] hotbar.7 with air
+item replace entity @s[scores={air_jump_slot=8}] hotbar.8 with air
+
 
 ##Particles
 particle cloud ~ ~-0.75 ~ 0.25 0.2 0.25 0.05 50
@@ -79,6 +89,9 @@ playsound minecraft:entity.player.small_fall master @s[scores={damage_percent=80
 playsound minecraft:entity.player.small_fall master @s[scores={damage_percent=90..99}] ~ ~ ~ 0.45 0.75
 playsound minecraft:entity.player.small_fall master @s[scores={damage_percent=100}] ~ ~ ~ 0.45 0.5
 playsound minecraft:block.bone_block.break master @s ~ ~ ~ 0.35 0.5
+
+##If we're arthor, reset our cooldown
+scoreboard players reset @s[scores={fighter=16}] random_cooldown2
 
 ##Reset if we're falling
 execute if entity @s[tag=slow_falling_until_landing] run function game:landed

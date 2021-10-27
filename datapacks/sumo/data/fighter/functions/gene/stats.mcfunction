@@ -29,7 +29,7 @@ scoreboard players set @s set_extra_jumps 2
 scoreboard players set @s set_e_jump_time 10
 
 ##Levitation amplifier for extra jumps
-scoreboard players set @s extra_jump_force 19
+scoreboard players set @s extra_jump_force 12
 
 ##Jump boost amplifier
 scoreboard players set @s jump_force 2

@@ -21,6 +21,7 @@ execute as @p[tag=temporary_tag] at @s store result score @s pos_x run data get 
 scoreboard players operation @s pos_x -= @e[tag=temporary_tag,limit=1,sort=nearest] pos_x
 execute store result score @s pos_y run data get entity @s Pos[1] 100
 execute as @p[tag=temporary_tag] at @s store result score @s pos_y run data get entity @s Pos[1] 101
+scoreboard players add @p[tag=temporary_tag] pos_y 50
 scoreboard players operation @s pos_y -= @e[tag=temporary_tag,limit=1,sort=nearest] pos_y
 execute store result score @s pos_z run data get entity @s Pos[2] 100
 execute as @p[tag=temporary_tag] at @s store result score @s pos_z run data get entity @s Pos[2] 100
@@ -40,9 +41,9 @@ execute if score @s pos_z matches ..-1000 run scoreboard players set @s pos_z -9
 execute unless entity @p[tag=temporary_tag] run function fighter:blaze/fireball_no_target
 
 ##Applying motion
-execute at @s if block ^ ^ ^-1 air store result entity @s Motion[0] double -0.00085 run scoreboard players get @s pos_x
-execute at @s if block ^ ^ ^-1 air store result entity @s Motion[1] double -0.00085 run scoreboard players get @s pos_y
-execute at @s if block ^ ^ ^-1 air store result entity @s Motion[2] double -0.00085 run scoreboard players get @s pos_z
+execute at @s if block ^ ^ ^-1 air store result entity @s Motion[0] double -0.00120 run scoreboard players get @s pos_x
+execute at @s if block ^ ^ ^-1 air store result entity @s Motion[1] double -0.00120 run scoreboard players get @s pos_y
+execute at @s if block ^ ^ ^-1 air store result entity @s Motion[2] double -0.00120 run scoreboard players get @s pos_z
 
 
 

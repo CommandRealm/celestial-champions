@@ -54,6 +54,11 @@ execute if entity @s[scores={fighter=15}] unless entity @s[tag=unlock_malice_2] 
 execute if entity @s[scores={fighter=15}] unless entity @s[tag=unlock_malice_3] run summon area_effect_cloud 0 0 0 {Tags:["cosmetic_unlock","malice_3"],Duration:1}
 execute if entity @s[scores={fighter=15}] unless entity @s[tag=unlock_malice_4] run summon area_effect_cloud 0 0 0 {Tags:["cosmetic_unlock","malice_4"],Duration:1}
 
+execute if entity @s[scores={fighter=17}] unless entity @s[tag=unlock_guardian_2] run summon area_effect_cloud 0 0 0 {Tags:["cosmetic_unlock","guardian_2"],Duration:1}
+execute if entity @s[scores={fighter=17}] unless entity @s[tag=unlock_guardian_3] run summon area_effect_cloud 0 0 0 {Tags:["cosmetic_unlock","guardian_3"],Duration:1}
+
+execute if entity @s[scores={fighter=16}] unless entity @s[tag=unlock_arthor_2] run summon area_effect_cloud 0 0 0 {Tags:["cosmetic_unlock","arthor_2"],Duration:1}
+
 tag @e[type=area_effect_cloud,tag=cosmetic_unlock,sort=random,limit=1] add selected_unlock
 
 execute if entity @e[tag=selected_unlock,type=area_effect_cloud,tag=theo_2] run function cosmetic:theo_2
@@ -106,6 +111,12 @@ execute if entity @e[tag=selected_unlock,type=area_effect_cloud,tag=slime_3] run
 
 execute if entity @e[tag=selected_unlock,type=area_effect_cloud,tag=chicken_2] run function cosmetic:chicken_2
 execute if entity @e[tag=selected_unlock,type=area_effect_cloud,tag=chicken_3] run function cosmetic:chicken_3
+
+execute if entity @e[tag=selected_unlock,type=area_effect_cloud,tag=guardian_2] run function cosmetic:guardian_2
+execute if entity @e[tag=selected_unlock,type=area_effect_cloud,tag=guardian_3] run function cosmetic:guardian_3
+
+execute if entity @e[tag=selected_unlock,type=area_effect_cloud,tag=arthor_2] run function cosmetic:arthor_2
+
 execute if entity @e[tag=selected_unlock,type=area_effect_cloud] run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 0.20 2
 execute if entity @e[tag=selected_unlock,type=area_effect_cloud] run tag @s add unlocked_variant
 kill @e[tag=cosmetic_unlock,type=area_effect_cloud]

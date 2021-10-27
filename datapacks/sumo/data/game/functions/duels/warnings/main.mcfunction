@@ -1,9 +1,0 @@
-##Called to call functions which will do tellraws and warning sounds
-execute as @a[tag=playing,scores={duels_timer=600},gamemode=adventure] at @s unless entity @e[type=area_effect_cloud,distance=..300,scores={death_timer=1..}] run function game:duels/warnings/30_seconds
-execute as @a[tag=playing,scores={duels_timer=200},gamemode=adventure] at @s unless entity @e[type=area_effect_cloud,distance=..300,scores={death_timer=1..}] run function game:duels/warnings/10_seconds
-execute as @a[tag=playing,scores={duels_timer=100},gamemode=adventure] at @s unless entity @e[type=area_effect_cloud,distance=..300,scores={death_timer=1..}] run function game:duels/warnings/5_seconds
-execute as @a[tag=playing,scores={duels_timer=80},gamemode=adventure] at @s unless entity @e[type=area_effect_cloud,distance=..300,scores={death_timer=1..}] run function game:duels/warnings/4_seconds
-execute as @a[tag=playing,scores={duels_timer=60},gamemode=adventure] at @s unless entity @e[type=area_effect_cloud,distance=..300,scores={death_timer=1..}] run function game:duels/warnings/3_seconds
-execute as @a[tag=playing,scores={duels_timer=40},gamemode=adventure] at @s unless entity @e[type=area_effect_cloud,distance=..300,scores={death_timer=1..}] run function game:duels/warnings/2_seconds
-execute as @a[tag=playing,scores={duels_timer=20},gamemode=adventure] at @s unless entity @e[type=area_effect_cloud,distance=..300,scores={death_timer=1..}] run function game:duels/warnings/1_second
-execute as @a[tag=playing,scores={duels_timer=0},gamemode=adventure] at @s unless entity @e[type=area_effect_cloud,distance=..300,scores={death_timer=1..}] run function game:duels/out_of_time

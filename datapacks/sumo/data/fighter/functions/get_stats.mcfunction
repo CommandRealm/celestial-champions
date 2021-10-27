@@ -21,3 +21,5 @@ execute if entity @s[scores={fighter=12}] run function fighter:melon_man/stats
 execute if entity @s[scores={fighter=13}] run function fighter:blaze/stats
 execute if entity @s[scores={fighter=14}] run function fighter:slime/stats
 execute if entity @s[scores={fighter=15}] run function fighter:malice/stats
+execute if entity @s[scores={fighter=16}] run function fighter:arthor/stats
+execute if entity @s[scores={fighter=17}] run function fighter:guardian/stats
