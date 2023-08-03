@@ -1,15 +1,21 @@
 {
-  "fighter:inventory_changed": {
-    "criteria": {
-      "requirement": "2021-10-18 21:21:56 -0700"
-    },
-    "done": true
-  },
   "advancements:custom/root": {
     "criteria": {
-      "requirement": "2021-10-18 21:21:56 -0700"
+      "requirement": "2023-06-20 20:37:26 -0700"
     },
     "done": true
   },
-  "DataVersion": 2730
+  "fighter:inventory_changed": {
+    "criteria": {
+      "requirement": "2023-06-20 20:37:26 -0700"
+    },
+    "done": true
+  },
+  "advancements:custom/bridge": {
+    "criteria": {
+      "impossible": "2023-06-20 20:38:13 -0700"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
 }

@@ -23,20 +23,20 @@ data modify storage game:comp cur.l_fighter set from storage game:comp symbol
 
 ##name
 setblock 0 55 0 air
-setblock 0 55 0 oak_sign{Text1:'[{"selector":"@p[tag=playing,team=!red]"}]'}
+setblock 0 55 0 oak_sign{front_text:{messages:['[{"selector":"@p[tag=playing,team=!red]"}]', '{"text":""}', '{"text":""}', '{"text":""}'], has_glowing_text: false, color: "black"}}
 data modify storage game:comp cur.w set from block 0 55 0 Text1
 
 setblock 0 55 0 air
-setblock 0 55 0 oak_sign{Text1:'[{"selector":"@p[tag=playing,team=red]"}]'}
+setblock 0 55 0 oak_sign{front_text:{messages:['[{"selector":"@p[tag=playing,team=red]"}]', '{"text":""}', '{"text":""}', '{"text":""}'], has_glowing_text: false, color: "black"}}
 data modify storage game:comp cur.l set from block 0 55 0 Text1
 
 ##deaths
 setblock 0 55 0 air
-setblock 0 55 0 oak_sign{Text1:'[{"score":{"name":"@p[tag=playing,team=!red]","objective":"cur_deaths"}}]'}
+setblock 0 55 0 oak_sign{front_text:{messages:['[{"score":{"name":"@p[tag=playing,team=!red]","objective":"cur_deaths"}}]', '{"text":""}', '{"text":""}', '{"text":""}'], has_glowing_text: false, color: "black"}}
 data modify storage game:comp cur.w_deaths set from block 0 55 0 Text1
 
 setblock 0 55 0 air
-setblock 0 55 0 oak_sign{Text1:'[{"score":{"name":"@p[tag=playing,team=red]","objective":"cur_deaths"}}]'}
+setblock 0 55 0 oak_sign{front_text:{messages:['[{"score":{"name":"@p[tag=playing,team=red]","objective":"cur_deaths"}}]', '{"text":""}', '{"text":""}', '{"text":""}'], has_glowing_text: false, color: "black"}}
 data modify storage game:comp cur.l_deaths set from block 0 55 0 Text1
 
 ##Adding tag
