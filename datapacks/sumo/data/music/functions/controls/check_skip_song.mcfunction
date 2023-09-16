@@ -14,4 +14,4 @@ clear @s lime_stained_glass_pane{skip_button:1b}
 kill @e[type=item,distance=..15,nbt={Item:{id:"minecraft:lime_stained_glass_pane",tag:{skip_button:1b}}}]
 
 ##Putting items in our inventory
-item replace entity @s inventory.17 with lime_stained_glass_pane{not_clickable:1,skip_button:1b,display:{Name:'[{"text":"Skip","color":"green","bold":true,"italic":false}]',Lore:['[{"text":"Press to play","color":"gray","italic":false}]','[{"text":"a random track.","color":"gray","italic":false}]']}}
+item replace entity @s inventory.17 with lime_stained_glass_pane{not_clickable:1,skip_button:1b,display:{Name:'[{"translate":"Skip","color":"green","bold":true,"italic":false}]',Lore:['[{"translate":"Press to play","color":"gray","italic":false}]','[{"translate":"a random track.","color":"gray","italic":false}]']}}

@@ -24,7 +24,7 @@ execute as @a[distance=..4,tag=is_fighter,gamemode=adventure,tag=!used_ability,n
 tag @s remove used_ability
 
 ##Tellraw
-tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"aqua"},{"text":"\nGround Ability: ","color":"gray","bold":true},{"text":"Sticky Floor\n","color":"white"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Freezes nearby players who are grounded."}},{"text":"--------------------------","color":"aqua"}]
+tellraw @s[tag=!no_ability_msg] [{"translate":"--------------------------","color":"aqua"},{"translate":"\nGround Ability: ","color":"gray","bold":true},{"translate":"Sticky Floor\n","color":"white"},{"translate":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":{"translate":"Freezes nearby players who are grounded."}}},{"translate":"--------------------------","color":"aqua"}]
 
 
 ##Sounds

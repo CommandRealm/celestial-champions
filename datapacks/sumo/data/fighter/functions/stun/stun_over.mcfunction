@@ -4,8 +4,8 @@
 scoreboard players reset @s stun
 
 ##Title
-title @s title [{"text":""}]
-title @s subtitle [{"text":""}]
+title @s title [{"translate":""}]
+title @s subtitle [{"translate":""}]
 
 
 ##Sound

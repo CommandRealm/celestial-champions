@@ -9,32 +9,32 @@ scoreboard players set $end cooldown 100
 
 title @a[tag=playing] times 5 50 5
 
-execute if entity @a[tag=playing,tag=winner,tag=on_red_team] run title @a[tag=playing] title [{"text":"Red Team","color":"dark_red"},{"text":" wins!","color":"white"}]
-execute if entity @a[tag=playing,tag=winner,tag=on_red_team] run tellraw @a[tag=playing] [{"text":"Red Team","color":"dark_red"},{"text":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_red_team] run title @a[tag=playing] title [{"translate":"Red Team","color":"dark_red"},{"translate":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_red_team] run tellraw @a[tag=playing] [{"translate":"Red Team","color":"dark_red"},{"translate":" wins!","color":"white"}]
 
-execute if entity @a[tag=playing,tag=winner,tag=on_blue_team] run title @a[tag=playing] title [{"text":"Blue Team","color":"dark_blue"},{"text":" wins!","color":"white"}]
-execute if entity @a[tag=playing,tag=winner,tag=on_blue_team] run tellraw @a[tag=playing] [{"text":"Blue Team","color":"dark_blue"},{"text":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_blue_team] run title @a[tag=playing] title [{"translate":"Blue Team","color":"dark_blue"},{"translate":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_blue_team] run tellraw @a[tag=playing] [{"translate":"Blue Team","color":"dark_blue"},{"translate":" wins!","color":"white"}]
 
-execute if entity @a[tag=playing,tag=winner,tag=on_yellow_team] run title @a[tag=playing] title [{"text":"Yellow Team","color":"yellow"},{"text":" wins!","color":"white"}]
-execute if entity @a[tag=playing,tag=winner,tag=on_yellow_team] run tellraw @a[tag=playing] [{"text":"Yellow Team","color":"yellow"},{"text":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_yellow_team] run title @a[tag=playing] title [{"translate":"Yellow Team","color":"yellow"},{"translate":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_yellow_team] run tellraw @a[tag=playing] [{"translate":"Yellow Team","color":"yellow"},{"translate":" wins!","color":"white"}]
 
-execute if entity @a[tag=playing,tag=winner,tag=on_green_team] run title @a[tag=playing] title [{"text":"Green Team","color":"green"},{"text":" wins!","color":"white"}]
-execute if entity @a[tag=playing,tag=winner,tag=on_green_team] run tellraw @a[tag=playing] [{"text":"Green Team","color":"green"},{"text":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_green_team] run title @a[tag=playing] title [{"translate":"Green Team","color":"green"},{"translate":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_green_team] run tellraw @a[tag=playing] [{"translate":"Green Team","color":"green"},{"translate":" wins!","color":"white"}]
 
-execute if entity @a[tag=playing,tag=winner,tag=on_cyan_team] run title @a[tag=playing] title [{"text":"Cyan Team","color":"dark_aqua"},{"text":" wins!","color":"white"}]
-execute if entity @a[tag=playing,tag=winner,tag=on_cyan_team] run tellraw @a[tag=playing] [{"text":"Cyan Team","color":"dark_aqua"},{"text":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_cyan_team] run title @a[tag=playing] title [{"translate":"Cyan Team","color":"dark_aqua"},{"translate":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_cyan_team] run tellraw @a[tag=playing] [{"translate":"Cyan Team","color":"dark_aqua"},{"translate":" wins!","color":"white"}]
 
-execute if entity @a[tag=playing,tag=winner,tag=on_orange_team] run title @a[tag=playing] title [{"text":"Orange Team","color":"gold"},{"text":" wins!","color":"white"}]
-execute if entity @a[tag=playing,tag=winner,tag=on_orange_team] run tellraw @a[tag=playing] [{"text":"Orange Team","color":"gold"},{"text":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_orange_team] run title @a[tag=playing] title [{"translate":"Orange Team","color":"gold"},{"translate":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_orange_team] run tellraw @a[tag=playing] [{"translate":"Orange Team","color":"gold"},{"translate":" wins!","color":"white"}]
 
-execute if entity @a[tag=playing,tag=winner,tag=on_pink_team] run title @a[tag=playing] title [{"text":"Pink Team","color":"light_purple"},{"text":" wins!","color":"white"}]
-execute if entity @a[tag=playing,tag=winner,tag=on_pink_team] run tellraw @a[tag=playing] [{"text":"Pink Team","color":"light_purple"},{"text":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_pink_team] run title @a[tag=playing] title [{"translate":"Pink Team","color":"light_purple"},{"translate":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_pink_team] run tellraw @a[tag=playing] [{"translate":"Pink Team","color":"light_purple"},{"translate":" wins!","color":"white"}]
 
-execute if entity @a[tag=playing,tag=winner,tag=on_purple_team] run title @a[tag=playing] title [{"text":"Purple Team","color":"dark_purple"},{"text":" wins!","color":"white"}]
-execute if entity @a[tag=playing,tag=winner,tag=on_purple_team] run tellraw @a[tag=playing] [{"text":"Purple Team","color":"dark_purple"},{"text":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_purple_team] run title @a[tag=playing] title [{"translate":"Purple Team","color":"dark_purple"},{"translate":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_purple_team] run tellraw @a[tag=playing] [{"translate":"Purple Team","color":"dark_purple"},{"translate":" wins!","color":"white"}]
 
-execute if entity @a[tag=playing,tag=winner,tag=on_white_team] run title @a[tag=playing] title [{"text":"White Team","color":"white"},{"text":" wins!","color":"white"}]
-execute if entity @a[tag=playing,tag=winner,tag=on_white_team] run tellraw @a[tag=playing] [{"text":"White Team","color":"white"},{"text":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_white_team] run title @a[tag=playing] title [{"translate":"White Team","color":"white"},{"translate":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_white_team] run tellraw @a[tag=playing] [{"translate":"White Team","color":"white"},{"translate":" wins!","color":"white"}]
 
-execute if entity @a[tag=playing,tag=winner,tag=on_gray_team] run title @a[tag=playing] title [{"text":"Gray Team","color":"dark_gray"},{"text":" wins!","color":"white"}]
-execute if entity @a[tag=playing,tag=winner,tag=on_gray_team] run tellraw @a[tag=playing] [{"text":"Gray Team","color":"dark_gray"},{"text":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_gray_team] run title @a[tag=playing] title [{"translate":"Gray Team","color":"dark_gray"},{"translate":" wins!","color":"white"}]
+execute if entity @a[tag=playing,tag=winner,tag=on_gray_team] run tellraw @a[tag=playing] [{"translate":"Gray Team","color":"dark_gray"},{"translate":" wins!","color":"white"}]

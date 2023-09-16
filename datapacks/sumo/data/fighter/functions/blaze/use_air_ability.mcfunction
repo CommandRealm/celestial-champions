@@ -36,7 +36,7 @@ tag @e[type=area_effect_cloud,tag=needs_copied_id] remove needs_copied_id
 
 
 ##Tellraw
-tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"white"},{"text":"\nAir Ability: ","color":"dark_aqua","bold":true},{"text":"Fiery Float\n","color":"aqua"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Freezes the user in place and become invincible for 1 second."}},{"text":"--------------------------","color":"white"}]
+tellraw @s[tag=!no_ability_msg] [{"translate":"--------------------------","color":"white"},{"translate":"\nAir Ability: ","color":"dark_aqua","bold":true},{"translate":"Fiery Float\n","color":"aqua"},{"translate":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":{"translate":"Freezes the user in place and become invincible for 1 second."}}},{"translate":"--------------------------","color":"white"}]
 
 
 ##Particles

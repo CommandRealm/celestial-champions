@@ -1,16 +1,16 @@
 ##Activated when someone wins a round of teams (rounds mode)
 
 ##Tellraws
-execute if entity @a[tag=playing,team=!dead,tag=on_red_team] run tellraw @a[tag=playing] [{"text":"Red Team","color":"dark_red"},{"text":" has won the round.","color":"white"}]
-execute if entity @a[tag=playing,team=!dead,tag=on_blue_team] run tellraw @a[tag=playing] [{"text":"Blue Team","color":"dark_blue"},{"text":" has won the round.","color":"white"}]
-execute if entity @a[tag=playing,team=!dead,tag=on_yellow_team] run tellraw @a[tag=playing] [{"text":"Yellow Team","color":"yellow"},{"text":" has won the round.","color":"white"}]
-execute if entity @a[tag=playing,team=!dead,tag=on_green_team] run tellraw @a[tag=playing] [{"text":"Green Team","color":"green"},{"text":" has won the round.","color":"white"}]
-execute if entity @a[tag=playing,team=!dead,tag=on_cyan_team] run tellraw @a[tag=playing] [{"text":"Cyan Team","color":"dark_aqua"},{"text":" has won the round.","color":"white"}]
-execute if entity @a[tag=playing,team=!dead,tag=on_orange_team] run tellraw @a[tag=playing] [{"text":"Orange Team","color":"gold"},{"text":" has won the round.","color":"white"}]
-execute if entity @a[tag=playing,team=!dead,tag=on_pink_team] run tellraw @a[tag=playing] [{"text":"Pink Team","color":"light_purple"},{"text":" has won the round.","color":"white"}]
-execute if entity @a[tag=playing,team=!dead,tag=on_purple_team] run tellraw @a[tag=playing] [{"text":"Purple Team","color":"dark_purple"},{"text":" has won the round.","color":"white"}]
-execute if entity @a[tag=playing,team=!dead,tag=on_white_team] run tellraw @a[tag=playing] [{"text":"White Team","color":"white"},{"text":" has won the round.","color":"white"}]
-execute if entity @a[tag=playing,team=!dead,tag=on_gray_team] run tellraw @a[tag=playing] [{"text":"Gray Team","color":"dark_gray"},{"text":" has won the round.","color":"white"}]
+execute if entity @a[tag=playing,team=!dead,tag=on_red_team] run tellraw @a[tag=playing] [{"translate":"Red Team","color":"dark_red"},{"translate":" has won the round.","color":"white"}]
+execute if entity @a[tag=playing,team=!dead,tag=on_blue_team] run tellraw @a[tag=playing] [{"translate":"Blue Team","color":"dark_blue"},{"translate":" has won the round.","color":"white"}]
+execute if entity @a[tag=playing,team=!dead,tag=on_yellow_team] run tellraw @a[tag=playing] [{"translate":"Yellow Team","color":"yellow"},{"translate":" has won the round.","color":"white"}]
+execute if entity @a[tag=playing,team=!dead,tag=on_green_team] run tellraw @a[tag=playing] [{"translate":"Green Team","color":"green"},{"translate":" has won the round.","color":"white"}]
+execute if entity @a[tag=playing,team=!dead,tag=on_cyan_team] run tellraw @a[tag=playing] [{"translate":"Cyan Team","color":"dark_aqua"},{"translate":" has won the round.","color":"white"}]
+execute if entity @a[tag=playing,team=!dead,tag=on_orange_team] run tellraw @a[tag=playing] [{"translate":"Orange Team","color":"gold"},{"translate":" has won the round.","color":"white"}]
+execute if entity @a[tag=playing,team=!dead,tag=on_pink_team] run tellraw @a[tag=playing] [{"translate":"Pink Team","color":"light_purple"},{"translate":" has won the round.","color":"white"}]
+execute if entity @a[tag=playing,team=!dead,tag=on_purple_team] run tellraw @a[tag=playing] [{"translate":"Purple Team","color":"dark_purple"},{"translate":" has won the round.","color":"white"}]
+execute if entity @a[tag=playing,team=!dead,tag=on_white_team] run tellraw @a[tag=playing] [{"translate":"White Team","color":"white"},{"translate":" has won the round.","color":"white"}]
+execute if entity @a[tag=playing,team=!dead,tag=on_gray_team] run tellraw @a[tag=playing] [{"translate":"Gray Team","color":"dark_gray"},{"translate":" has won the round.","color":"white"}]
 
 execute if entity @a[tag=playing,team=!dead,tag=on_red_team] run scoreboard players add Red: criteria 1
 execute if entity @a[tag=playing,team=!dead,tag=on_blue_team] run scoreboard players add Blue: criteria 1

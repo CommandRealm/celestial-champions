@@ -38,7 +38,7 @@ execute if entity @s[scores={costume=3}] anchored eyes positioned ^ ^ ^2 positio
 execute if entity @s[scores={costume=4}] anchored eyes positioned ^ ^ ^2 positioned ~ ~5 ~ run particle soul_fire_flame ~ ~ ~ 0.25 0.25 0.25 0.25 50
 
 ##Tellraw
-tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"white"},{"text":"\nAir Ability: ","color":"dark_aqua","bold":true},{"text":"Star-Strike\n","color":"aqua"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Spikes opponent in front of you."}},{"text":"--------------------------","color":"white"}]
+tellraw @s[tag=!no_ability_msg] [{"translate":"--------------------------","color":"white"},{"translate":"\nAir Ability: ","color":"dark_aqua","bold":true},{"translate":"Star-Strike\n","color":"aqua"},{"translate":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":{"translate":"Spikes opponent in front of you."}}},{"translate":"--------------------------","color":"white"}]
 
 
 ##Sounds

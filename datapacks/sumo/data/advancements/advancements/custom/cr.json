@@ -5,7 +5,7 @@
             "nbt": "{CustomModelData:0}"
         },
         "title": {
-            "text": "CR Expert",
+            "translate": "CR Expert",
             "color": "#e3e3e3",
             "bold": true
         },
@@ -13,7 +13,7 @@
         "show_toast": true,
         "announce_to_chat": false,
         "description": {
-            "text": "Find the Command Realm \"CR\" in the lobby.",
+            "translate": "Find the Command Realm \"CR\" in the lobby.",
             "color": "#fac84b",
             "bold": false
         }

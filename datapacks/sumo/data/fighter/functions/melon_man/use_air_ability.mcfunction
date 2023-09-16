@@ -22,7 +22,7 @@ tag @s add pause_random_cooldown
 scoreboard players set @s random_cooldown 1
 
 ##Tellraw
-tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"white"},{"text":"\nAir Ability: ","color":"dark_aqua","bold":true},{"text":"Ground Pound\n","color":"aqua"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Launch yourself in the air and ground pound, stunning nearby grounded opponents for 3 seconds."}},{"text":"--------------------------","color":"white"}]
+tellraw @s[tag=!no_ability_msg] [{"translate":"--------------------------","color":"white"},{"translate":"\nAir Ability: ","color":"dark_aqua","bold":true},{"translate":"Ground Pound\n","color":"aqua"},{"translate":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":{"translate":"Launch yourself in the air and ground pound, stunning nearby grounded opponents for 3 seconds."}}},{"translate":"--------------------------","color":"white"}]
 
 
 ##Sounds

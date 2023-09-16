@@ -45,7 +45,7 @@ particle item minecraft:feather ~ ~-0.5 ~ 0.5 0.5 0.5 0.25 25
 
 
 ##Tellraw
-tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"white"},{"text":"\nAir Ability: ","color":"dark_aqua","bold":true},{"text":"Egg Spike\n","color":"aqua"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Shoots an egg below you, spiking opponents."}},{"text":"--------------------------","color":"white"}]
+tellraw @s[tag=!no_ability_msg] [{"translate":"--------------------------","color":"white"},{"translate":"\nAir Ability: ","color":"dark_aqua","bold":true},{"translate":"Egg Spike\n","color":"aqua"},{"translate":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":{"translate":"Shoots an egg below you, spiking opponents."}}},{"translate":"--------------------------","color":"white"}]
 
 
 ##Sounds

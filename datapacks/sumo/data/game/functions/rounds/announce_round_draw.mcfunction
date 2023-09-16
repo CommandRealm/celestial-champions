@@ -1,8 +1,8 @@
 ##Activated when someone draws in a round of solos (rounds mode)
 
 ##Tellraws
-tellraw @a[tag=playing] [{"text":"Draw!","color":"aqua"}]
-title @a[tag=playing] title [{"text":"Draw!","color":"aqua"}]
+tellraw @a[tag=playing] [{"translate":"Draw!","color":"aqua"}]
+title @a[tag=playing] title [{"translate":"Draw!","color":"aqua"}]
 
 
 ##Sounds

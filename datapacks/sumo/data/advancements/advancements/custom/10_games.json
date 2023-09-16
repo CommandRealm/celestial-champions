@@ -5,7 +5,7 @@
             "nbt": "{CustomModelData:0}"
         },
         "title": {
-            "text": "Veteran",
+            "translate": "Veteran",
             "color": "#00d4d4",
             "bold": true
         },
@@ -13,7 +13,7 @@
         "show_toast": true,
         "announce_to_chat": false,
         "description": {
-            "text": "Play 10 games of Celestial Champions.",
+            "translate": "Play 10 games of Celestial Champions.",
             "color": "#fac84b",
             "bold": false
         }

@@ -6,7 +6,7 @@ execute store result score $calculate calculate run clear @s oak_sign{info_item:
 clear @s oak_sign
 kill @e[type=item,nbt={Item:{id:"minecraft:oak_sign"}},distance=..15]
 
-item replace entity @s inventory.8 with oak_sign{info_item:1b,HideFlags:63,display:{Name:'[{"text":"ⓘ","color":"gold","italic":false},{"text":" Information","color":"yellow"}]',Lore:['[{"text":"Click to receive info","color":"gray","italic":false}]','[{"text":"on your fighter.","italic":false,"color":"gray"}]']}}
+item replace entity @s inventory.8 with oak_sign{info_item:1b,HideFlags:63,display:{Name:'[{"translate":"ⓘ","color":"gold","italic":false},{"translate":" Information","color":"yellow"}]',Lore:['[{"translate":"Click to receive info","color":"gray","italic":false}]','[{"translate":"on your fighter.","italic":false,"color":"gray"}]']}}
 
 ##If we clicked, give the info
 execute if score $calculate calculate matches 1.. if score @s fighter matches 0 run function lobby:descriptions/theo

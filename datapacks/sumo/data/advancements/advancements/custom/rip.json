@@ -5,7 +5,7 @@
             "nbt": "{CustomModelData:1}"
         },
         "title": {
-            "text": "That's rough, buddy.",
+            "translate": "That's rough, buddy.",
             "color": "#cc0000",
             "bold": true
         },
@@ -13,7 +13,7 @@
         "show_toast": true,
         "announce_to_chat": false,
         "description": {
-            "text": "Die within 30 seconds of your last death.",
+            "translate": "Die within 30 seconds of your last death.",
             "color": "#fac84b",
             "bold": false
         }

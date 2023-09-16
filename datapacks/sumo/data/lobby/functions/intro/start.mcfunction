@@ -2,8 +2,8 @@
 
 ##Titles
 title @s times 40 20 0
-title @s subtitle [{"text":""}]
-title @s title [{"text":"Celestial ","color":"white","bold":false}]
+title @s subtitle [{"translate":""}]
+title @s title [{"translate":"Celestial ","color":"white","bold":false}]
 
 ##Intro score
 scoreboard players set @s intro 0

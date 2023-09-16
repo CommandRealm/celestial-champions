@@ -23,7 +23,7 @@ scoreboard players set @a[tag=playing] lives 1
 
 
 ##Modifying sidebar and list objectives to have a fancy title
-scoreboard objectives modify sidebar displayname [{"text":"☀","color":"white","bold":false},{"text":" Wins ","color":"aqua","bold":true},{"text":"☀","color":"white","bold":false}]
+scoreboard objectives modify sidebar displayname [{"translate":"☀","color":"white","bold":false},{"translate":" Wins ","color":"aqua","bold":true},{"translate":"☀","color":"white","bold":false}]
 
 
 ##Resetting fighter scores
@@ -81,7 +81,7 @@ execute as @e[type=area_effect_cloud,tag=duel_map_point,sort=random,limit=1] at 
 
 ##Title
 team join gold @a[tag=playing]
-title @a[tag=playing] title [{"text":"Fight ","color":"aqua","bold":true},{"score":{"objective":"duels","name":"$duel"},"color":"white","bold":false}]
+title @a[tag=playing] title [{"translate":"Fight ","color":"aqua","bold":true},{"score":{"objective":"duels","name":"$duel"},"color":"white","bold":false}]
 execute as @a[tag=playing] at @s run function game:duels/subtitle
 
 ##Joining proper team

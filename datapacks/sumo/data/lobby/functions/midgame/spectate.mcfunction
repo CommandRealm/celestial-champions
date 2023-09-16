@@ -1,6 +1,6 @@
 ##called when we press spectate
 team join spectator
-tellraw @s [{"text":"You are now spectating. To return to the lobby, click ","color":"white"},{"text":"[","color":"gray","bold":true},{"text":"here","color":"white","bold":true,"clickEvent": {"action": "run_command","value":"/trigger back_to_lobby set 1"}},{"text":"] ","color":"gray","bold":true}]
+tellraw @s [{"translate":"You are now spectating. To return to the lobby, click ","color":"white"},{"translate":"[","color":"gray","bold":true},{"translate":"here","color":"white","bold":true,"clickEvent": {"action": "run_command","value":"/trigger back_to_lobby set 1"}},{"translate":"] ","color":"gray","bold":true}]
 
 ##Bossbar
 bossbar set minecraft:lobby players @a[tag=!playing,team=!spectator]

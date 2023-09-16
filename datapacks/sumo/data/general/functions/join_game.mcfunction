@@ -71,7 +71,7 @@ execute as @a at @s run playsound minecraft:entity.firework_rocket.blast master 
 
 
 ##Starting message
-tellraw @s [{"text":"☀ ","color":"aqua","bold":false},{"text":"Welcome to ","color":"white"},{"text":"Celestial","color":"white","bold":true},{"text":" Champions","color":"aqua","bold":true},{"text":". \nThe goal of Celestial Champions is to push your opponents off of the edge and into the void.","color":"white"},{"text":"\nYou can crouch in game to activate an extra jump or drop items to activate abilities.","color":"aqua"},{"text":"\nThe in-depth tutorial is to your right. You can read about all of the fighter abilities on the bridge.","color":"white"}]
+tellraw @s [{"translate":"☀ ","color":"aqua","bold":false},{"translate":"Welcome to ","color":"white"},{"translate":"Celestial","color":"white","bold":true},{"translate":" Champions","color":"aqua","bold":true},{"translate":". \nThe goal of Celestial Champions is to push your opponents off of the edge and into the void.","color":"white"},{"translate":"\nYou can crouch in game to activate an extra jump or drop items to activate abilities.","color":"aqua"},{"translate":"\nThe in-depth tutorial is to your right. You can read about all of the fighter abilities on the bridge.","color":"white"}]
 
 ##Resetting our sidebar score
 scoreboard players reset @s sidebar

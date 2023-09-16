@@ -18,7 +18,7 @@ execute anchored eyes positioned ^ ^ ^3.0 align y run function fighter:zombie/at
 tag @s remove used_ability
 
 ##Tellraw
-tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"aqua"},{"text":"\nGround Ability: ","color":"gray","bold":true},{"text":"Grave Danger\n","color":"white"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Summons a grave in front of yourself, launching opponents into the air, removing one extra jump."}},{"text":"--------------------------","color":"aqua"}]
+tellraw @s[tag=!no_ability_msg] [{"translate":"--------------------------","color":"aqua"},{"translate":"\nGround Ability: ","color":"gray","bold":true},{"translate":"Grave Danger\n","color":"white"},{"translate":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":{"translate":"Summons a grave in front of yourself, launching opponents into the air, removing one extra jump."}}},{"translate":"--------------------------","color":"aqua"}]
 
 
 

@@ -28,7 +28,7 @@ particle minecraft:crit ~ ~-3.5 ~ 0.25 1 0.25 0.25 25
 
 
 ##Tellraw
-tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"white"},{"text":"\nAir Ability: ","color":"dark_aqua","bold":true},{"text":"Repellent Destruction\n","color":"aqua"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Summons explosives under yourself, launching the user upward."}},{"text":"--------------------------","color":"white"}]
+tellraw @s[tag=!no_ability_msg] [{"translate":"--------------------------","color":"white"},{"translate":"\nAir Ability: ","color":"dark_aqua","bold":true},{"translate":"Repellent Destruction\n","color":"aqua"},{"translate":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":{"translate":"Summons explosives under yourself, launching the user upward."}}},{"translate":"--------------------------","color":"white"}]
 
 
 ##Sounds

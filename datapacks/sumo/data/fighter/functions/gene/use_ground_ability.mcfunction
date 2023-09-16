@@ -30,23 +30,23 @@ scoreboard players set @s[scores={random_stat3=4..}] random_stat3 0
 
 
 ##Tellraw
-tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"aqua"},{"text":"\nGround Ability: ","color":"gray","bold":true},{"text":"Would You Rather\n","color":"white"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Gives the user a choice between two randomized items."}},{"text":"--------------------------","color":"aqua"}]
+tellraw @s[tag=!no_ability_msg] [{"translate":"--------------------------","color":"aqua"},{"translate":"\nGround Ability: ","color":"gray","bold":true},{"translate":"Would You Rather\n","color":"white"},{"translate":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":{"translate":"Gives the user a choice between two randomized items."}}},{"translate":"--------------------------","color":"aqua"}]
 
 
 ##Sounds
 playsound minecraft:entity.guardian.hurt master @a ~ ~ ~ 0.25 2
 
-tellraw @s [{"text":"- ","color":"gray"},{"text":"Would","color":"blue","bold":true},{"text":" You ","color":"aqua","bold":true},{"text":"Rather","color":"yellow","bold":true}]
+tellraw @s [{"translate":"- ","color":"gray"},{"translate":"Would","color":"blue","bold":true},{"translate":" You ","color":"aqua","bold":true},{"translate":"Rather","color":"yellow","bold":true}]
 
-execute if score @s random_stat2 matches 0 run tellraw @s [{"text":"Press ","color":"blue"},{"text":"<","color":"gray","bold":true},{"keybind":"key.drop"},{"text":">","color":"gray","bold":true},{"text":" to receive the ","color":"aqua"},{"text":"Bow","color":"blue"}] 
-execute if score @s random_stat2 matches 1 run tellraw @s [{"text":"Press ","color":"blue"},{"text":"<","color":"gray","bold":true},{"keybind":"key.drop"},{"text":">","color":"gray","bold":true},{"text":" to receive the ","color":"aqua"},{"text":"Sharp Rock","color":"blue"}] 
-execute if score @s random_stat2 matches 2 run tellraw @s [{"text":"Press ","color":"blue"},{"text":"<","color":"gray","bold":true},{"keybind":"key.drop"},{"text":">","color":"gray","bold":true},{"text":" to receive the ","color":"aqua"},{"text":"Pickaxe","color":"blue"}] 
-execute if score @s random_stat2 matches 3 run tellraw @s [{"text":"Press ","color":"blue"},{"text":"<","color":"gray","bold":true},{"keybind":"key.drop"},{"text":">","color":"gray","bold":true},{"text":" to receive the ","color":"aqua"},{"text":"Energy Drink","color":"blue"}] 
+execute if score @s random_stat2 matches 0 run tellraw @s [{"translate":"Press ","color":"blue"},{"translate":"<","color":"gray","bold":true},{"keybind":"key.drop"},{"translate":">","color":"gray","bold":true},{"translate":" to receive the ","color":"aqua"},{"translate":"Bow","color":"blue"}] 
+execute if score @s random_stat2 matches 1 run tellraw @s [{"translate":"Press ","color":"blue"},{"translate":"<","color":"gray","bold":true},{"keybind":"key.drop"},{"translate":">","color":"gray","bold":true},{"translate":" to receive the ","color":"aqua"},{"translate":"Sharp Rock","color":"blue"}] 
+execute if score @s random_stat2 matches 2 run tellraw @s [{"translate":"Press ","color":"blue"},{"translate":"<","color":"gray","bold":true},{"keybind":"key.drop"},{"translate":">","color":"gray","bold":true},{"translate":" to receive the ","color":"aqua"},{"translate":"Pickaxe","color":"blue"}] 
+execute if score @s random_stat2 matches 3 run tellraw @s [{"translate":"Press ","color":"blue"},{"translate":"<","color":"gray","bold":true},{"keybind":"key.drop"},{"translate":">","color":"gray","bold":true},{"translate":" to receive the ","color":"aqua"},{"translate":"Energy Drink","color":"blue"}] 
 
-tellraw @s [{"text":"or","color":"aqua"}]
+tellraw @s [{"translate":"or","color":"aqua"}]
 
-execute if score @s random_stat3 matches 0 run tellraw @s [{"text":"Press ","color":"yellow"},{"text":"<","color":"gray","bold":true},{"keybind":"key.swapOffhand"},{"text":">","color":"gray","bold":true},{"text":" to receive the ","color":"aqua"},{"text":"Bow","color":"yellow"}] 
-execute if score @s random_stat3 matches 1 run tellraw @s [{"text":"Press ","color":"yellow"},{"text":"<","color":"gray","bold":true},{"keybind":"key.swapOffhand"},{"text":">","color":"gray","bold":true},{"text":" to receive the ","color":"aqua"},{"text":"Sharp Rock","color":"yellow"}] 
-execute if score @s random_stat3 matches 2 run tellraw @s [{"text":"Press ","color":"yellow"},{"text":"<","color":"gray","bold":true},{"keybind":"key.swapOffhand"},{"text":">","color":"gray","bold":true},{"text":" to receive the ","color":"aqua"},{"text":"Pickaxe","color":"yellow"}] 
-execute if score @s random_stat3 matches 3 run tellraw @s [{"text":"Press ","color":"yellow"},{"text":"<","color":"gray","bold":true},{"keybind":"key.swapOffhand"},{"text":">","color":"gray","bold":true},{"text":" to receive the ","color":"aqua"},{"text":"Energy Drink","color":"yellow"}] 
+execute if score @s random_stat3 matches 0 run tellraw @s [{"translate":"Press ","color":"yellow"},{"translate":"<","color":"gray","bold":true},{"keybind":"key.swapOffhand"},{"translate":">","color":"gray","bold":true},{"translate":" to receive the ","color":"aqua"},{"translate":"Bow","color":"yellow"}] 
+execute if score @s random_stat3 matches 1 run tellraw @s [{"translate":"Press ","color":"yellow"},{"translate":"<","color":"gray","bold":true},{"keybind":"key.swapOffhand"},{"translate":">","color":"gray","bold":true},{"translate":" to receive the ","color":"aqua"},{"translate":"Sharp Rock","color":"yellow"}] 
+execute if score @s random_stat3 matches 2 run tellraw @s [{"translate":"Press ","color":"yellow"},{"translate":"<","color":"gray","bold":true},{"keybind":"key.swapOffhand"},{"translate":">","color":"gray","bold":true},{"translate":" to receive the ","color":"aqua"},{"translate":"Pickaxe","color":"yellow"}] 
+execute if score @s random_stat3 matches 3 run tellraw @s [{"translate":"Press ","color":"yellow"},{"translate":"<","color":"gray","bold":true},{"keybind":"key.swapOffhand"},{"translate":">","color":"gray","bold":true},{"translate":" to receive the ","color":"aqua"},{"translate":"Energy Drink","color":"yellow"}] 
 

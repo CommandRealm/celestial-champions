@@ -38,7 +38,7 @@ clear @s #minecraft:knockback_weapon{Weapon:"knockback"}
 tag @s add use_set_knockback
 
 ##Tellraw
-tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"white"},{"text":"\nAir Ability: ","color":"dark_aqua","bold":true},{"text":"Enemy Swap\n","color":"aqua"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Swap positions with a nearby player in front of your face. Sets knockback to 2 for the duration of the ability."}},{"text":"--------------------------","color":"white"}]
+tellraw @s[tag=!no_ability_msg] [{"translate":"--------------------------","color":"white"},{"translate":"\nAir Ability: ","color":"dark_aqua","bold":true},{"translate":"Enemy Swap\n","color":"aqua"},{"translate":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":{"translate":"Swap positions with a nearby player in front of your face. Sets knockback to 2 for the duration of the ability."}}},{"translate":"--------------------------","color":"white"}]
 
 
 ##Sounds

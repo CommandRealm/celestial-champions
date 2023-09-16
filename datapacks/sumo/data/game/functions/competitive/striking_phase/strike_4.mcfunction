@@ -3,7 +3,7 @@ setblock 0 61 88 air destroy
 setblock 0 61 88 structure_void
 execute positioned 0 61 88 as @e[type=area_effect_cloud,tag=competitive_nameplate,sort=nearest,limit=1] at @s run function game:competitive/striking_phase/strikethrough_name
 
-tellraw @a[tag=playing] [{"selector":"@p[tag=playing,tag=!just_striked]"},{"text":" has chosen to strike ","color":"gray"},{"text":"Celestial","color":"dark_aqua"},{"text":"!","color":"gray"}]
+tellraw @a[tag=playing] [{"selector":"@p[tag=playing,tag=!just_striked]"},{"translate":" has chosen to strike ","color":"gray"},{"translate":"Celestial","color":"dark_aqua"},{"translate":"!","color":"gray"}]
 
 ##Seeing if six maps have been striked
 scoreboard players add $striked_maps game 1

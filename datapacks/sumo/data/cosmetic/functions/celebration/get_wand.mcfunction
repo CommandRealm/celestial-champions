@@ -1,4 +1,4 @@
 ##called to give us the wand
 clear @s blaze_rod
 kill @e[type=item,distance=..10,nbt={Item:{id:"minecraft:blaze_rod"}}]
-item replace entity @s hotbar.0 with blaze_rod{display:{Name:'[{"text":"R","color":"red","italic":false},{"text":"a","color":"gold"},{"text":"i","color":"yellow"},{"text":"n","color":"green"},{"text":"b","color":"aqua"},{"text":"o","color":"blue"},{"text":"w","color":"dark_purple"},{"text":" Wand ","color":"gray"},{"text":"[","color":"dark_gray","bold":true},{"keybind":"key.drop","color":"gray","bold":false},{"text":"]","color":"dark_gray","bold":true}]'}}
+item replace entity @s hotbar.0 with blaze_rod{display:{Name:'[{"translate":"R","color":"red","italic":false},{"translate":"a","color":"gold"},{"translate":"i","color":"yellow"},{"translate":"n","color":"green"},{"translate":"b","color":"aqua"},{"translate":"o","color":"blue"},{"translate":"w","color":"dark_purple"},{"translate":" Wand ","color":"gray"},{"translate":"[","color":"dark_gray","bold":true},{"keybind":"key.drop","color":"gray","bold":false},{"translate":"]","color":"dark_gray","bold":true}]'}}

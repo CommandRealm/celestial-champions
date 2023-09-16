@@ -2,5 +2,5 @@
     [ { "rolls":1, "entries":
         [ { "type": "minecraft:item", "functions":
             [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1}"},
-              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"You have played ","color":"gray","italic":false,"bold":false},{"score":{"objective":"stats_played","name":"@s"},"color":"white","italic":false,"bold":true},{"text":" games.","color":"gray","italic":false,"bold":false}] }], 
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"translate":"You have played ","color":"gray","italic":false,"bold":false},{"score":{"objective":"stats_played","name":"@s"},"color":"white","italic":false,"bold":true},{"translate":" games.","color":"gray","italic":false,"bold":false}] }], 
               "name": "minecraft:iron_block" } ] } ] }

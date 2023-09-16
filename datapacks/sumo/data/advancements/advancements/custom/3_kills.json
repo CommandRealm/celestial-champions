@@ -5,7 +5,7 @@
             "nbt": "{CustomModelData:0}"
         },
         "title": {
-            "text": "I got three!?",
+            "translate": "I got three!?",
             "color": "#e80000",
             "bold": true
         },
@@ -13,7 +13,7 @@
         "show_toast": true,
         "announce_to_chat": false,
         "description": {
-            "text": "Get a kill-streak of three in a game of Celestial Champions.",
+            "translate": "Get a kill-streak of three in a game of Celestial Champions.",
             "color": "#fac84b",
             "bold": false
         }

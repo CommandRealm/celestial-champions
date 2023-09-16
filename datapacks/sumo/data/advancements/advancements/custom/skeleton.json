@@ -5,7 +5,7 @@
             "nbt": "{CustomModelData:0}"
         },
         "title": {
-            "text": "Bone Battle",
+            "translate": "Bone Battle",
             "color": "#fff703",
             "bold": true
         },
@@ -13,7 +13,7 @@
         "show_toast": true,
         "announce_to_chat": false,
         "description": {
-            "text": "Play a game as Skeleton.",
+            "translate": "Play a game as Skeleton.",
             "color": "#fac84b",
             "bold": false
         }

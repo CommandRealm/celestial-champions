@@ -40,4 +40,4 @@ scoreboard objectives setdisplay belowName damage_percent
 scoreboard players set @s training_area 20
 
 ##Boots
-item replace entity @s armor.feet with netherite_boots{Unbreakable:1b,display:{Name:'[{"text":"Boots That Make You Invulnerable","italic":false,"color":"dark_gray"}]'},HideFlags:63,Enchantments:[{id:"minecraft:binding_curse",lvl:1}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:0,UUID:[I; 999, 999, 999]},{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:1,UUID:[I; 99, 99, 99, 99]}]}
+item replace entity @s armor.feet with netherite_boots{Unbreakable:1b,display:{Name:'[{"translate":"Boots That Make You Invulnerable","italic":false,"color":"dark_gray"}]'},HideFlags:63,Enchantments:[{id:"minecraft:binding_curse",lvl:1}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:0,UUID:[I; 999, 999, 999]},{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:1,UUID:[I; 99, 99, 99, 99]}]}

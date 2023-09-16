@@ -19,8 +19,8 @@ execute if entity @e[type=armor_stand,tag=selected_map] if score $comp_kill_dela
 execute if score $time game matches 500 as @a[tag=playing,tag=!just_striked] at @s run function game:competitive/time_warning
 execute if score $time game matches 600 as @a[tag=playing,tag=!just_striked] at @s run function game:competitive/selection_phase/time_over
 
-title @a[tag=playing] title [{"text":""}]
-title @a[tag=playing,tag=!just_striked] subtitle [{"text":"!","color":"gold","bold":true},{"text":" CHOOSE A MAP ","color":"yellow","bold":false},{"text":"!","color":"gold","bold":true}]
-title @a[tag=playing,tag=just_striked] subtitle [{"text":""}]
+title @a[tag=playing] title [{"translate":""}]
+title @a[tag=playing,tag=!just_striked] subtitle [{"translate":"!","color":"gold","bold":true},{"translate":" CHOOSE A MAP ","color":"yellow","bold":false},{"translate":"!","color":"gold","bold":true}]
+title @a[tag=playing,tag=just_striked] subtitle [{"translate":""}]
 
 effect give @a[tag=playing] weakness 1 255 true

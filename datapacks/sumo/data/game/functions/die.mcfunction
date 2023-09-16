@@ -28,9 +28,9 @@ execute if entity @s[scores={lives=..0}] run function game:out_of_lives
 ##score
 scoreboard players set @s[scores={lives=1..}] death_cooldown 100
 ##Tellraws
-execute unless score $mode settings matches 1..3 run tellraw @s[scores={lives=2..}] [{"text":"You have died! ","color":"red"},{"text":"You have ","color":"aqua"},{"score":{"objective":"lives","name":"@s"},"color":"white","bold":true},{"text":" lives remaining.","color":"aqua"}]
-execute unless score $mode settings matches 3 run tellraw @s[scores={lives=1}] [{"text":"You have died! ","color":"red"},{"text":"You have ","color":"aqua"},{"score":{"objective":"lives","name":"@s"},"color":"white","bold":true},{"text":" life remaining.","color":"aqua"}]
-execute unless score $mode settings matches 3 run tellraw @s[scores={lives=0}] [{"text":"You have died! ","color":"red"},{"text":"You are now out of the game.","color":"aqua"}]
+execute unless score $mode settings matches 1..3 run tellraw @s[scores={lives=2..}] [{"translate":"You have died! ","color":"red"},{"translate":"You have ","color":"aqua"},{"score":{"objective":"lives","name":"@s"},"color":"white","bold":true},{"translate":" lives remaining.","color":"aqua"}]
+execute unless score $mode settings matches 3 run tellraw @s[scores={lives=1}] [{"translate":"You have died! ","color":"red"},{"translate":"You have ","color":"aqua"},{"score":{"objective":"lives","name":"@s"},"color":"white","bold":true},{"translate":" life remaining.","color":"aqua"}]
+execute unless score $mode settings matches 3 run tellraw @s[scores={lives=0}] [{"translate":"You have died! ","color":"red"},{"translate":"You are now out of the game.","color":"aqua"}]
 
 
 ##add cur death if this is comp
@@ -57,7 +57,7 @@ execute if score $mode settings matches 0 run scoreboard players operation @s[ta
 execute if score $mode settings matches 4 run scoreboard players operation @s[tag=playing] sidebar = @s lives
 
 ##Reset actionbar
-title @s actionbar {"text":" "}
+title @s actionbar {"translate":" "}
 
 
 
@@ -104,21 +104,21 @@ team join red @s
 team join aqua @a[tag=killer]
 
 ##Tellraws (First one if for if you were killed by a player. Second is for if you died by your own accord) (Second set of two is for being eliminated)
-execute unless score $mode settings matches 3 if entity @a[tag=killer] if entity @s[scores={lives=1..}] run tellraw @a[tag=playing] [{"selector":"@s"},{"text":" was killed by ","color":"gold"},{"selector":"@a[tag=killer,limit=1]"}]
+execute unless score $mode settings matches 3 if entity @a[tag=killer] if entity @s[scores={lives=1..}] run tellraw @a[tag=playing] [{"selector":"@s"},{"translate":" was killed by ","color":"gold"},{"selector":"@a[tag=killer,limit=1]"}]
 
-execute unless score $mode settings matches 3 unless entity @a[tag=killer] if entity @s[scores={lives=1..}] run tellraw @a[tag=playing] [{"selector":"@s"},{"text":" has died.","color":"gold"}]
+execute unless score $mode settings matches 3 unless entity @a[tag=killer] if entity @s[scores={lives=1..}] run tellraw @a[tag=playing] [{"selector":"@s"},{"translate":" has died.","color":"gold"}]
 
 
-execute unless score $mode settings matches 3 if entity @a[tag=killer] if entity @s[scores={lives=0}] run tellraw @a[tag=playing] [{"selector":"@s"},{"text":" was ","color":"gold"},{"text":"ELIMINATED ","bold":true,"color":"red"},{"text":"by ","color":"gold"},{"selector":"@a[tag=killer,limit=1]"}]
+execute unless score $mode settings matches 3 if entity @a[tag=killer] if entity @s[scores={lives=0}] run tellraw @a[tag=playing] [{"selector":"@s"},{"translate":" was ","color":"gold"},{"translate":"ELIMINATED ","bold":true,"color":"red"},{"translate":"by ","color":"gold"},{"selector":"@a[tag=killer,limit=1]"}]
 
-execute unless score $mode settings matches 3 unless entity @a[tag=killer] if entity @s[scores={lives=0}] run tellraw @a[tag=playing] [{"selector":"@s"},{"text":" has been ","color":"gold"},{"text":"ELIMINATED!","color":"red","bold":true}]
+execute unless score $mode settings matches 3 unless entity @a[tag=killer] if entity @s[scores={lives=0}] run tellraw @a[tag=playing] [{"selector":"@s"},{"translate":" has been ","color":"gold"},{"translate":"ELIMINATED!","color":"red","bold":true}]
 
 ##Kills streaks
 scoreboard players add @a[tag=playing,tag=killer] kill_streak 1
-execute as @a[tag=playing,tag=killer,scores={kill_streak=3}] at @s unless score $mode settings matches 3 run tellraw @a[tag=playing] [{"text":"🗡","color":"red"},{"text":": ","color":"dark_red"},{"selector":"@s"},{"text":" has a kill streak of ","color":"#ff9600"},{"text":"3","color":"#ff4b00"},{"text":"!","color":"red"}]
-execute as @a[tag=playing,tag=killer,scores={kill_streak=5}] at @s unless score $mode settings matches 3 run tellraw @a[tag=playing] [{"text":"🗡","color":"red"},{"text":": ","color":"dark_red"},{"selector":"@s"},{"text":" has a kill streak of ","color":"#ff7800"},{"text":"5","color":"#ff3c00"},{"text":"!","color":"red"}]
-execute as @a[tag=playing,tag=killer,scores={kill_streak=8}] at @s unless score $mode settings matches 3 run tellraw @a[tag=playing] [{"text":"🗡","color":"red"},{"text":": ","color":"dark_red"},{"selector":"@s"},{"text":" has a kill streak of ","color":"#ff5a00"},{"text":"8","color":"#ff2300"},{"text":"!","color":"red"}]
-execute as @a[tag=playing,tag=killer,scores={kill_streak=10}] at @s unless score $mode settings matches 3 run tellraw @a[tag=playing] [{"text":"🗡","color":"red"},{"text":": ","color":"dark_red"},{"selector":"@s"},{"text":" has a kill streak of ","color":"#ff3c00"},{"text":"10","color":"#ff0a00"},{"text":"!","color":"red"}]
+execute as @a[tag=playing,tag=killer,scores={kill_streak=3}] at @s unless score $mode settings matches 3 run tellraw @a[tag=playing] [{"translate":"🗡","color":"red"},{"translate":": ","color":"dark_red"},{"selector":"@s"},{"translate":" has a kill streak of ","color":"#ff9600"},{"translate":"3","color":"#ff4b00"},{"translate":"!","color":"red"}]
+execute as @a[tag=playing,tag=killer,scores={kill_streak=5}] at @s unless score $mode settings matches 3 run tellraw @a[tag=playing] [{"translate":"🗡","color":"red"},{"translate":": ","color":"dark_red"},{"selector":"@s"},{"translate":" has a kill streak of ","color":"#ff7800"},{"translate":"5","color":"#ff3c00"},{"translate":"!","color":"red"}]
+execute as @a[tag=playing,tag=killer,scores={kill_streak=8}] at @s unless score $mode settings matches 3 run tellraw @a[tag=playing] [{"translate":"🗡","color":"red"},{"translate":": ","color":"dark_red"},{"selector":"@s"},{"translate":" has a kill streak of ","color":"#ff5a00"},{"translate":"8","color":"#ff2300"},{"translate":"!","color":"red"}]
+execute as @a[tag=playing,tag=killer,scores={kill_streak=10}] at @s unless score $mode settings matches 3 run tellraw @a[tag=playing] [{"translate":"🗡","color":"red"},{"translate":": ","color":"dark_red"},{"selector":"@s"},{"translate":" has a kill streak of ","color":"#ff3c00"},{"translate":"10","color":"#ff0a00"},{"translate":"!","color":"red"}]
 
 #Kill streak sounds
 execute if entity @a[tag=playing,tag=killer,scores={kill_streak=3}] as @a[tag=playing] at @s run playsound minecraft:entity.ender_dragon.growl master @s ~ ~ ~ 0.25 1.7

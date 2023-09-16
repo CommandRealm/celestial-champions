@@ -2,8 +2,8 @@
 
 tag @s add temporary_tag
 
-tellraw @s[tag=!has_had_potato] [{"text":"⚠ ","color":"yellow"},{"text":"You have the potato! It will explode soon. Punch someone to give them the potato.","color":"#9fbf48","bold":false}]
-tellraw @s[tag=has_had_potato] [{"text":"⚠ ","color":"yellow"},{"text":"You have the potato!","color":"#9fbf48","bold":false}]
+tellraw @s[tag=!has_had_potato] [{"translate":"⚠ ","color":"yellow"},{"translate":"You have the potato! It will explode soon. Punch someone to give them the potato.","color":"#9fbf48","bold":false}]
+tellraw @s[tag=has_had_potato] [{"translate":"⚠ ","color":"yellow"},{"translate":"You have the potato!","color":"#9fbf48","bold":false}]
 
 ##sounds
 playsound minecraft:entity.cat.hiss master @a ~ ~ ~ 1 0.85

@@ -5,7 +5,7 @@
             "nbt": "{CustomModelData:0}"
         },
         "title": {
-            "text": "Competitive",
+            "translate": "Competitive",
             "color": "#006e6e",
             "bold": true
         },
@@ -13,7 +13,7 @@
         "show_toast": true,
         "announce_to_chat": false,
         "description": {
-            "text": "Play a game of Celestial Champions where everyone plays the same character and items are disabled.",
+            "translate": "Play a game of Celestial Champions where everyone plays the same character and items are disabled.",
             "color": "#fac84b",
             "bold": false
         }

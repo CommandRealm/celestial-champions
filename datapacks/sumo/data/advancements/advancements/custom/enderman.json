@@ -5,7 +5,7 @@
             "nbt": "{CustomModelData:0,SkullOwner:{Id:[I;1564911024,-906279023,-1936070405,-810429957],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTU4MDhlNzA4ZTMzN2VkMGI5ZWI3MGNhM2M3NjA2NDdmODMyOTE5MTY4ZmIxMDU4NTdiMThhZGU2NGFhYzJlOCJ9fX0=\"}]}}}"
         },
         "title": {
-            "text": "Always Watching...",
+            "translate": "Always Watching...",
             "color": "#fff703",
             "bold": true
         },
@@ -13,7 +13,7 @@
         "show_toast": true,
         "announce_to_chat": false,
         "description": {
-            "text": "Play a game as Enderman.",
+            "translate": "Play a game as Enderman.",
             "color": "#fac84b",
             "bold": false
         }

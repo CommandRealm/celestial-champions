@@ -17,7 +17,7 @@ execute if score $calculate knockback_slot matches 9..17 if score $calculate com
 
 ##If we had an invald press.
 playsound minecraft:block.note_block.didgeridoo master @s[tag=!valid_press] ~ ~ ~ 100 0
-tellraw @s[tag=!valid_press] [{"text":"⚡ ","color":"gold"},{"text":"Invalid orientation, please try again.","color":"red"}]
+tellraw @s[tag=!valid_press] [{"translate":"⚡ ","color":"gold"},{"translate":"Invalid orientation, please try again.","color":"red"}]
 
 ##If we had a valid press.
 scoreboard players operation @s[tag=valid_press] knockback_slot = $calculate knockback_slot

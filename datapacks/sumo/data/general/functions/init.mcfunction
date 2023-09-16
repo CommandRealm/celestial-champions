@@ -196,7 +196,7 @@ team modify fighter_50 color aqua
 ##Dead team
 team add dead
 team modify dead color red
-team modify dead prefix [{"text":"[","color":"dark_gray","bold":true},{"text":"☠","color":"gray","bold":false},{"text":"] ","color":"dark_gray","bold":true}]
+team modify dead prefix [{"translate":"[","color":"dark_gray","bold":true},{"translate":"☠","color":"gray","bold":false},{"translate":"] ","color":"dark_gray","bold":true}]
 
 ##Cooldown objectives (Will be used for the time in between gameplay stuffs)
 scoreboard objectives add cooldown dummy
@@ -246,29 +246,29 @@ team modify lead color aqua
 team modify art color aqua
 team modify sr_art color aqua
 team modify pc_role color aqua
-team modify test prefix {"text":"(Tester) ","color":"aqua"}
-team modify help prefix {"text":"[Helper] ","color":"dark_aqua"}
-team modify bld prefix {"text":"{Builder} ","color":"blue"}
-team modify prg prefix {"text":"{Programmer} ","color":"red"}
-team modify srbld prefix {"text":"{Sr. Builder} ","color":"dark_blue"}
-team modify srprg prefix {"text":"{Sr. Programmer} ","color":"dark_red"}
-team modify lead prefix [{"text":"{","color":"dark_purple","bold":true},{"text":"Project Lead","bold":false},{"text":"} ","bold":true}]
-team modify art prefix {"text":"{Artist} ","color":"green"}
-team modify sr_art prefix {"text":"{Sr. Artist} ","color":"dark_green"}
-team modify pc_role prefix [{"text":"(","color":"dark_gray"},{"text":"pc","color":"green","bold":true},{"text":") ","color":"dark_gray"}]
+team modify test prefix {"translate":"(Tester) ","color":"aqua"}
+team modify help prefix {"translate":"[Helper] ","color":"dark_aqua"}
+team modify bld prefix {"translate":"{Builder} ","color":"blue"}
+team modify prg prefix {"translate":"{Programmer} ","color":"red"}
+team modify srbld prefix {"translate":"{Sr. Builder} ","color":"dark_blue"}
+team modify srprg prefix {"translate":"{Sr. Programmer} ","color":"dark_red"}
+team modify lead prefix [{"translate":"{","color":"dark_purple","bold":true},{"translate":"Project Lead","bold":false},{"translate":"} ","bold":true}]
+team modify art prefix {"translate":"{Artist} ","color":"green"}
+team modify sr_art prefix {"translate":"{Sr. Artist} ","color":"dark_green"}
+team modify pc_role prefix [{"translate":"(","color":"dark_gray"},{"translate":"pc","color":"green","bold":true},{"translate":") ","color":"dark_gray"}]
 
 team add manager
 team modify manager color aqua
-team modify manager prefix {"text":"{Manager} ","color":"yellow"}
+team modify manager prefix {"translate":"{Manager} ","color":"yellow"}
 
 team add cr
 team modify cr color aqua
-team modify cr prefix [{"text":"{","color":"white","bold":true},{"text":"C","color":"aqua","bold":true},{"text":"R","color":"dark_aqua","bold":true},{"text":"} ","color":"white","bold":true}]
+team modify cr prefix [{"translate":"{","color":"white","bold":true},{"translate":"C","color":"aqua","bold":true},{"translate":"R","color":"dark_aqua","bold":true},{"translate":"} ","color":"white","bold":true}]
 
 
 team add sky_explorer
 team modify sky_explorer color aqua
-team modify sky_explorer prefix [{"text":"{","color":"dark_aqua","bold":true},{"text":"Sky ","bold":false,"color":"white"},{"text":"Explorer","color":"aqua","bold":false},{"text":"} ","bold":true,"color":"dark_aqua"}]
+team modify sky_explorer prefix [{"translate":"{","color":"dark_aqua","bold":true},{"translate":"Sky ","bold":false,"color":"white"},{"translate":"Explorer","color":"aqua","bold":false},{"translate":"} ","bold":true,"color":"dark_aqua"}]
 
 
 ##Objectives for in-game statistics
@@ -302,7 +302,7 @@ scoreboard objectives add max_damage dummy
 scoreboard objectives add times_hit dummy
 
 ##Percentage displayed in game.
-scoreboard objectives add damage_percent dummy [{"text":"☠","color":"gray"}]
+scoreboard objectives add damage_percent dummy [{"translate":"☠","color":"gray"}]
 
 ##Number of extra jumps
 scoreboard objectives add extra_jumps dummy
@@ -505,7 +505,7 @@ summon area_effect_cloud 37 68 -3 {Age:-2147483648,Duration:-1,WaitTime:-2147483
 summon area_effect_cloud 0 63.5 83.5 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["fighter_nameplate","reset_die","competitive_fighter_nameplate"],CustomNameVisible:0b}
 
 ##Menu nameplate text
-summon area_effect_cloud 6 67.0 7 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"☀ ","color":"aqua","bold":false},{"text":"- ","color":"gray","bold":true},{"text":"Menu","color":"white","italic":false,"underlined": true},{"text":" -","color":"gray","bold":true},{"text":" ☀","color":"aqua","bold":false}]'}
+summon area_effect_cloud 6 67.0 7 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"☀ ","color":"aqua","bold":false},{"translate":"- ","color":"gray","bold":true},{"translate":"Menu","color":"white","italic":false,"underlined": true},{"translate":" -","color":"gray","bold":true},{"translate":" ☀","color":"aqua","bold":false}]'}
 
 ##Cooldown objective for being invulnerable in the training area
 scoreboard objectives add training_area dummy
@@ -531,12 +531,12 @@ scoreboard objectives add throw_trident minecraft.used:minecraft.trident
 ##Bye team
 team add bye
 team modify bye color gray
-team modify bye prefix [{"text":"-= ","color":"white","bold":true},{"text":"BYE ","bold":false,"color":"gray"}]
+team modify bye prefix [{"translate":"-= ","color":"white","bold":true},{"translate":"BYE ","bold":false,"color":"gray"}]
 
 ##Winner team
 team add winner
 team modify winner color gold
-team modify winner prefix [{"text":"[","color":"white","bold":true},{"text":"🗡","bold":false,"color":"yellow"},{"text":"] ","color":"white","bold":true}]
+team modify winner prefix [{"translate":"[","color":"white","bold":true},{"translate":"🗡","bold":false,"color":"yellow"},{"translate":"] ","color":"white","bold":true}]
 
 
 ##music objectives
@@ -562,7 +562,7 @@ scoreboard objectives add handicap dummy
 
 ##Bossbar
 bossbar remove minecraft:lobby
-bossbar add minecraft:lobby [{"text":"| ","obfuscated":true,"color":"gold"},{"text":"Celestial ","obfuscated":false,"bold":true,"color":"white"},{"text":"Champions ","obfuscated":false,"bold":true,"color":"aqua"},{"text":"- ","obfuscated":false,"color":"gray"},{"text":"By the ","obfuscated":false,"color":"white"},{"text":"Command ","obfuscated":false,"bold":true,"color":"aqua"},{"text":"Realm ","obfuscated":false,"bold":true,"color":"dark_aqua"},{"text": "Team","obfuscated":false,"color":"white"},{"text":" |","obfuscated":true,"color":"gold"}]
+bossbar add minecraft:lobby [{"translate":"| ","obfuscated":true,"color":"gold"},{"translate":"Celestial ","obfuscated":false,"bold":true,"color":"white"},{"translate":"Champions ","obfuscated":false,"bold":true,"color":"aqua"},{"translate":"- ","obfuscated":false,"color":"gray"},{"translate":"By the ","obfuscated":false,"color":"white"},{"translate":"Command ","obfuscated":false,"bold":true,"color":"aqua"},{"translate":"Realm ","obfuscated":false,"bold":true,"color":"dark_aqua"},{"translate": "Team","obfuscated":false,"color":"white"},{"translate":" |","obfuscated":true,"color":"gold"}]
 bossbar set minecraft:lobby style progress
 bossbar set minecraft:lobby color blue
 bossbar set minecraft:lobby max 1
@@ -842,7 +842,7 @@ function completionist:setup
 
 team add spectator
 team modify spectator color white
-team modify spectator prefix [{"text":"[","color":"gray","bold":true},{"text":"Spectator","color":"white","bold":false},{"text":"] ","color":"gray","bold":true}]
+team modify spectator prefix [{"translate":"[","color":"gray","bold":true},{"translate":"Spectator","color":"white","bold":false},{"translate":"] ","color":"gray","bold":true}]
 
 
 ##Tutorial
@@ -851,56 +851,56 @@ scoreboard objectives add tutorial dummy
 #61a1a0
 
 
-summon area_effect_cloud 4.5 87.5 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"Every fighter has two weapons; a","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 87.25 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"combo weapon and a knockback weapon.","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 87.0 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"Hitting an opponent with your","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 86.75 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"combo weapon will raise the","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 86.5 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"knockback on your knockback weapon.","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 86.25 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"After hitting someone with your","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 86.0 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"knockback weapon, it will","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 85.75 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"reset back to the base knockback.","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 85.5 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"You can see your current","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 85.25 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"knockback on the action bar.","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 87.5 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"Every fighter has two weapons; a","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 87.25 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"combo weapon and a knockback weapon.","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 87.0 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"Hitting an opponent with your","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 86.75 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"combo weapon will raise the","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 86.5 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"knockback on your knockback weapon.","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 86.25 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"After hitting someone with your","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 86.0 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"knockback weapon, it will","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 85.75 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"reset back to the base knockback.","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 85.5 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"You can see your current","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 85.25 -70 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"knockback on the action bar.","color":"#00bbb9"}]'}
 
-summon area_effect_cloud 4.5 87.5 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"You have extra jumps that are","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 87.25 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"activated by sneaking. The","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 87.0 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"feather in your hotbar will","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 86.75 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"indicate how many extra jumps","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 86.5 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"you have left. They reset when","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 86.25 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"you touch the ground.","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 86.0 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"When hit, your damage ","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 85.75 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"percentage goes up. As your percentage","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 85.5 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"goes above 50 percent, your air","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 85.25 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"jumps will become shorter.","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 85.0 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":" You can see your current damage","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 84.75 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"percent on the action bar.","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 87.5 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"You have extra jumps that are","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 87.25 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"activated by sneaking. The","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 87.0 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"feather in your hotbar will","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 86.75 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"indicate how many extra jumps","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 86.5 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"you have left. They reset when","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 86.25 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"you touch the ground.","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 86.0 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"When hit, your damage ","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 85.75 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"percentage goes up. As your percentage","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 85.5 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"goes above 50 percent, your air","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 85.25 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"jumps will become shorter.","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 85.0 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":" You can see your current damage","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 84.75 -65 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"percent on the action bar.","color":"#00bbb9"}]'}
 
-summon area_effect_cloud 4.5 87.5 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"All fighters have two abilities;","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 87.25 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"the ground ability and the air ability.","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 87.0 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"They are activated depending on","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 86.75 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"whether you are on the ground","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 86.5 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"or in the air, respectively.","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 86.25 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"You can activate an ability","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 86.0 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"by dropping or offhanding","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 85.75 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"your weapons. You can see your","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 85.5 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"ability cooldowns on the action bar.","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 85.25 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"On the bridge, you can read about","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 85.0 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"specific fighter\'s abilities.","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 87.5 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"All fighters have two abilities;","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 87.25 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"the ground ability and the air ability.","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 87.0 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"They are activated depending on","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 86.75 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"whether you are on the ground","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 86.5 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"or in the air, respectively.","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 86.25 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"You can activate an ability","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 86.0 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"by dropping or offhanding","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 85.75 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"your weapons. You can see your","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 85.5 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"ability cooldowns on the action bar.","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 85.25 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"On the bridge, you can read about","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 85.0 -60 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"specific fighter\'s abilities.","color":"#78f4f3"}]'}
 
-summon area_effect_cloud 4.5 86.5 -55 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"Following up on your hits after","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 86.25 -55 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"you\'ve knocked someone off is the best","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 86.0 -55 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"way to stop their recovery","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 85.75 -55 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"attempt and get a kill.","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 86.5 -55 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"Following up on your hits after","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 86.25 -55 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"you\'ve knocked someone off is the best","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 86.0 -55 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"way to stop their recovery","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 85.75 -55 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"attempt and get a kill.","color":"#00bbb9"}]'}
 
-summon area_effect_cloud 4.5 86.5 -50 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"The default fighter is Theo,","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 86.25 -50 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"but there are many more to choose","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 86.0 -50 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"from in the Fighter Selection chest.","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 85.75 -50 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"We also recommend messing","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 85.5 -50 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"around with the game settings,","color":"#78f4f3"}]'}
-summon area_effect_cloud 4.5 85.25 -50 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"such as enabling items or","color":"#00bbb9"}]'}
-summon area_effect_cloud 4.5 85.0 -50 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"changing the mode.","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 86.5 -50 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"The default fighter is Theo,","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 86.25 -50 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"but there are many more to choose","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 86.0 -50 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"from in the Fighter Selection chest.","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 85.75 -50 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"We also recommend messing","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 85.5 -50 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"around with the game settings,","color":"#78f4f3"}]'}
+summon area_effect_cloud 4.5 85.25 -50 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"such as enabling items or","color":"#00bbb9"}]'}
+summon area_effect_cloud 4.5 85.0 -50 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"changing the mode.","color":"#78f4f3"}]'}
 
-summon area_effect_cloud 0 87 -48 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die","boost_pad_name_text"],CustomNameVisible:1b,CustomName:'[{"text":"☀ ","color":"aqua","bold":false},{"text":"- ","color":"gray","bold":true},{"text":"Boost Pad","color":"white","italic":false,"underlined": true},{"text":" -","color":"gray","bold":true},{"text":" ☀","color":"aqua","bold":false}]'}
+summon area_effect_cloud 0 87 -48 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die","boost_pad_name_text"],CustomNameVisible:1b,CustomName:'[{"translate":"☀ ","color":"aqua","bold":false},{"translate":"- ","color":"gray","bold":true},{"translate":"Boost Pad","color":"white","italic":false,"underlined": true},{"translate":" -","color":"gray","bold":true},{"translate":" ☀","color":"aqua","bold":false}]'}
 
 ## Tutorial teleporter
 
@@ -911,7 +911,7 @@ scoreboard players set @e[type=area_effect_cloud,tag=tutorial_teleporter] partic
 
 
 ##tutorial nameplate
-summon area_effect_cloud -5 67 7 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"text":"☀ ","color":"aqua","bold":false},{"text":"- ","color":"gray","bold":true},{"text":"Tutorial","color":"gold","italic":false,"underlined": true},{"text":" -","color":"gray","bold":true},{"text":" ☀","color":"aqua","bold":false}]'}
+summon area_effect_cloud -5 67 7 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die"],CustomNameVisible:1b,CustomName:'[{"translate":"☀ ","color":"aqua","bold":false},{"translate":"- ","color":"gray","bold":true},{"translate":"Tutorial","color":"gold","italic":false,"underlined": true},{"translate":" -","color":"gray","bold":true},{"translate":" ☀","color":"aqua","bold":false}]'}
 
 
 
@@ -929,7 +929,7 @@ scoreboard objectives add prefix dummy
 
 
 ##Start button text
-summon area_effect_cloud 0 68.5 27 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die","start_button_text"],CustomNameVisible:1b,CustomName:'[{"text":"- ","color":"gray"},{"text":"☀ ","color":"aqua"},{"text":"Start","color":"gold","bold":true},{"text":" ☀","color":"aqua"},{"text":" -","color":"gray"}]'}
+summon area_effect_cloud 0 68.5 27 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["reset_die","start_button_text"],CustomNameVisible:1b,CustomName:'[{"translate":"- ","color":"gray"},{"translate":"☀ ","color":"aqua"},{"translate":"Start","color":"gold","bold":true},{"translate":" ☀","color":"aqua"},{"translate":" -","color":"gray"}]'}
 
 scoreboard objectives add boost_pad_delay dummy
 

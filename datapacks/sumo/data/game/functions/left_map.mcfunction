@@ -5,4 +5,4 @@
 ##Die function
 function game:die
 
-tellraw @s {"text":"You went too far away from the map!","color":"red"}
+tellraw @s {"translate":"You went too far away from the map!","color":"red"}

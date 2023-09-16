@@ -2,5 +2,5 @@
     [ { "rolls":1, "entries":
         [ { "type": "minecraft:item", "functions":
             [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1}"},
-              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Your best kill-streak is: ","color":"dark_red","italic":false,"bold":false},{"score":{"objective":"stats_streak","name":"@s"},"color":"red","italic":false,"bold":true}] }], 
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"translate":"Your best kill-streak is: ","color":"dark_red","italic":false,"bold":false},{"score":{"objective":"stats_streak","name":"@s"},"color":"red","italic":false,"bold":true}] }], 
               "name": "minecraft:redstone_block" } ] } ] }

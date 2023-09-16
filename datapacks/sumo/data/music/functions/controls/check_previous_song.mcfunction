@@ -14,4 +14,4 @@ clear @s red_stained_glass_pane{previous_button:1b}
 kill @e[type=item,distance=..15,nbt={Item:{id:"minecraft:red_stained_glass_pane",tag:{previous_button:1b}}}]
 
 ##Putting items in our inventory
-item replace entity @s inventory.15 with red_stained_glass_pane{not_clickable:1,previous_button:1b,display:{Name:'[{"text":"Previous","color":"red","bold":true,"italic":false}]',Lore:['[{"text":"Press to play","color":"gray","italic":false}]','[{"text":"the previous track.","color":"gray","italic":false}]']}}
+item replace entity @s inventory.15 with red_stained_glass_pane{not_clickable:1,previous_button:1b,display:{Name:'[{"translate":"Previous","color":"red","bold":true,"italic":false}]',Lore:['[{"translate":"Press to play","color":"gray","italic":false}]','[{"translate":"the previous track.","color":"gray","italic":false}]']}}

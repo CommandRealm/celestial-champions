@@ -19,15 +19,15 @@ execute at @s run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 100
 
 
 ##Titles
-title @s title [{"text":"☄ ","color":"#8a0007","bold":true},{"text":"- ","color":"white","bold":false},{"text":"Fight!","color":"#ff7d83","bold":false},{"text":" -","color":"white","bold":false},{"text":" ☄","color":"#8a0007"}]
-title @s subtitle [{"text":""}]
+title @s title [{"translate":"☄ ","color":"#8a0007","bold":true},{"translate":"- ","color":"white","bold":false},{"translate":"Fight!","color":"#ff7d83","bold":false},{"translate":" -","color":"white","bold":false},{"translate":" ☄","color":"#8a0007"}]
+title @s subtitle [{"translate":""}]
 
 ##Effects
 gamemode adventure @s
 effect clear @s[tag=playing] levitation
 effect give @s[tag=playing] slow_falling 10000 0 true
 effect give @s[tag=playing] weakness 10000 0 true
-item replace entity @s[tag=playing] armor.feet with netherite_boots{Unbreakable:1b,display:{Name:'[{"text":"Boots That Make You Invulnerable","italic":false,"color":"dark_gray"}]'},HideFlags:63,Enchantments:[{id:"minecraft:binding_curse",lvl:1}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:0,UUID:[I; 999, 999, 999]},{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:1,UUID:[I; 99, 99, 99, 99]}]}
+item replace entity @s[tag=playing] armor.feet with netherite_boots{Unbreakable:1b,display:{Name:'[{"translate":"Boots That Make You Invulnerable","italic":false,"color":"dark_gray"}]'},HideFlags:63,Enchantments:[{id:"minecraft:binding_curse",lvl:1}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:0,UUID:[I; 999, 999, 999]},{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:1,UUID:[I; 99, 99, 99, 99]}]}
 
 ##Particles
 execute at @s run particle spit ~ ~ ~ 0.25 0.25 0.25 0.15 5

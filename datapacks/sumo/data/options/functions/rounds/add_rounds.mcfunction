@@ -4,7 +4,7 @@ scoreboard players add $rounds_to_win settings 1
 execute if score $rounds_to_win settings matches 11.. run scoreboard players set $rounds_to_win settings 1
 execute if score $rounds_to_win settings matches ..0 run scoreboard players set $rounds_to_win settings 10
 
-setblock 7 64 26 oak_wall_sign[facing=west]{front_text:{messages:['{"text":"","color":"blue","bold":true,"clickEvent":{"action":"run_command","value":"/execute if score $game state matches 1.. run function options:error"}}', '{"text":"Rounds to win:","color":"aqua","bold":true}', '{"score":{"objective":"settings","name":"$rounds_to_win"},"color":"gold"}', '{"text":"<<<         >>>","color":"#d4d4d4","bold":true,"clickEvent":{"action":"run_command","value":"/execute as @s at @s anchored eyes if score $game state matches 0 run function options:rounds/click_rounds"}}'], has_glowing_text: false, color: "black"}}
+setblock 7 64 26 oak_wall_sign[facing=west]{front_text:{messages:['{"translate":"","color":"blue","bold":true,"clickEvent":{"action":"run_command","value":"/execute if score $game state matches 1.. run function options:error"}}', '{"translate":"Rounds to win:","color":"aqua","bold":true}', '{"score":{"objective":"settings","name":"$rounds_to_win"},"color":"gold"}', '{"translate":"<<<         >>>","color":"#d4d4d4","bold":true,"clickEvent":{"action":"run_command","value":"/execute as @s at @s anchored eyes if score $game state matches 0 run function options:rounds/click_rounds"}}'], has_glowing_text: false, color: "black"}}
 
 
 particle minecraft:cloud 8 65.5 26 0 0 0 0.05 10

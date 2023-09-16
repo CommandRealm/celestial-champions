@@ -2,8 +2,8 @@
     [ { "rolls":1, "entries":
         [ { "type": "minecraft:item", "functions":
             [ {"function":"minecraft:set_nbt","entity":"this","tag":"{fighter:1,HideFlags:63,clickable:1,SkullOwner:{Id:[I;-1590716297,-948745208,-2049456831,-1974397505],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzk3MTVjNjhiNzgxYzBhZDRlYjE2ZjlkN2NmNDU5MGMzODUwMzQ5MGM5MDU0ZDE1MDhlMjMyZDI0YjBiYWJhOSJ9fX0=\"}]}}}"},
-              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Zombie","color":"#71955b","italic":false,"bold":true}] },
-              {"function":"minecraft:set_lore","entity":"this","lore":[{"text":"Click to select.","color":"gray","italic":false},{"text":"Shift-click to change variant.","color":"gray","italic":false}]}], 
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"translate":"Zombie","color":"#71955b","italic":false,"bold":true}] },
+              {"function":"minecraft:set_lore","entity":"this","lore":[{"translate":"Click to select.","color":"gray","italic":false},{"translate":"Shift-click to change variant.","color":"gray","italic":false}]}], 
               "name": "minecraft:player_head" } ] } ] }
 
 

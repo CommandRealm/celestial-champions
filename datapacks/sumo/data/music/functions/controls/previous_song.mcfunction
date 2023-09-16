@@ -1,7 +1,7 @@
 ##Called to play the previous song
 
 ##If we don't have a previous song.
-execute unless entity @s[scores={previous_track=1..}] run tellraw @s [{"text":"⚡ ","color":"gold"},{"text":"There are no previous songs to play.","color":"red"}]
+execute unless entity @s[scores={previous_track=1..}] run tellraw @s [{"translate":"⚡ ","color":"gold"},{"translate":"There are no previous songs to play.","color":"red"}]
 execute unless entity @s[scores={previous_track=1..}] run playsound minecraft:block.note_block.didgeridoo master @s ~ ~ ~ 1 0
 
 execute if entity @s[scores={previous_track=1..}] run tag @s add temporary_tag

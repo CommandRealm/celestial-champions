@@ -25,8 +25,8 @@ scoreboard objectives setdisplay sidebar
 ##Tellraws and titles
 
 title @a[tag=playing] times 5 50 5
-title @a[tag=playing] title [{"selector":"@r[tag=playing,scores={fake_criteria=0}]"},{"text":" wins!","color":"white"}]
-tellraw @a[tag=playing] [{"selector":"@a[tag=playing,scores={fake_criteria=0}]"},{"text":" wins!","color":"white"}]
+title @a[tag=playing] title [{"selector":"@r[tag=playing,scores={fake_criteria=0}]"},{"translate":" wins!","color":"white"}]
+tellraw @a[tag=playing] [{"selector":"@a[tag=playing,scores={fake_criteria=0}]"},{"translate":" wins!","color":"white"}]
 
 ##Winner tag
 tag @a remove winner
