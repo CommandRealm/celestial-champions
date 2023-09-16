@@ -2,8 +2,8 @@
 
 ##Title
 scoreboard players add $rounds game 1
-title @a[tag=playing] title [{"text":"Round: ","color":"aqua"},{"score":{"objective":"game","name":"$rounds"},"color":"white","bold":true}]
-title @a[tag=playing] subtitle [{"text":" "}]
+title @a[tag=playing] title [{"translate":"Round: ","color":"aqua"},{"score":{"objective":"game","name":"$rounds"},"color":"white","bold":true}]
+title @a[tag=playing] subtitle [{"translate":" "}]
 ##General resets
 function game:reset_players_before_start
 
@@ -34,8 +34,8 @@ tag @a[tag=playing] remove update_prefix
 
 
 ##Modifying sidebar and list objectives to have a fancy title
-scoreboard objectives modify sidebar displayname [{"text":"☀","color":"white","bold":false},{"text":" Lives ","color":"aqua","bold":true},{"text":"☀","color":"white","bold":false}]
-scoreboard objectives modify list displayname [{"text":"☀","color":"aqua","bold":false},{"text":" Rounds Won ","color":"white","bold":true},{"text":"☀","color":"aqua","bold":false}]
+scoreboard objectives modify sidebar displayname [{"translate":"☀","color":"white","bold":false},{"translate":" Lives ","color":"aqua","bold":true},{"translate":"☀","color":"white","bold":false}]
+scoreboard objectives modify list displayname [{"translate":"☀","color":"aqua","bold":false},{"translate":" Rounds Won ","color":"white","bold":true},{"translate":"☀","color":"aqua","bold":false}]
 
 ##Updating list objective
 scoreboard players operation Criteria: list = $rounds_to_win settings

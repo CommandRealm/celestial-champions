@@ -7,7 +7,7 @@ tag @a[tag=playing] remove is_fighter
 clear @a[tag=playing]
 
 ##Actionbar clear
-title @a[tag=playing] actionbar {"text":" "}
+title @a[tag=playing] actionbar {"translate":" "}
 
 ##Resetting extra jump
 scoreboard players reset @a[tag=playing] extra_jump_time

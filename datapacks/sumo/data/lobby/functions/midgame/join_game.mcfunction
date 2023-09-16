@@ -1,6 +1,6 @@
 ##called when we press join
 execute if score $mode settings matches 0 run team join dead
-tellraw @s [{"text":"You will join the game as soon as possible.","color":"white"}]
+tellraw @s [{"translate":"You will join the game as soon as possible.","color":"white"}]
 
 gamemode spectator @s
 tag @s add playing

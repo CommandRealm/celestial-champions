@@ -2,8 +2,8 @@
     [ { "rolls":1, "entries":
         [ { "type": "minecraft:item", "functions":
             [ {"function":"minecraft:set_nbt","entity":"this","tag":"{fighter:5,invalid_click:1,selected:1,HideFlags:63,clickable:1,CustomModelData:1}"},
-              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Chicken","color":"aqua","italic":false,"bold":true}] },
-              {"function":"minecraft:set_lore","entity":"this","lore":[{"text":"SELECTED","color":"dark_aqua","bold":true,"italic":false},{"text":""},{"text":"Shift-click to change variant.","color":"gray","italic":false}]}], 
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"translate":"Chicken","color":"aqua","italic":false,"bold":true}] },
+              {"function":"minecraft:set_lore","entity":"this","lore":[{"translate":"SELECTED","color":"dark_aqua","bold":true,"italic":false},{"translate":""},{"translate":"Shift-click to change variant.","color":"gray","italic":false}]}], 
               "name": "minecraft:turtle_egg" } ] } ] }
 
 

@@ -46,7 +46,7 @@ execute if entity @s[scores={random_stat=4}] run particle item blackstone ~ ~ ~ 
 execute if entity @s[scores={random_stat=4}] run particle squid_ink ~ ~ ~ 2.5 2.5 2.5 0.5 100
 
 ##Tellraw
-tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"white"},{"text":"\nAir Ability: ","color":"dark_aqua","bold":true},{"text":"Elemental Jump\n","color":"aqua"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Launches you upwards, different selected elements have different effects."}},{"text":"--------------------------","color":"white"}]
+tellraw @s[tag=!no_ability_msg] [{"translate":"--------------------------","color":"white"},{"translate":"\nAir Ability: ","color":"dark_aqua","bold":true},{"translate":"Elemental Jump\n","color":"aqua"},{"translate":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":{"translate":"Launches you upwards, different selected elements have different effects."}}},{"translate":"--------------------------","color":"white"}]
 
 tag @s remove used_ability
 

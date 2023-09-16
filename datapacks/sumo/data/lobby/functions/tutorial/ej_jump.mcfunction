@@ -18,8 +18,8 @@ execute if score $ej_jump tutorial matches 2 at @e[type=armor_stand,tag=tutorial
 execute if score $ej_jump tutorial matches 3 at @e[type=armor_stand,tag=tutorial_extra_jumps] run playsound minecraft:entity.player.small_fall master @a ~ ~ ~ 0.45 0.8
 
 ##Name
-execute if score $ej_jump tutorial matches 2 run data modify entity @e[type=armor_stand,limit=1,tag=tutorial_extra_jumps] CustomName set value '[{"text":"75%","color":"red","bold":true}]'
-execute if score $ej_jump tutorial matches 3 run data modify entity @e[type=armor_stand,limit=1,tag=tutorial_extra_jumps] CustomName set value '[{"text":"100%","color":"red","bold":true}]'
+execute if score $ej_jump tutorial matches 2 run data modify entity @e[type=armor_stand,limit=1,tag=tutorial_extra_jumps] CustomName set value '[{"translate":"75%","color":"red","bold":true}]'
+execute if score $ej_jump tutorial matches 3 run data modify entity @e[type=armor_stand,limit=1,tag=tutorial_extra_jumps] CustomName set value '[{"translate":"100%","color":"red","bold":true}]'
 
 
 ##Resetting timer

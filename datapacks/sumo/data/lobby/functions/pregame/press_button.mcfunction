@@ -24,5 +24,5 @@ scoreboard players set $button pregame 10
 
 
 ##Changing start to cancel
-execute if score $countdown pregame matches 0.. run data modify entity @e[type=area_effect_cloud,tag=start_button_text,limit=1] CustomName set value '[{"text":"- ","color":"gray"},{"text":"☀ ","color":"aqua"},{"text":"Cancel","color":"red","bold":true},{"text":" ☀","color":"aqua"},{"text":" -","color":"gray"}]'
-execute unless score $countdown pregame matches 0.. run data modify entity @e[type=area_effect_cloud,tag=start_button_text,limit=1] CustomName set value '[{"text":"- ","color":"gray"},{"text":"☀ ","color":"aqua"},{"text":"Start","color":"gold","bold":true},{"text":" ☀","color":"aqua"},{"text":" -","color":"gray"}]'
+execute if score $countdown pregame matches 0.. run data modify entity @e[type=area_effect_cloud,tag=start_button_text,limit=1] CustomName set value '[{"translate":"- ","color":"gray"},{"translate":"☀ ","color":"aqua"},{"translate":"Cancel","color":"red","bold":true},{"translate":" ☀","color":"aqua"},{"translate":" -","color":"gray"}]'
+execute unless score $countdown pregame matches 0.. run data modify entity @e[type=area_effect_cloud,tag=start_button_text,limit=1] CustomName set value '[{"translate":"- ","color":"gray"},{"translate":"☀ ","color":"aqua"},{"translate":"Start","color":"gold","bold":true},{"translate":" ☀","color":"aqua"},{"translate":" -","color":"gray"}]'

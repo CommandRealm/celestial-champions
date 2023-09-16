@@ -5,7 +5,7 @@
             "nbt": "{CustomModelData:0}"
         },
         "title": {
-            "text": "Fateful Duel",
+            "translate": "Fateful Duel",
             "color": "#008585",
             "bold": true
         },
@@ -13,7 +13,7 @@
         "show_toast": true,
         "announce_to_chat": false,
         "description": {
-            "text": "Win a round of Duels flawlessly.",
+            "translate": "Win a round of Duels flawlessly.",
             "color": "#fac84b",
             "bold": false
         }

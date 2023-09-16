@@ -1,7 +1,7 @@
 ##called when the competitive mode starts
 
 scoreboard objectives remove points
-scoreboard objectives add points dummy [{"text":"☀","color":"white","bold":false},{"text":" Points ","color":"aqua","bold":true},{"text":"☀","color":"white","bold":false}]
+scoreboard objectives add points dummy [{"translate":"☀","color":"white","bold":false},{"translate":" Points ","color":"aqua","bold":true},{"translate":"☀","color":"white","bold":false}]
 scoreboard players set @a[tag=playing] points 0
 
 ##setting fighting to 0

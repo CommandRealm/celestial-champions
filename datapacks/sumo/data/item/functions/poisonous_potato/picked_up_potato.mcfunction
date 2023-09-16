@@ -2,7 +2,7 @@
 
 tag @s remove has_potato
 
-tellraw @a[tag=has_potato,gamemode=adventure,tag=is_fighter] [{"text":"⚠ ","color":"yellow"},{"text":"Someone else picked up a new potato! You are now safe.","color":"#9fbf48","bold":false}]
+tellraw @a[tag=has_potato,gamemode=adventure,tag=is_fighter] [{"translate":"⚠ ","color":"yellow"},{"translate":"Someone else picked up a new potato! You are now safe.","color":"#9fbf48","bold":false}]
 execute as @a[tag=has_potato,gamemode=adventure,tag=is_fighter] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 1
 tag @a remove has_had_potato
 

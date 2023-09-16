@@ -10,7 +10,7 @@ tp @s 0 67 0 0 -10
 function general:rank
 
 ##msg
-tellraw @s {"text":"Returned to lobby.","color":"gray"}
+tellraw @s {"translate":"Returned to lobby.","color":"gray"}
 
 ##sound
 execute at @s run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 1 0

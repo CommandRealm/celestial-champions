@@ -1,3 +1,3 @@
 ##Called to run the Youtube lobby button
-execute positioned 5 65 9 run tellraw @a[distance=..5] [{"text":"Click ","color":"red"},{"text":"here","color":"white","bold":true,"clickEvent":{"action":"open_url","value":"https://www.youtube.com/c/commandrealm"}},{"text":" to check out our Youtube.","color":"red"}]
+execute positioned 5 65 9 run tellraw @a[distance=..5] [{"translate":"Click ","color":"red"},{"translate":"here","color":"white","bold":true,"clickEvent":{"action":"open_url","value":"https://www.youtube.com/c/commandrealm"}},{"translate":" to check out our Youtube.","color":"red"}]
 execute positioned 5 65 9 run advancement grant @a[distance=..5] only advancements:custom/socials

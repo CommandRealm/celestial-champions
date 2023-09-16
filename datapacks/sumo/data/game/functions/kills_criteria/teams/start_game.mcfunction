@@ -1,8 +1,8 @@
 ##Called at the very start of this mode
 
 ##Title
-title @a[tag=playing] title [{"text":"Starting","color":"aqua"},{"text":" Soon","color":"white"}]
-title @a[tag=playing] subtitle [{"text":" "}]
+title @a[tag=playing] title [{"translate":"Starting","color":"aqua"},{"translate":" Soon","color":"white"}]
+title @a[tag=playing] subtitle [{"translate":" "}]
 
 ##General resets
 function game:reset_players_before_start
@@ -56,5 +56,5 @@ execute as @a[tag=playing] at @s run function fighter:reset_scores
 execute as @a[tag=playing] at @s run function fighter:passive_effects
 
 ##Modifying sidebar and list objectives to have a fancy title
-scoreboard objectives modify sidebar displayname [{"text":"☀","color":"white","bold":false},{"text":" Kills ","color":"aqua","bold":true},{"text":"☀","color":"white","bold":false}]
-scoreboard objectives modify list displayname [{"text":"☀","color":"aqua","bold":false},{"text":" Deaths ","color":"white","bold":true},{"text":"☀","color":"aqua","bold":false}]
+scoreboard objectives modify sidebar displayname [{"translate":"☀","color":"white","bold":false},{"translate":" Kills ","color":"aqua","bold":true},{"translate":"☀","color":"white","bold":false}]
+scoreboard objectives modify list displayname [{"translate":"☀","color":"aqua","bold":false},{"translate":" Deaths ","color":"white","bold":true},{"translate":"☀","color":"aqua","bold":false}]

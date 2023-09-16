@@ -7,30 +7,30 @@
       {
         "color": "white",
         "bold": true,
-        "text": "Celestial"
+        "translate": "Celestial"
       },
       {
         "color": "aqua",
         "bold": true,
-        "text": " Champions"
+        "translate": " Champions"
       }
     ],
     "description": {
-      "text": "By the ",
+      "translate": "By the ",
       "color": "white",
       "underlined": false,
       "extra": [
         {
-          "text": "Command",
+          "translate": "Command",
           "color": "aqua",
           "bold": true,
           "extra": [
             {
-              "text": " Realm",
+              "translate": " Realm",
               "color": "dark_aqua",
               "extra": [
                 {
-                  "text": " Team",
+                  "translate": " Team",
                   "bold": false,
                   "color": "white"
                 }

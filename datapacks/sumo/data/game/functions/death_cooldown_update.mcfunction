@@ -1,9 +1,9 @@
-title @s title [{"text":""}]
-title @s[scores={death_cooldown=80}] subtitle [{"text":"You died!","color":"red"}]
+title @s title [{"translate":""}]
+title @s[scores={death_cooldown=80}] subtitle [{"translate":"You died!","color":"red"}]
 
-title @s[scores={death_cooldown=60}] subtitle [{"text":"You will respawn in ","color":"aqua"},{"text":"3","bold":true,"color":"white"},{"text":" seconds.","color":"aqua"}]
-title @s[scores={death_cooldown=40}] subtitle [{"text":"You will respawn in ","color":"aqua"},{"text":"2","bold":true,"color":"white"},{"text":" seconds.","color":"aqua"}]
-title @s[scores={death_cooldown=20}] subtitle [{"text":"You will respawn in ","color":"aqua"},{"text":"1","bold":true,"color":"white"},{"text":" second.","color":"aqua"}]
+title @s[scores={death_cooldown=60}] subtitle [{"translate":"You will respawn in ","color":"aqua"},{"translate":"3","bold":true,"color":"white"},{"translate":" seconds.","color":"aqua"}]
+title @s[scores={death_cooldown=40}] subtitle [{"translate":"You will respawn in ","color":"aqua"},{"translate":"2","bold":true,"color":"white"},{"translate":" seconds.","color":"aqua"}]
+title @s[scores={death_cooldown=20}] subtitle [{"translate":"You will respawn in ","color":"aqua"},{"translate":"1","bold":true,"color":"white"},{"translate":" second.","color":"aqua"}]
 
 
 playsound minecraft:block.note_block.cow_bell master @s[scores={death_cooldown=80}] ~ ~ ~ 0.25 0.7

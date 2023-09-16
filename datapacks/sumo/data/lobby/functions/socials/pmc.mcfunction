@@ -1,3 +1,3 @@
 ##Called to run the Youtube lobby button
-execute positioned 5 65 10 run tellraw @a[distance=..5] [{"text":"Click ","color":"aqua"},{"text":"here","color":"green","bold":true,"clickEvent":{"action":"open_url","value":"https://www.planetminecraft.com/member/command_realm/submissions/"}},{"text":" to download and play some of our other maps.","color":"aqua"}]
+execute positioned 5 65 10 run tellraw @a[distance=..5] [{"translate":"Click ","color":"aqua"},{"translate":"here","color":"green","bold":true,"clickEvent":{"action":"open_url","value":"https://www.planetminecraft.com/member/command_realm/submissions/"}},{"translate":" to download and play some of our other maps.","color":"aqua"}]
 execute positioned 5 65 10 run advancement grant @a[distance=..5] only advancements:custom/socials

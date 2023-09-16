@@ -5,7 +5,7 @@
             "nbt": "{CustomModelData:0}"
         },
         "title": {
-            "text": "Made it!",
+            "translate": "Made it!",
             "color": "#b80000",
             "bold": true
         },
@@ -13,7 +13,7 @@
         "show_toast": true,
         "announce_to_chat": false,
         "description": {
-            "text": "Recover back onto the stage after being near the void.",
+            "translate": "Recover back onto the stage after being near the void.",
             "color": "#fac84b",
             "bold": false
         }

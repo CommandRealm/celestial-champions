@@ -2,5 +2,5 @@
     [ { "rolls":1, "entries":
         [ { "type": "minecraft:item", "functions":
             [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1}"},
-              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"You have won ","color":"gold","italic":false,"bold":false},{"score":{"objective":"stats_wins","name":"@s"},"color":"yellow","italic":false,"bold":true},{"text":" games.","color":"gold","italic":false,"bold":false}] }], 
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"translate":"You have won ","color":"gold","italic":false,"bold":false},{"score":{"objective":"stats_wins","name":"@s"},"color":"yellow","italic":false,"bold":true},{"translate":" games.","color":"gold","italic":false,"bold":false}] }], 
               "name": "minecraft:gold_block" } ] } ] }

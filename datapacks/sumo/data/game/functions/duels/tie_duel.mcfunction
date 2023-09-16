@@ -7,7 +7,7 @@ team join gold @a[tag=playing,gamemode=spectator,tag=in_duels_map]
 tag @s add temporary_tag
 
 ##msg
-tellraw @a[tag=playing] [{"selector":"@s"},{"text":" & ","color":"yellow"},{"selector":"@p[team=gold,tag=in_duels_map,tag=!temporary_tag,gamemode=spectator,tag=playing]"},{"text":" have tied.","color":"gray","bold":false}]
+tellraw @a[tag=playing] [{"selector":"@s"},{"translate":" & ","color":"yellow"},{"selector":"@p[team=gold,tag=in_duels_map,tag=!temporary_tag,gamemode=spectator,tag=playing]"},{"translate":" have tied.","color":"gray","bold":false}]
 
 team join dead @a[team=gold]
 ##tag removal

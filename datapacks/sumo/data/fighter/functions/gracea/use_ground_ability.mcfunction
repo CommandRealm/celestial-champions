@@ -100,7 +100,7 @@ tag @e[type=falling_block,tag=needs_death_timer] remove needs_death_timer
 tag @e[type=area_effect_cloud,tag=needs_death_timer] remove needs_death_timer
 
 ##Tellraw
-tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"aqua"},{"text":"\nGround Ability: ","color":"gray","bold":true},{"text":"Beautiful Barricade\n","color":"white"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Places an impenetrable wall that lasts 4 seconds."}},{"text":"--------------------------","color":"aqua"}]
+tellraw @s[tag=!no_ability_msg] [{"translate":"--------------------------","color":"aqua"},{"translate":"\nGround Ability: ","color":"gray","bold":true},{"translate":"Beautiful Barricade\n","color":"white"},{"translate":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":{"translate":"Places an impenetrable wall that lasts 4 seconds."}}},{"translate":"--------------------------","color":"aqua"}]
 
 
 ##Sounds

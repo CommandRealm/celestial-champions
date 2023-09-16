@@ -2,9 +2,9 @@
 
 ##Messages
 team join gold
-execute if entity @s[tag=had_damage_id,tag=!won_duel_by_forfeit] run tellraw @a[tag=playing] [{"selector":"@s"},{"text":" has won their duel!","color":"white","bold":false}]
-execute if entity @s[tag=!had_damage_id,tag=!won_duel_by_forfeit] run tellraw @a[tag=playing] [{"selector":"@s"},{"text":" has ","color":"white","bold":false},{"text":"FLAWLESSLY","color":"aqua","bold":true},{"text":" won their duel!","color":"white","bold":false}]
-execute if entity @s[tag=won_duel_by_forfeit] run tellraw @a[tag=playing] [{"selector":"@s"},{"text":" has won their duel by forfeit!","color":"dark_gray","bold":false}]
+execute if entity @s[tag=had_damage_id,tag=!won_duel_by_forfeit] run tellraw @a[tag=playing] [{"selector":"@s"},{"translate":" has won their duel!","color":"white","bold":false}]
+execute if entity @s[tag=!had_damage_id,tag=!won_duel_by_forfeit] run tellraw @a[tag=playing] [{"selector":"@s"},{"translate":" has ","color":"white","bold":false},{"translate":"FLAWLESSLY","color":"aqua","bold":true},{"translate":" won their duel!","color":"white","bold":false}]
+execute if entity @s[tag=won_duel_by_forfeit] run tellraw @a[tag=playing] [{"selector":"@s"},{"translate":" has won their duel by forfeit!","color":"dark_gray","bold":false}]
 
 ##advancement
 execute if entity @s[tag=!had_damage_id,tag=!won_duel_by_forfeit] run advancement grant @s only advancements:custom/flawless

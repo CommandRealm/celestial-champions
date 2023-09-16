@@ -5,7 +5,7 @@
             "nbt": "{CustomModelData:0}"
         },
         "title": {
-            "text": "I got one!",
+            "translate": "I got one!",
             "color": "#ff0000",
             "bold": true
         },
@@ -13,7 +13,7 @@
         "show_toast": true,
         "announce_to_chat": false,
         "description": {
-            "text": "Get a kill in a game of Celestial Champions.",
+            "translate": "Get a kill in a game of Celestial Champions.",
             "color": "#fac84b",
             "bold": false
         }

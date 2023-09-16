@@ -71,7 +71,7 @@ particle falling_dust oak_planks ~ ~ ~ 0.25 0 0.25 0 50
 
 
 ##Tellraw
-tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"white"},{"text":"\nAir Ability: ","color":"dark_aqua","bold":true},{"text":"Precise Platform\n","color":"aqua"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Places a platform below you that lasts 3 seconds (gives grounded status.)"}},{"text":"--------------------------","color":"white"}]
+tellraw @s[tag=!no_ability_msg] [{"translate":"--------------------------","color":"white"},{"translate":"\nAir Ability: ","color":"dark_aqua","bold":true},{"translate":"Precise Platform\n","color":"aqua"},{"translate":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":{"translate":"Places a platform below you that lasts 3 seconds (gives grounded status.)"}}},{"translate":"--------------------------","color":"white"}]
 
 
 ##Sounds

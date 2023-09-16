@@ -1,8 +1,8 @@
 ##Called at the very start of this mode
 
 ##Title
-title @a[tag=playing] title [{"text":"Starting","color":"aqua"},{"text":" Soon","color":"white"}]
-title @a[tag=playing] subtitle [{"text":" "}]
+title @a[tag=playing] title [{"translate":"Starting","color":"aqua"},{"translate":" Soon","color":"white"}]
+title @a[tag=playing] subtitle [{"translate":" "}]
 
 ##General resets
 function game:reset_players_before_start
@@ -40,7 +40,7 @@ scoreboard players set @a[tag=playing] criteria 0
 
 
 ##Set boss bar
-bossbar set minecraft:game name [{"text":"=","color":"aqua","bold":false},{"text":"-","color":"white","bold":false},{"text":"=","color":"aqua","bold":false},{"text":" Time ","color":"aqua","bold":true},{"text":"Remaining ","color":"white","bold":true},{"text":"=","color":"aqua","bold":false},{"text":"-","color":"white","bold":false},{"text":"=","color":"aqua","bold":false}]
+bossbar set minecraft:game name [{"translate":"=","color":"aqua","bold":false},{"translate":"-","color":"white","bold":false},{"translate":"=","color":"aqua","bold":false},{"translate":" Time ","color":"aqua","bold":true},{"translate":"Remaining ","color":"white","bold":true},{"translate":"=","color":"aqua","bold":false},{"translate":"-","color":"white","bold":false},{"translate":"=","color":"aqua","bold":false}]
 bossbar set minecraft:game players @a[tag=playing]
 execute store result bossbar minecraft:game max run scoreboard players get $set_kills_timer settings
 execute store result bossbar minecraft:game value run scoreboard players get $set_kills_timer settings
@@ -56,5 +56,5 @@ execute as @a[tag=playing] at @s run function fighter:reset_scores
 execute as @a[tag=playing] at @s run function fighter:passive_effects
 
 ##Modifying sidebar and list objectives to have a fancy title
-scoreboard objectives modify sidebar displayname [{"text":"☀","color":"white","bold":false},{"text":" Kills ","color":"aqua","bold":true},{"text":"☀","color":"white","bold":false}]
-scoreboard objectives modify list displayname [{"text":"☀","color":"aqua","bold":false},{"text":" Deaths ","color":"white","bold":true},{"text":"☀","color":"aqua","bold":false}]
+scoreboard objectives modify sidebar displayname [{"translate":"☀","color":"white","bold":false},{"translate":" Kills ","color":"aqua","bold":true},{"translate":"☀","color":"white","bold":false}]
+scoreboard objectives modify list displayname [{"translate":"☀","color":"aqua","bold":false},{"translate":" Deaths ","color":"white","bold":true},{"translate":"☀","color":"aqua","bold":false}]

@@ -32,11 +32,11 @@ item replace entity @s[scores={knockback_slot=8}] hotbar.8 with light_gray_stain
 playsound minecraft:block.amethyst_block.break master @a ~ ~ ~ 1 0
 
 ##Giving us the item
-give @s[scores={random_stat2=0}] bow{Damage:384,Enchantments:[{id:"minecraft:punch",lvl:8}],display:{Name:'[{"text":"Bow","italic":false,"color":"gold"}]'},gene_item:1b}
+give @s[scores={random_stat2=0}] bow{Damage:384,Enchantments:[{id:"minecraft:punch",lvl:8}],display:{Name:'[{"translate":"Bow","italic":false,"color":"gold"}]'},gene_item:1b}
 give @s[scores={random_stat2=0}] arrow
-give @s[scores={random_stat2=1}] stone_sword{HideFlags:63,Damage:130,display:{Name:'[{"text":"Sharp ","italic":false,"color":"dark_gray"},{"text":"Rock","color":"gray"}]'},gene_item:1b,CustomModelData:1}
-give @s[scores={random_stat2=2}] iron_pickaxe{Damage:250,Enchantments:[{id:"minecraft:fortune",lvl:3},{id:"minecraft:knockback",lvl:6}],display:{Name:'[{"text":"Pickaxe","italic":false,"color":"dark_aqua"}]'},gene_item:1b}
-give @s[scores={random_stat2=3}] potion{display:{Name:'[{"text":"Energy Drink","italic":false,"color":"blue"}]'},CustomPotionColor:2714506,CustomPotionEffects:[{Id:1,Amplifier:1,ShowIcon:1b,ShowParticles:1b,Duration:200}],gene_item:1b}
+give @s[scores={random_stat2=1}] stone_sword{HideFlags:63,Damage:130,display:{Name:'[{"translate":"Sharp ","italic":false,"color":"dark_gray"},{"translate":"Rock","color":"gray"}]'},gene_item:1b,CustomModelData:1}
+give @s[scores={random_stat2=2}] iron_pickaxe{Damage:250,Enchantments:[{id:"minecraft:fortune",lvl:3},{id:"minecraft:knockback",lvl:6}],display:{Name:'[{"translate":"Pickaxe","italic":false,"color":"dark_aqua"}]'},gene_item:1b}
+give @s[scores={random_stat2=3}] potion{display:{Name:'[{"translate":"Energy Drink","italic":false,"color":"blue"}]'},CustomPotionColor:2714506,CustomPotionEffects:[{Id:1,Amplifier:1,ShowIcon:1b,ShowParticles:1b,Duration:200}],gene_item:1b}
 
 ##Ending the ability.
 scoreboard players set @s[scores={ability_state=1,ability_timer=2..}] ability_timer 1

@@ -45,7 +45,7 @@ tag @e[type=marker,tag=needs_death_timer] remove needs_death_timer
 tag @e[type=guardian,tag=needs_death_timer] remove needs_death_timer
 
 ##Tellraw
-tellraw @s[tag=!no_ability_msg] [{"text":"--------------------------","color":"white"},{"text":"\nAir Ability: ","color":"dark_aqua","bold":true},{"text":"Guardian Strike\n","color":"aqua"},{"text":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":"Spawns a guardian which will shoot a damaging laser shortly; however, if the guardian is damaged, it immediately explodes."}},{"text":"--------------------------","color":"white"}]
+tellraw @s[tag=!no_ability_msg] [{"translate":"--------------------------","color":"white"},{"translate":"\nAir Ability: ","color":"dark_aqua","bold":true},{"translate":"Guardian Strike\n","color":"aqua"},{"translate":"(Hover for description.)\n","color":"#bd9b4b","italic":true,"hoverEvent":{"action":"show_text","value":{"translate":"Spawns a guardian which will shoot a damaging laser shortly; however, if the guardian is damaged, it immediately explodes."}}},{"translate":"--------------------------","color":"white"}]
 
 
 ##Sounds

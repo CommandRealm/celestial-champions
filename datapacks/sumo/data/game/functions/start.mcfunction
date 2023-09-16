@@ -103,7 +103,7 @@ scoreboard objectives remove fake_criteria
 scoreboard objectives add fake_criteria dummy
 
 ##Reset subtitle 
-title @a[tag=playing] subtitle [{"text":" "}]
+title @a[tag=playing] subtitle [{"translate":" "}]
 
 ##Give players tags
 execute unless score $mode settings matches 4 run tag @a[tag=playing] add needs_costume
@@ -326,4 +326,4 @@ setblock 0 67 26 air destroy
 scoreboard players set $button pregame 5
 
 data modify entity @e[type=area_effect_cloud,tag=start_button_text,limit=1] CustomNameVisible set value 0b
-data modify entity @e[type=area_effect_cloud,tag=start_button_text,limit=1] CustomName set value '[{"text":"- ","color":"gray"},{"text":"☀ ","color":"aqua"},{"text":"Start","color":"gold","bold":true},{"text":" ☀","color":"aqua"},{"text":" -","color":"gray"}]'
+data modify entity @e[type=area_effect_cloud,tag=start_button_text,limit=1] CustomName set value '[{"translate":"- ","color":"gray"},{"translate":"☀ ","color":"aqua"},{"translate":"Start","color":"gold","bold":true},{"translate":" ☀","color":"aqua"},{"translate":" -","color":"gray"}]'

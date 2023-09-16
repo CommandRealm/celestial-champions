@@ -20,8 +20,8 @@ execute if score $time game matches 500 as @a[tag=playing,tag=!just_striked] at 
 execute if score $time game matches 600 as @a[tag=playing,tag=!just_striked] at @s run function game:competitive/striking_phase/time_over
 
 ##Title
-title @a[tag=playing] title [{"text":""}]
-title @a[tag=playing,tag=!just_striked] subtitle [{"text":"!","color":"dark_red","bold":true},{"text":" STRIKE A MAP ","color":"red","bold":false},{"text":"!","color":"dark_red","bold":true}]
-title @a[tag=playing,tag=just_striked] subtitle [{"text":""}]
+title @a[tag=playing] title [{"translate":""}]
+title @a[tag=playing,tag=!just_striked] subtitle [{"translate":"!","color":"dark_red","bold":true},{"translate":" STRIKE A MAP ","color":"red","bold":false},{"translate":"!","color":"dark_red","bold":true}]
+title @a[tag=playing,tag=just_striked] subtitle [{"translate":""}]
 
 effect give @a[tag=playing] weakness 1 255 true

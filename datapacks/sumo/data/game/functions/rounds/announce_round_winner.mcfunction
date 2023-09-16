@@ -5,7 +5,7 @@ team join aqua @p[tag=playing,team=!dead]
 
 
 ##Tellraws
-tellraw @a[tag=playing] [{"selector":"@p[tag=playing,team=!dead]"},{"text":" has won the round.","color":"white"}]
+tellraw @a[tag=playing] [{"selector":"@p[tag=playing,team=!dead]"},{"translate":" has won the round.","color":"white"}]
 
 ##Adding tag
 tag @p[tag=playing,team=!dead] add join_team

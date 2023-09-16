@@ -5,7 +5,7 @@
             "nbt": "{CustomModelData:0}"
         },
         "title": {
-            "text": "En Garde!",
+            "translate": "En Garde!",
             "color": "#009c9c",
             "bold": true
         },
@@ -13,7 +13,7 @@
         "show_toast": true,
         "announce_to_chat": false,
         "description": {
-            "text": "Play a game of Duels.",
+            "translate": "Play a game of Duels.",
             "color": "#fac84b",
             "bold": false
         }
