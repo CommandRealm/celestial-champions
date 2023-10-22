@@ -25,8 +25,8 @@ execute if score $countdown pregame matches 1.. run function lobby:pregame/count
 ##Running death timer
 execute unless entity @a[tag=is_fighter] run function fighter:death_timer
 
-##Reset belowName display
-execute if score $game state matches 0 unless entity @a[tag=is_fighter] run scoreboard objectives setdisplay belowName
+##Reset below_name display
+execute if score $game state matches 0 unless entity @a[tag=is_fighter] run scoreboard objectives setdisplay below_name
 
 
 ##Button

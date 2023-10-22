@@ -18,7 +18,7 @@ tag @s add used_ability
 tag @s add copy_id
 
 ##zombie
-execute anchored eyes run summon zombie ^ ^ ^1 {Invulnerable:1b,Silent:1b,IsBaby:1b,ActiveEffects:[{Id:14b,Amplifier:1,Duration:100000,ShowParticles:false}],ArmorItems:[{},{},{},{id:"minecraft:snowball",Count:1b,tag:{CustomModelData:1}}],Tags:["needs_copied_id","needs_motion","on_death_timer","needs_death_timer","callidus_smoke"]}
+execute anchored eyes run summon zombie ^ ^ ^1 {Invulnerable:1b,Silent:1b,IsBaby:1b,active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:100000,show_particles:false}],ArmorItems:[{},{},{},{id:"minecraft:snowball",Count:1b,tag:{CustomModelData:1}}],Tags:["needs_copied_id","needs_motion","on_death_timer","needs_death_timer","callidus_smoke"]}
 
 execute as @e[type=zombie,tag=needs_motion] at @s run tp @s ~ ~ ~ facing entity @p[tag=used_ability]
 

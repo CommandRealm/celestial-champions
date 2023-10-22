@@ -12,7 +12,7 @@ item replace entity @s enderchest.11 with bone{HideFlags:63,display:{Name:'[{"te
 
 item replace entity @s enderchest.13 with diamond{HideFlags:63,display:{Name:'[{"text":"Celebrations","color":"aqua","italic":false,"bold":true}]',Lore:['[{"text":"Celebrations that appear when you win.","color":"gray","italic":false}]']},clickable:1}
 
-item replace entity @s enderchest.15 with gold_nugget{Enchantments:[{id:"x",lvl:1}],HideFlags:63,display:{Name:'[{"text":"Advancement ","color":"gold","italic":false,"bold":true},{"text":"Unlocks","color":"yellow"}]',Lore:['[{"text":"Unlockables from advancements.","color":"gray","italic":false}]']},clickable:1}
+item replace entity @s enderchest.15 with gold_nugget{Enchantments:[{}],HideFlags:63,display:{Name:'[{"text":"Advancement ","color":"gold","italic":false,"bold":true},{"text":"Unlocks","color":"yellow"}]',Lore:['[{"text":"Unlockables from advancements.","color":"gray","italic":false}]']},clickable:1}
 
 
 ##Back button

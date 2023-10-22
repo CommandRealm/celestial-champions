@@ -44,7 +44,7 @@ tellraw @s [{"text":"","hoverEvent":{"action":"show_text","value":""}},{"text":"
 ##Exrta jump amplifier
 #Adding one so the amplifer is in agreement with how it shows in the inventory gui
 scoreboard players add @s extra_jump_force 1
-tellraw @s [{"text":"","hoverEvent":{"action":"show_text","value":""}},{"text":"Extra Jump Amplifier","color":"green","bold":false,"hoverEvent":{"action":"show_text","value":"The amplifier of levitation from the extra jump."}},{"text":": ","color":"gray","bold":false},{"score":{"objective":"extra_jump_force","name":"@s"},"color":"white","bold":true}]
+tellraw @s [{"text":"","hoverEvent":{"action":"show_text","value":""}},{"text":"Extra Jump amplifier","color":"green","bold":false,"hoverEvent":{"action":"show_text","value":"The amplifier of levitation from the extra jump."}},{"text":": ","color":"gray","bold":false},{"score":{"objective":"extra_jump_force","name":"@s"},"color":"white","bold":true}]
 
 ##Passive
 tellraw @s [{"text":"","hoverEvent":{"action":"show_text","value":""}},{"text":"Passive/Loadout","color":"light_purple","bold":false,"hoverEvent":{"action":"show_text","value":"An ability you don't have to activate/An item unique to the fighter."}},{"text":": ","color":"gray","bold":false},{"text":"Flame bow with arrows on a 3 second cooldown.","color":"white","bold":false}]

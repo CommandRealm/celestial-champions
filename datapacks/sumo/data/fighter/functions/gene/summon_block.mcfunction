@@ -7,7 +7,7 @@
 
 
 ##Summoning
-summon armor_stand ~ ~-2 ~ {NoGravity:1b,Marker:1b,Tags:["on_death_timer","needs_death_timer","needs_adjustments","gene_block_shulker_display","needs_copied_id","gene_block_tp"],Invisible:1b,Invulnerable:1b,Passengers:[{id:"minecraft:shulker",Tags:["needs_death_timer","on_death_timer","gene_block_shulker"],NoAI:1b,ActiveEffects:[{Id:14b,Duration:1000000,Amplifier:0,ShowParticles:false}]}]}
+summon armor_stand ~ ~-2 ~ {NoGravity:1b,Marker:1b,Tags:["on_death_timer","needs_death_timer","needs_adjustments","gene_block_shulker_display","needs_copied_id","gene_block_tp"],Invisible:1b,Invulnerable:1b,Passengers:[{id:"minecraft:shulker",Tags:["needs_death_timer","on_death_timer","gene_block_shulker"],NoAI:1b,active_effects:[{id:"minecraft:invisibility",duration:1000000,amplifier:0,show_particles:false}]}]}
 
 
 ##Random number

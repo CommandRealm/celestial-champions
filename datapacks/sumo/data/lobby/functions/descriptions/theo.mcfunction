@@ -44,7 +44,7 @@ tellraw @s [{"text":"","hoverEvent":{"action":"show_text","value":""}},{"text":"
 ##Exrta jump amplifier
 #Adding one so the amplifer is in agreement with how it shows in the inventory gui
 scoreboard players add @s extra_jump_force 1
-tellraw @s [{"text":"","hoverEvent":{"action":"show_text","value":""}},{"text":"Extra Jump Amplifier","color":"green","bold":false,"hoverEvent":{"action":"show_text","value":"The amplifier of levitation from the extra jump."}},{"text":": ","color":"gray","bold":false},{"score":{"objective":"extra_jump_force","name":"@s"},"color":"white","bold":true}]
+tellraw @s [{"text":"","hoverEvent":{"action":"show_text","value":""}},{"text":"Extra Jump amplifier","color":"green","bold":false,"hoverEvent":{"action":"show_text","value":"The amplifier of levitation from the extra jump."}},{"text":": ","color":"gray","bold":false},{"score":{"objective":"extra_jump_force","name":"@s"},"color":"white","bold":true}]
 
 ##Ground ability
 tellraw @s [{"text":""},{"text":"Ground Ability","color":"aqua","bold":false,"hoverEvent":{"action":"show_text","value":"Ability when the fighter drops or offhands their weapons while on the ground."}},{"text":": ","color":"gray","bold":false},{"text":"Adrenaline ","color":"aqua"},{"text":"- ","color":"gray","bold":false},{"text":"Gain Speed 4 and Jump Boost 6 for 1 second. However, during this ability, knockback is locked to 2.","color":"white"}]

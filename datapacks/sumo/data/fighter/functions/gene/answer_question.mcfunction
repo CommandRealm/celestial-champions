@@ -36,7 +36,7 @@ give @s[scores={random_stat2=0}] bow{Damage:384,Enchantments:[{id:"minecraft:pun
 give @s[scores={random_stat2=0}] arrow
 give @s[scores={random_stat2=1}] stone_sword{HideFlags:63,Damage:130,display:{Name:'[{"text":"Sharp ","italic":false,"color":"dark_gray"},{"text":"Rock","color":"gray"}]'},gene_item:1b,CustomModelData:1}
 give @s[scores={random_stat2=2}] iron_pickaxe{Damage:250,Enchantments:[{id:"minecraft:fortune",lvl:3},{id:"minecraft:knockback",lvl:6}],display:{Name:'[{"text":"Pickaxe","italic":false,"color":"dark_aqua"}]'},gene_item:1b}
-give @s[scores={random_stat2=3}] potion{display:{Name:'[{"text":"Energy Drink","italic":false,"color":"blue"}]'},CustomPotionColor:2714506,CustomPotionEffects:[{Id:1,Amplifier:1,ShowIcon:1b,ShowParticles:1b,Duration:200}],gene_item:1b}
+give @s[scores={random_stat2=3}] potion{display:{Name:'[{"text":"Energy Drink","italic":false,"color":"blue"}]'},CustomPotionColor:2714506,custom_potion_effects:[{id:"minecraft:speed",amplifier:1,show_icon:1b,show_particles:1b,duration:200}],gene_item:1b}
 
 ##Ending the ability.
 scoreboard players set @s[scores={ability_state=1,ability_timer=2..}] ability_timer 1

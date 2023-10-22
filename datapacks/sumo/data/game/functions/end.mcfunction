@@ -68,7 +68,7 @@ scoreboard objectives setdisplay sidebar
 scoreboard objectives setdisplay list
 
 ##Belowname reset
-scoreboard objectives setdisplay belowName
+scoreboard objectives setdisplay below_name
 
 
 ##Objective resets

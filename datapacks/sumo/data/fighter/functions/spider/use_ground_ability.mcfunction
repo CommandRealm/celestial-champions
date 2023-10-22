@@ -18,7 +18,7 @@ particle item string ~ ~1.75 ~ 0.5 0.5 0.5 0.25 50
 
 
 ##Called to shoot an arrow with motion
-execute positioned ^ ^ ^1 run summon zombie ~ ~0.75 ~ {Silent:1b,Invulnerable:1b,Tags:["needs_motion","needs_copied_id","on_death_timer","needs_death_timer","spider_web"],ArmorItems:[{},{},{},{id:"minecraft:light_gray_stained_glass_pane",Count:1b,tag:{CustomModelData:1}}],ActiveEffects:[{Id:14b,Amplifier:254,Duration:1000,ShowParticles:false},{Id:11b,Amplifier:254,Duration:1000,ShowParticles:false}],Attributes:[{Name:"generic.follow_range",Base:0}],Passengers:[{id:"minecraft:falling_block",Time:1,BlockState:{Name:"minecraft:cobweb"},NoGravity:1b,Tags:["on_death_timer","needs_death_timer","spider_web_display"]}]}
+execute positioned ^ ^ ^1 run summon zombie ~ ~0.75 ~ {Silent:1b,Invulnerable:1b,Tags:["needs_motion","needs_copied_id","on_death_timer","needs_death_timer","spider_web"],ArmorItems:[{},{},{},{id:"minecraft:light_gray_stained_glass_pane",Count:1b,tag:{CustomModelData:1}}],active_effects:[{id:"minecraft:invisibility",amplifier:254,duration:1000,show_particles:false},{id:"minecraft:resistance",amplifier:254,duration:1000,show_particles:false}],Attributes:[{Name:"generic.follow_range",Base:0}],Passengers:[{id:"minecraft:falling_block",Time:1,BlockState:{Name:"minecraft:cobweb"},NoGravity:1b,Tags:["on_death_timer","needs_death_timer","spider_web_display"]}]}
 
 
 
@@ -62,7 +62,7 @@ tag @e[type=zombie,tag=needs_motion] remove needs_motion
 tag @e[type=zombie,tag=needs_motion] remove needs_death_timer
 
 
-##Id for block
+##id for block
 execute as @e[type=spider,tag=needs_death_timer] at @s run scoreboard players operation @s id = @p[tag=used_ability] id
 
 ##Death timer for falling blocks

@@ -51,11 +51,11 @@ summon leash_knot 998 69 -2980 {Invulnerable:1b,Tags:["this_map_die"]}
 summon leash_knot 1004 69 -2980 {Invulnerable:1b,Tags:["this_map_die"]}
 summon leash_knot 1005 73 -2978 {Invulnerable:1b,Tags:["this_map_die"]}
 
-summon rabbit 999 72.5 -3012 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:14b,Amplifier:1b,Duration:20000000,ShowParticles:0b}],Leash:{X:999,Y:72,Z:-3017},Tags:["this_map_die"]}
-summon rabbit 999 73.5 -3022 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:14b,Amplifier:1b,Duration:20000000,ShowParticles:0b}],Leash:{X:999,Y:72,Z:-3017},Tags:["this_map_die"]}
-summon rabbit 1005 72.5 -3012 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:14b,Amplifier:1b,Duration:20000000,ShowParticles:0b}],Leash:{X:1005,Y:72,Z:-3017},Tags:["this_map_die"]}
-summon rabbit 1005 73.5 -3022 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:14b,Amplifier:1b,Duration:20000000,ShowParticles:0b}],Leash:{X:1005,Y:72,Z:-3017},Tags:["this_map_die"]}
-summon rabbit 998 70.5 -2990 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:14b,Amplifier:1b,Duration:20000000,ShowParticles:0b}],Leash:{X:998,Y:69,Z:-2985},Tags:["this_map_die"]}
-summon rabbit 998 69.5 -2980 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:14b,Amplifier:1b,Duration:20000000,ShowParticles:0b}],Leash:{X:998,Y:69,Z:-2985},Tags:["this_map_die"]}
-summon rabbit 1004 69.5 -2980 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:14b,Amplifier:1b,Duration:20000000,ShowParticles:0b}],Leash:{X:1004,Y:69,Z:-2985},Tags:["this_map_die"]}
-summon rabbit 1004 70.5 -2990 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:14b,Amplifier:1b,Duration:20000000,ShowParticles:0b}],Leash:{X:1004,Y:69,Z:-2985},Tags:["this_map_die"]}
+summon rabbit 999 72.5 -3012 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:20000000,show_particles:0b}],Leash:{X:999,Y:72,Z:-3017},Tags:["this_map_die"]}
+summon rabbit 999 73.5 -3022 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:20000000,show_particles:0b}],Leash:{X:999,Y:72,Z:-3017},Tags:["this_map_die"]}
+summon rabbit 1005 72.5 -3012 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:20000000,show_particles:0b}],Leash:{X:1005,Y:72,Z:-3017},Tags:["this_map_die"]}
+summon rabbit 1005 73.5 -3022 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:20000000,show_particles:0b}],Leash:{X:1005,Y:72,Z:-3017},Tags:["this_map_die"]}
+summon rabbit 998 70.5 -2990 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:20000000,show_particles:0b}],Leash:{X:998,Y:69,Z:-2985},Tags:["this_map_die"]}
+summon rabbit 998 69.5 -2980 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:20000000,show_particles:0b}],Leash:{X:998,Y:69,Z:-2985},Tags:["this_map_die"]}
+summon rabbit 1004 69.5 -2980 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:20000000,show_particles:0b}],Leash:{X:1004,Y:69,Z:-2985},Tags:["this_map_die"]}
+summon rabbit 1004 70.5 -2990 {Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:20000000,show_particles:0b}],Leash:{X:1004,Y:69,Z:-2985},Tags:["this_map_die"]}

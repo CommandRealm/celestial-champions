@@ -319,7 +319,7 @@ scoreboard objectives add set_e_jump_time dummy
 ##Cooldown between using extra jumps
 scoreboard objectives add extra_jump_cool dummy
 
-##Amplifier of levitation
+##amplifier of levitation
 scoreboard objectives add extra_jump_force dummy
 
 ##Starting knockback.
@@ -334,7 +334,7 @@ scoreboard objectives add knockback dummy
 ##What the knockback should be.
 scoreboard objectives add calc_knockback dummy
 
-##Amplifier of jump boost
+##amplifier of jump boost
 scoreboard objectives add jump_force dummy
 
 ##Keeps track of abilities 

@@ -18,7 +18,7 @@ tag @s add used_ability
 tag @s add copy_id
 
 ##Summon
-summon skeleton ~ ~ ~ {Tags:["needs_copied_id","needs_motion","skeleton_tp","on_death_timer","needs_death_timer"],Invulnerable:0b,ArmorItems:[{},{},{},{id:"minecraft:stone_button",Count:1b}],ActiveEffects:[{Id:18b,Amplifier:254b,Duration:1000,ShowParticles:false},{Id:11b,Amplifier:250b,Duration:1000,ShowParticles:false}],Attributes:[{Name:"generic.follow_range",Base:0}]}
+summon skeleton ~ ~ ~ {Tags:["needs_copied_id","needs_motion","skeleton_tp","on_death_timer","needs_death_timer"],Invulnerable:0b,ArmorItems:[{},{},{},{id:"minecraft:stone_button",Count:1b}],active_effects:[{id:"minecraft:weakness",amplifier:127,duration:1000,show_particles:false},{id:"minecraft:resistance",amplifier:127,duration:1000,show_particles:false}],Attributes:[{Name:"generic.follow_range",Base:0}]}
 
 ##Changing skeleton's outfit
 execute if entity @s[scores={costume=1}] run item replace entity @e[type=skeleton,tag=needs_motion,sort=nearest,limit=1] armor.head with player_head{AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:0,UUID:[I; 999, 999, 999, 999]}],Unbreakable:1b,HideFlags:63,display:{Name:'[{"text":"Stray\'s Head","italic":false,"color":"#88b9b3","bold":true}]'},costume:1b,SkullOwner:{Id:[I;-895195206,-604027417,-2132896399,-605322634],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTFhMWJjMzhiMGM5NmM4ODNhZjU1OGFjMjAwZmY0YTk1OGY1Y2FiZTNmYzI1ZDhmODNjNmQ3MGZkNjdkM2M4YSJ9fX0="}]}}}

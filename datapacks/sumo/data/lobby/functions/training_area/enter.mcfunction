@@ -34,7 +34,7 @@ scoreboard players set @s ability_state 0
 tag @s remove slow_falling_until_landing
 
 ##BelowName display
-scoreboard objectives setdisplay belowName damage_percent
+scoreboard objectives setdisplay below_name damage_percent
 
 ##invulnerability
 scoreboard players set @s training_area 20

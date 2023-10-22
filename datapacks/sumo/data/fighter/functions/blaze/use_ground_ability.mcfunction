@@ -15,7 +15,7 @@ scoreboard players set @s ability_type 0
 tag @s add copy_id
 
 ##summon zombies
-execute anchored eyes positioned ~ ~4.5 ~ run summon zombie ^ ^ ^2 {Tags:["blaze_fireball","needs_death_timer","on_death_timer","needs_copied_id"],Invulnerable:1b,IsBaby:1b,ActiveEffects:[{Id:14b,Amplifier:1,Duration:100000,ShowParticles:0b}],Silent:1b,ArmorItems:[{},{},{},{id:"minecraft:fire_charge",Count:1b}],NoAI:0b,Attributes:[{Name:"generic.attack_damage",Base:0}]}
+execute anchored eyes positioned ~ ~4.5 ~ run summon zombie ^ ^ ^2 {Tags:["blaze_fireball","needs_death_timer","on_death_timer","needs_copied_id"],Invulnerable:1b,IsBaby:1b,active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:100000,show_particles:0b}],Silent:1b,ArmorItems:[{},{},{},{id:"minecraft:fire_charge",Count:1b}],NoAI:0b,Attributes:[{Name:"generic.attack_damage",Base:0}]}
 
 ##Tp so they're facing us
 execute as @e[type=zombie,tag=needs_copied_id] at @s run tp @s ~ ~ ~ facing entity @p[tag=copy_id]

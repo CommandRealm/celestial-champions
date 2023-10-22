@@ -91,8 +91,8 @@ bossbar set minecraft:game color blue
 bossbar set minecraft:game players
 bossbar set minecraft:game visible false
 
-##Setting belowName objective
-scoreboard objectives setdisplay belowName damage_percent
+##Setting below_name objective
+scoreboard objectives setdisplay below_name damage_percent
 
 ##Remove and recreate criteria objective
 scoreboard objectives remove criteria
