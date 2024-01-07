@@ -44,7 +44,7 @@ kill @e[type=area_effect_cloud,tag=needs_distribution]
 
 ##Particles
 particle block dirt ~ ~ ~ 2 0.25 2 0.15 150
-particle block grass ~ ~ ~ 2 0.25 2 0.1 50
+particle block short_grass ~ ~ ~ 2 0.25 2 0.1 50
 
 ##sound
 playsound minecraft:block.grass.break master @a ~ ~ ~ 1 0
