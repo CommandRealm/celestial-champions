@@ -101,10 +101,10 @@ advancement grant @a[x=-11,y=66,z=107,dx=0,tag=!playing] only advancements:custo
 advancement grant @a[advancements={advancements:custom/all_lobby=false,advancements:custom/tutorial=true,advancements:custom/bridge=true,advancements:custom/cosmetics=true,advancements:custom/dummy=true,advancements:custom/cr=true,advancements:custom/socials=true,advancements:custom/parkour=true,advancements:custom/secret=true}] only advancements:custom/all_lobby
 ##
 
-advancement grant @a[advancements={completionist/completionist=false,advancements:custom/all_games=true,advancements:custom/all_lobby=true,advancements:custom/all_kills=true,advancements:custom/all_characters=true}] only minecraft:completionist/completionist
+advancement grant @a[advancements={advancements:completionist/completionist=false,advancements:custom/all_games=true,advancements:custom/all_lobby=true,advancements:custom/all_kills=true,advancements:custom/all_characters=true}] only advancements:completionist/completionist
 
 
-execute if entity @a[advancements={completionist/completionist=true},tag=!playing,tag=!is_fighter] run function completionist:completionist_helix
+execute if entity @a[advancements={advancements:completionist/completionist=true},tag=!playing,tag=!is_fighter] run function completionist:completionist_helix
 
 
 ##If a player goes too far away from the lobby.
